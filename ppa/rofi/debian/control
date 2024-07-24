@@ -1,0 +1,67 @@
+Source: rofi
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: x11
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ make,
+ autoconf,
+ automake,
+ pkg-config,
+ flex,
+ bison,
+ check,
+ libglib2.0-dev-bin,
+ meson,
+ cmake,
+ libpango1.0-dev (>= 1.50),
+ libcairo2-dev,
+ libglib2.0-dev (>= 2.72),
+ libgdk-pixbuf2.0-dev,
+ libstartup-notification0-dev,
+ libxkbcommon-dev (>= 0.4.1),
+ libxkbcommon-x11-dev,
+ libxcb-ewmh-dev,
+ libxcb-util-dev,
+ libxcb-imdkit-dev,
+ libxcb-icccm4-dev,
+ libxcb-randr0-dev,
+ libxcb-cursor-dev,
+ libxcb-xinerama0-dev,
+ libxcb-xtest0-dev,
+ libxcb-shape0-dev,
+ libxcb-xkb-dev,
+ libwayland-dev,
+ wayland-protocols,
+ pandoc,
+ mkdocs,
+Homepage: https://davatorium.github.io/rofi/
+Vcs-Git: https://github.com/lbonn/rofi/tree/wayland
+
+Package: rofi
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ libpango-1.0-0 (>= 1.50),
+ libpangocairo-1.0-0,
+ libcairo2,
+ libglib2.0-0 (>= 2.72),
+ libgdk-pixbuf2.0-0,
+ libstartup-notification0,
+ libxkbcommon0 (>= 0.4.1),
+ libxkbcommon-x11-0,
+ libxcb-icccm4,
+ libxcb-randr0,
+ libxcb-cursor0,
+ libxcb-xinerama0,
+ libxcb-xtest0,
+ libxcb-shape0,
+ libxcb-xkb1,
+ wayland-protocols,
+Provides: rofi
+Conflicts: rofi
+Description: Rofi: A window switcher, run dialog and dmenu replacement - fork with wayland support
+    Rofi started as a clone of simpleswitcher, written by Sean Pringle - a popup window switcher roughly based on superswitcher. Simpleswitcher laid the foundations, and therefore Sean Pringle deserves most of the credit for this tool. Rofi (renamed, as it lost the simple property) has been extended with extra features, like an application launcher and ssh-launcher, and can act as a drop-in dmenu replacement, making it a very versatile tool.

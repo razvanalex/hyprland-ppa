@@ -1,0 +1,19 @@
+rofi (1.7.5+wayland3a-1) noble; urgency=medium
+
+  * wayland-only builds are working again
+  * issues with multiple keyboard layouts (@Nemo157)
+  * pango markup for -window-format (@MikeWalrus)
+  * re-sync with rofi-git ABI (see notes below) (@MoetaYuko)
+  * crashing `rofi -help` (@alebastr)
+  * crash during layer shell destruction
+  * window switching after breaking change in Hyprland 0.35 (@alebastr)
+  * scrolling was skipping elements 2 by 2
+  * monitor selection options `-m` (@alebastr)
+  * monitor dpi detection that can be used for physical units (@alebastr)
+  * cursor types support (@alebastr)
+  * `-global-kb` option to override compositor's bindings through
+  * support high resolution pointer events when available
+  * everything that happened on upstream rofi got merged as well!
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Wed, 24 Jul 2024 23:18:38 +0000
+
