@@ -14,6 +14,7 @@ class Arguments(argparse.Namespace):
         self.github_repo: str
         self.package: str
         self.package_version: str
+        self.build_version: str
         self.version: str
         self.target: str
         self.urgency: str
@@ -52,6 +53,13 @@ def parse_args() -> Arguments:
         type=str,
         required=True,
         help="Version of the package from github release",
+    )
+    _ = parser.add_argument(
+        '--build-version',
+        '-bv',
+        type=str,
+        required=True,
+        help="The build number",
     )
     _ = parser.add_argument(
         '--target',
@@ -158,6 +166,7 @@ def format_debian_changelog(
     package: str,
     version: str,
     package_version: str,
+    build_version: str,
     target: str,
     urgency: str,
     maintainer_name: str,
@@ -166,7 +175,10 @@ def format_debian_changelog(
     last_release = get_last_release_info(repository)
     crt_date = datetime.today().strftime('%a, %d %b %Y %H:%M:%S +0000')
 
-    # assert version in last_release['name']
+    if version not in last_release['name']:
+        raise ValueError(
+            f"Invalid version {version} for package {last_release['name']}"
+        )
 
     changelog: str = last_release['body']
     changelog = changelog.replace('\r', '')
@@ -175,7 +187,7 @@ def format_debian_changelog(
     if len(changelog) == 0:
         changelog = "  * updated package"
 
-    deb_changelog = f"{package} ({version}-{package_version}) {target}; urgency={urgency}\n\n"
+    deb_changelog = f"{package} ({version}-{package_version}{build_version}) {target}; urgency={urgency}\n\n"
     deb_changelog += f"{changelog}\n\n"
     deb_changelog += f" -- {maintainer_name} <{maintainer_email}>  {crt_date}\n"
 
@@ -205,6 +217,7 @@ def main(args: Arguments) -> None:
         args.package,
         args.version,
         args.package_version,
+        args.build_version,
         args.target,
         args.urgency,
         args.maintainer_name,

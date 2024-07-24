@@ -1,3 +1,4 @@
+SHELL			:= /bin/bash
 PACKAGE			:= swww
 VERSION			:= 0.9.5
 BUILD           := c
@@ -9,11 +10,13 @@ URGENCY 		?= medium
 DEBFULLNAME 	?=
 DEBEMAIL    	?=
 PPA				?= ppa:razvanalex/hyprland-ppa
+ROOT			:= $(shell pwd)/../../
+PACKAGE_ROOT    := $(ROOT)/ppa/swww/
 
 # Because of limitations regarding networking when building rust packages on
 # Launchpad, we need to include the dependencies in the archive. In addition,
 # we need to allow binaries in the archive, otherwise build will fail.
-build: sign_pgp_init
+build: sign_pgp_init clean
 	$(info Build $(PACKAGE) from release $(VERSION))
 	mkdir -p build && cd build \
 	&& \
@@ -37,18 +40,19 @@ build: sign_pgp_init
 	&& \
 	mkdir -p debian \
 	&& \
-	../../../scripts/build_changelog.py \
+	$(ROOT)/scripts/build_changelog.py \
 		--github-repo $(REPOSITORY) \
 		--package $(PACKAGE) \
 		--version $(VERSION)$(BUILD) \
 		--package-version $(PACKAGE_VERSION) \
+		--build-version $(BUILD) \
 		--target $(TARGET) \
 		--urgency $(URGENCY) \
 		--maintainer-name "$(DEBFULLNAME)" \
 		--maintainer-email "$(DEBEMAIL)" \
-		--changelog ../../debian/changelog \
+		--changelog $(PACKAGE_ROOT)/debian/changelog \
 	&& \
-	cp -r ../../debian . \
+	cp -r $(PACKAGE_ROOT)/debian . \
 	&& \
 	decopy --root . --output ./debian/copyright --exclude ./debian/ --mode full \
 	&& \
@@ -60,7 +64,7 @@ build: sign_pgp_init
 # because it couldn't sign the files.
 .PHONY: sign_pgp_init 
 sign_pgp_init:
-	gpg --clearsign --passphrase-file ../.pgp --dry-run --pinentry-mode loopback ../README.md
+	gpg --clearsign --passphrase-file $(ROOT)/.pgp --dry-run --pinentry-mode loopback $(ROOT)/README.md
 
 .PHONY: publish
 publish:
