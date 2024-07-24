@@ -1,0 +1,54 @@
+.PHONY: build
+build: __prepare_pkg sign_pgp_init 
+	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
+	debuild -S -d -k${DEBEMAIL} --source-option=--include-binaries
+	echo "done"
+
+.PHONY: download
+download: 
+	$(info Download $(PACKAGE) version $(VERSION))
+	mkdir -p build && cd build \
+	&& \
+	curl -LJ -o $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz $(TARBALL) \
+	&& \
+	tar xf $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz \
+	&& \
+	([ -n "$(BUILD)" ] && mv $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION)$(BUILD) || echo "skipping renaming")
+
+.PHONY: __prepare_pkg
+__prepare_pkg: __prepare
+	$(MAKE) prepare
+
+.PHONY: __prepare
+__prepare: download
+	$(info Build $(PACKAGE) from release $(VERSION))
+	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
+	mkdir -p debian && \
+	$(ROOT)/scripts/build_changelog.py \
+		--github-repo $(REPOSITORY) \
+		--package $(PACKAGE) \
+		--version $(VERSION)$(BUILD) \
+		--package-version $(PACKAGE_VERSION) \
+		--build-version $(BUILD) \
+		--target $(TARGET) \
+		--urgency $(URGENCY) \
+		--maintainer-name "$(DEBFULLNAME)" \
+		--maintainer-email "$(DEBEMAIL)" \
+		--changelog $(PACKAGE_ROOT)/debian/changelog \
+	&& \
+	cp -r $(PACKAGE_ROOT)/debian . && \
+	decopy --root . --output ./debian/copyright --exclude ./debian/ --mode full
+
+# HACK: This is a hack to enable GPG inside a container. Otherwise, build fails
+# because it couldn't sign the files.
+.PHONY: sign_pgp_init 
+sign_pgp_init:
+	gpg --clearsign --passphrase-file $(ROOT)/.pgp --dry-run --pinentry-mode loopback $(ROOT)/README.md
+
+.PHONY: publish
+publish:
+	dput $(PPA) ./build/$(PACKAGE)_$(VERSION)$(BUILD)-$(PACKAGE_VERSION)_source.changes
+
+.PHONY: clean
+clean:
+	rm -fr build
