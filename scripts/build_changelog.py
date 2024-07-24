@@ -187,7 +187,7 @@ def format_debian_changelog(
     if len(changelog) == 0:
         changelog = "  * updated package"
 
-    deb_changelog = f"{package} ({version}-{package_version}{build_version}) {target}; urgency={urgency}\n\n"
+    deb_changelog = f"{package} ({version}{build_version}-{package_version}) {target}; urgency={urgency}\n\n"
     deb_changelog += f"{changelog}\n\n"
     deb_changelog += f" -- {maintainer_name} <{maintainer_email}>  {crt_date}\n"
 
@@ -227,7 +227,8 @@ def main(args: Arguments) -> None:
 
     with open(args.changelog, 'w') as file:
         _ = file.write(debian_changelog)
-        _ = file.write("\n".join(contents))
+        _ = file.write("\n")
+        _ = file.write("".join(contents))
 
 
 if __name__ == "__main__":
