@@ -4,6 +4,13 @@ build: __prepare_pkg sign_pgp_init
 	debuild -S -d -k${DEBEMAIL} --source-option=--include-binaries
 	echo "done"
 
+.PHONY: build_deb
+build_deb:
+	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
+	mk-build-deps --install --tool "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" --remove && \
+	dpkg-buildpackage -us -uc
+	echo "done"
+
 .PHONY: download
 download: 
 	$(info Download $(PACKAGE) version $(VERSION))
