@@ -27,7 +27,7 @@ __prepare: download
 	$(ROOT)/scripts/build_changelog.py \
 		--github-repo $(REPOSITORY) \
 		--package $(PACKAGE) \
-		--version $(VERSION)$(BUILD) \
+		--version $(VERSION) \
 		--package-version $(PACKAGE_VERSION) \
 		--build-version $(BUILD) \
 		--target $(TARGET) \

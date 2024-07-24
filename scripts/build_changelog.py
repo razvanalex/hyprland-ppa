@@ -200,17 +200,18 @@ def main(args: Arguments) -> None:
         with open(args.changelog, "r") as file:
             contents = file.readlines()
 
-            package, version, *_ = contents[0].split()
-            if package != args.package:
-                raise ValueError(f"Invalid package: {package}")
+            if len(contents) > 0:
+                package, version, *_ = contents[0].split()
+                if package != args.package:
+                    raise ValueError(f"Invalid package: {package}")
 
-            # NOTE: Make the assumption that versions only increase
-            version, package_version = version.replace("(", "").replace(")", "").split('-')
-            print("Found:", package, version, package_version)
+                # NOTE: Make the assumption that versions only increase
+                version, package_version = version.replace("(", "").replace(")", "").split('-')
+                print("Found:", package, version, package_version)
 
-            if version == args.version and package_version == args.package_version:
-                print("Changelog already written")
-                return
+                if version == args.version and package_version == args.package_version:
+                    print("Changelog already written")
+                    return
 
     debian_changelog = format_debian_changelog(
         args.github_repo,
