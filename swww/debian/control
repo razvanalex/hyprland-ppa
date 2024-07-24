@@ -1,0 +1,27 @@
+Source: swww
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: x11
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ cargo,
+ liblz4-dev,
+ rustc,
+ pkg-config,
+ scdoc
+Homepage: https://github.com/LGFae/swww
+Vcs-Git: https://github.com/LGFae/swww.git
+
+Package: swww
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ lz4,
+ wayland-protocols
+Provides: swww
+Conflicts: swww
+Description: A Solution to your Wayland Wallpaper Woes.
+ Efficient animated wallpaper daemon for wayland, controlled at runtime

@@ -1,0 +1,4 @@
+.pgp
+.env
+build/
+README.md.asc

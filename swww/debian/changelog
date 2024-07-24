@@ -1,0 +1,15 @@
+swww (0.9.5c-1) noble; urgency=medium
+
+  * Fixes
+    - fixed wallpaper never setting `configured` to 'true'
+    - fixed fractional scaling rounding incorrectly 
+    - fixed scaling for vertical monitors (thanks, @AhJi26)
+    - fixed the annoying black screen on login issue (finally)
+  * Additions
+    - add --no-cache option to `swww-daemon`, by @lucasreis1
+  * Internal improvements
+    - specialized transition for `--transition-type none` (previously it was an alias
+    - remove an extra call to `thread::sleep` when loading the cache
+    - no longer using an `event_fd` to wake up the main thread
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Wed, 24 Jul 2024 09:44:35 +0000
