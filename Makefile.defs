@@ -23,11 +23,12 @@ download:
 	([ -n "$(BUILD)" ] && mv $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION)$(BUILD) || echo "skipping renaming")
 
 .PHONY: __prepare_pkg
-__prepare_pkg: __prepare
+__prepare_pkg: download
 	$(MAKE) prepare
+	$(MAKE) __prepare
 
 .PHONY: __prepare
-__prepare: download
+__prepare:
 	$(info Build $(PACKAGE) from release $(VERSION))
 	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
 	mkdir -p debian && \

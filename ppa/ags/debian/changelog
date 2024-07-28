@@ -1,0 +1,34 @@
+ags (1.8.2b-1) noble; urgency=medium
+
+  * Features
+    - Calendar.detail
+    - SpinButton.range
+    - SpinButton.increments
+    - Network.frequency
+    - recursive Utils.monitorFile
+    - add: Network.vpn
+    - add write and writeAsync to Utils.subprocess (#388)
+  * Fixes
+    - compiles with typescript >= 5.0.4
+    - DrawingArea.draw-fn
+    - hyprland: active client empty on window close
+    - dispose signal on Variable
+    - skip unnecessary value setting in Utils.derive and Utils.merge
+    - properly log errors from Variables
+    - adjust Hyprland socket (#398)
+  * Breaking Changes
+    - Stream.is_muted corresponds to actual mute state
+    - Utils.exec returns stderr on error
+  * New Contributors
+    - @A7R7 made their first contribution in https://github.com/Aylur/ags/pull/335
+    - @h-banii made their first contribution in https://github.com/Aylur/ags/pull/332
+    - @webflo-dev made their first contribution in https://github.com/Aylur/ags/pull/355
+    - @Robin-Sch made their first contribution in https://github.com/Aylur/ags/pull/357
+    - @NicolaiVdS made their first contribution in https://github.com/Aylur/ags/pull/345
+    - @topaxi made their first contribution in https://github.com/Aylur/ags/pull/358
+    - @PixisVI made their first contribution in https://github.com/Aylur/ags/pull/341
+    - @amitds1997 made their first contribution in https://github.com/Aylur/ags/pull/384
+    - @teutonicjoe made their first contribution in https://github.com/Aylur/ags/pull/380
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 27 Jul 2024 22:38:17 +0000
+

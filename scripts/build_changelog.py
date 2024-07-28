@@ -209,7 +209,9 @@ def main(args: Arguments) -> None:
                 version, package_version = version.replace("(", "").replace(")", "").split('-')
                 print("Found:", package, version, package_version)
 
-                if version == args.version and package_version == args.package_version:
+                if version == f"{args.version}{args.build_version}" and (
+                    package_version == args.package_version
+                ):
                     print("Changelog already written")
                     return
 

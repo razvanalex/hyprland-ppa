@@ -11,7 +11,7 @@ DEBFULLNAME 	?=
 DEBEMAIL    	?=
 PPA				?= ppa:razvanalex/hyprland-ppa
 ROOT			:= $(shell pwd)/../../
-PACKAGE_ROOT    := $(ROOT)/ppa/swww/
+PACKAGE_ROOT    := $(ROOT)/ppa/$(PACKAGE)/
 
 include $(ROOT)/Makefile.defs
 
