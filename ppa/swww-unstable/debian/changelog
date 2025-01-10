@@ -1,0 +1,1073 @@
+swww (0.9.5+git20250110.004dfd8b-1) oracular; urgency=medium
+
+  * 004dfd8 Merge pull request #375 from kerty0/main
+  * 1bd7166 Merge pull request #381 from LGFae/update_flake_lock_action
+  * 5f03f00 flake.lock: Update
+  * 56928f7 Add wallpaper refresh on monitor configuration change
+  * 87869b2 Fix crush when changing monitor configuration
+  * 0db3f4e Merge pull request #376 from LGFae/update_flake_lock_action
+  * f4bc113 flake.lock: Update
+  * e297350 Fix memory leak and stopped animation
+  * 36808df Merge pull request #372 from kerty0/main
+  * fb45d81 Fix swww restore error handling
+  * 624fac4 update MSRV
+  * 8e3bd5c update dependencies
+  * 77a2f2d Merge pull request #373 from rexept/resize-features
+  * 741ca78 formatted + typo fix
+  * 3cdf15b more concise definition
+  * 8c72051 added to docs
+  * d581b9e added resize-stretch feature
+  * 716c489 Update old cache handling
+  * b4cf862 Fix crush when using solid color
+  * ba74b60 Add filter caching
+  * 5142863 Merge pull request #371 from mendess/mendess/fix-animation-cache
+  * 7be78db Fix animation cache not working when image is behind a symlink
+  * 0a39652 Merge pull request #366 from LGFae/update_flake_lock_action
+  * 46b0b00 flake.lock: Update
+  * ddb0d5d Merge pull request #360 from iynaix/main
+  * 45ce14c fix reading image from stdin
+  * 2408c0b Merge pull request #358 from mstoeckl/fix-wayl-sock
+  * 4562185 Merge pull request #359 from LGFae/update_flake_lock_action
+  * 138f11a flake.lock: Update
+  * 587ecdb Fix connecting to Wayland via WAYLAND_SOCKET
+  * 886ce3e Merge pull request #352 from LGFae/nuke-multithreading
+  * 810960d FractionalScaleManager and PollTime structs
+  * 0ae168e small refactors
+  * 3c148ff stop animations when output disconnects
+  * a74759d Arc -> Rc; Mutex -> RefCell
+  * 1a377a7 finish up first implementation
+  * 62557c4 step 1: structs for trantition's internal state
+  * 81ae449 fix autocompletion with swww img `file`
+  * 8d347f6 debug assertion on ipc sending shm fd wildly wrong
+  * 227f83e fix debug assertion of ipc Codes shm fds
+  * 4851c9b fix socket naming
+  * 3eb6870 Merge pull request #327 from LGFae/better-socket-location-defaults
+  * 596aa0a update dependencies
+  * 6de63a6 fix documentation indentation
+  * 424172d better defaults for when we can't read env vars
+  * b4117e2 Merge pull request #340 from cplir-c/cplir-c-randomize-multi
+  * bfd5d00 Merge pull request #349 from LGFae/update_flake_lock_action
+  * 8c3798c flake.lock: Update
+  * e6a259d Move `break 2` else clause to inside the "no image" check so it doesn't run every time
+  * 34d7aff Comment swww_randomize_multi.sh and normalize
+  * deaf4ac add example_scripts/swww_randomize_multi.sh
+  * 2da1f57 Merge pull request #339 from LGFae/revert-333-main
+  * 000f0d1 Revert "Refactor IPC handling in both client and daemon"
+  * 6fc1655 Merge pull request #338 from LGFae/update_flake_lock_action
+  * b44f171 flake.lock: Update
+  * 51f8637 Merge pull request #333 from rkuklik/main
+  * 0aafb81 Merge pull request #334 from Not-Glunk/swww-fix-typos
+  * bf7e30c Fix typos
+  * db0bf1b fix(daemon): rt dir creation
+  * b99825e refactor(client): consolidate IPC logic
+  * 0b5ee01 fix(daemon): unused imports
+  * 3ffb6a3 refactor(daemon): move init more to relevant structs
+  * 678b48c refactor(daemon): extract `Daemon` into separate module
+  * 90e205e Merge pull request #331 from rkuklik/main
+  * 74f5d59 refactor(mmap): minor fonction movement
+  * f666f37 refactor(mmap): unify `Mapped'thing'` with generic bool
+  * e8ddf48 refactor(mmap): extract into top level module
+  * b28f3bf refactor(ipc): rework messaging format v1
+  * 64bd080 refactor(ipc): replace old methods with new
+  * 089ab9e refactor(socket): introduce new `IpcSocket` type
+  * 6d49d25 refactor(ipc): get rid of unused `Answer::Err`
+  * 54eeac1 fix: resolver should be set to "2" in top level manifest
+  * 1bb137b Merge pull request #330 from rkuklik/main
+  * 18cee57 fix(script): update singe file on version change
+  * b901f9b fix(ci): nix build version extraction
+  * a2252dc fix(ci): `rust-version` detection and formatting
+  * 0f1fdfc refactor(naming): rename utils to common
+  * 55d35fb refactor(workspace): separate project into 3 folders
+  * 57f5337 fix protocol error when destroying Wallpaper
+  * 316fa39 Merge pull request #230 from WhyNotHugo/main
+  * c8a1981 Drop 'init` command
+  * ceb6306 Merge pull request #195 from flick0/colour
+  * f751621 Merge pull request #324 from LGFae/update_flake_lock_action
+  * 0e240bc flake.lock: Update
+  * 319b7fb Merge pull request #323 from LGFae/trim-dev-dependencies
+  * d1819bc trim dependencies: criterion features and fastrand
+  * e57b9b4 Merge pull request #322 from ettancos/main
+  * 2cf04e3 daemon: guard against unnecessary blocking read if there is no payload
+  * e6b5b46 fix conflicts
+  * ed05d9f Merge branch 'main' into colour
+  * c47ba76 workaround for not using Option<image::RgbImage>
+  * c1ecdb0 Merge pull request #319 from JohnRTitor/add-workflows
+  * 2e59e4c Merge pull request #318 from LGFae/update_flake_lock_action
+  * 95771f1 workflows: add CI nix-tests workflow
+  * 6a8a9ad workflows: update-flake-lock should now run monthly
+  * 6feef5f pick a file starting with 0x if exists before using it as color
+  * ae81c71 add comment for Color
+  * 1b314ba nuke `spin_sleep` dependency
+  * 3b27041 do not use `image`'s default features
+  * 4c564a6 flake.lock: Update
+  * ebbbe01 update fast_image_resize to version 4.0.0
+  * 8533744 Merge pull request #316 from LGFae/unmap-when-idle
+  * 5e346c5 Merge pull request #315 from LGFae/custom-wayland-backend
+  * c616819 update libc
+  * 9a01264 Merge pull request #313 from kovidgoyal/patch-1
+  * 4b81a8a Add kitty as an alternative
+  * 12f0957 Merge pull request #312 from LGFae/update_flake_lock_action
+  * 9febc77 flake.lock: Update
+  * 6ed6929 document `BumpPool` better
+  * 17f7f93 unmap shared memory when idle
+  * 9e52ffe wait for animation threads on normal exit
+  * 9247476 ensure buffers are destroyed before the shm_pool
+  * 0a2ff0e better error handling
+  * f07a9fc send all draw-related requests in one single msg
+  * 05efb9f stop animations at exit
+  * f296cb8 remember to notify systemd
+  * 7beae8c fix animation timings
+  * fb8f6fe improve ObjectManager to not use the BinaryHeap
+  * 9c1faa1 document our custom wayland implementation
+  * 415934f manual wayland implementation for swww-daemon
+  * d458041 bump master version to force rebuilding the cache
+  * e323739 Merge pull request #305 from LGFae/zero-copy-serialization
+  * a15025d fix rustix features and put utils in workspace
+  * 023392e increase MSRV to 1.75.0
+  * ee86ade off by one error when caching animation frames
+  * c05550e refactor ipc into multiple modules
+  * 215ba1d serialize directly onto mmaped file
+  * 160a812 mmap file when reading cache
+  * 7c0098f mmap only parts of the shm we care about
+  * e9ab663 do not copy over images and animations
+  * 90e9553 fix wrong inversion in y axis during transitions
+  * bd86710 Merge pull request #309 from LGFae/update_flake_lock_action
+  * 7a459b1 flake.lock: Update
+  * 9f7ceb5 Merge pull request #306 from JohnRTitor/add-flake
+  * 11d1ebf Merge pull request #308 from JaKooLit/main
+  * 113eb96 replaced deprecated swww init commands with swww-daemon
+  * 302e873 README: add instructions for NixOS users
+  * 5054982 workflows: add update-flake-lock workflow that will run weekly
+  * c41d7cf Nix: allow building swww from the source directly
+  * e479739 fix off by one error when receiving image request
+  * f6a59e9 unwrap on thread::Builder::spawn
+  * 20c23c1 nuke rayon from `swww-daemon`
+  * 9733f3e Merge pull request #302 from LGFae/faster-wave
+  * b4b63f4 refactor transitions common byte changing code
+  * aaf827f faster wave transition
+  * a0727c4 faster wipe transition
+  * c944bab Merge pull request #301 from LGFae/fix-output-transforms
+  * e525f41 fix output transforms
+  * f31c591 faster grow and outer transitions
+  * 45d63b6 fix `clear` not flushing the wayland fd
+  * d747932 faster simple and fade transitions
+  * 6bb33f4 remove allow-git for bitcode
+  * 2b4adeb nuke simplelog and use a custom log implementation
+  * fb34129 Merge pull request #299 from LGFae/manual-serializer
+  * 82def7a minor refactors
+  * 07e8a73 use just one request for animated images
+  * e251de3 fix loading cached animation frames
+  * b35d69b return std::io::Result for the cache mod functions
+  * b53492e refactor out common socket code
+  * b48ad7e remove unsafe from deserializer
+  * 91b05e0 move all memory map functions into utils/ipc
+  * 5cd2646 delete extra prints
+  * 42d5eff only truncate the shared mem file when necessary
+  * c267046 do not copy to intermediate buffer
+  * 5af7f11 use shared memory for large transfers
+  * 6896467 use rustix sockets instead of std
+  * ee1772b manually serialize answers
+  * 1601cde manually serialize requests
+  * ad88953 Merge pull request #298 from LGFae/remove-codecoverage-from-ci
+  * 06bf259 remove llvm-cov from CI
+  * 3ee69e3 v0.9.5
+  * 699d16d flush the wayland_fd correctly from animations
+  * 8fddd47 update TODO
+  * 1288672 specialized function for `none` transition type
+  * 13c0e76 Merge pull request #296 from LGFae/fix-initial-black-screen
+  * 9caa6df Merge pull request #297 from hkupty/remove-unused
+  * caf1f88 refactor: Remove unused mutable buffer
+  * 776fa46 fix initial black screen due to late configuration
+  * d96705d don't use event_fd to wake up the main thread
+  * cfd9cb8 remove sleep during cache loading
+  * 89db028 collapse else if into single line
+  * 1a5df2f README.md - explicit warning about gnome
+  * 453fa14 Merge pull request #292 from AhJi26/fix-vertical-monitor
+  * 40728d8 fix switching width and height
+  * 70e63d7 use output name advertised by wl_registry as id
+  * f9a920f process output transforms properly
+  * 8beb6c1 fix fractional scale rounding calculation
+  * dae79fe fix wallpaper never setting configured to 'true'
+  * 2b4a436 Merge pull request #286 from lucasreis1/no_cache
+  * dab8174 fix typo and update documentation
+  * b6fc649 Add --no-cache option to swww-daemon
+  * 4bcb979 v0.9.4
+  * cdaf424 less casting between types
+  * 43d1227 Merge pull request #282 from LGFae/fractional-scaling
+  * 6bece86 implement fractional scaling
+  * 2911e23 merge BumpPool and RawPool; remove MmapMut2 dep
+  * 132bde3 v0.9.3
+  * df8b069 Merge pull request #280 from LGFae/fix-output-scaling
+  * 42adbe9 fix output scaling
+  * a27aeff delete proc traversal code from client
+  * 6f1f523 do not set nonblocking mode for socket
+  * 2ce35b8 Merge pull request #277 from LGFae/better-ipc-structs
+  * 2d05079 create ImageRequest and AnimationRequest structs
+  * aef2876 0.9.2
+  * bddd89f update documentation regarding sockets and `init`
+  * 01540d7 Merge pull request #273 from Fuyukai/nested-wayland
+  * cfc676c Try pinging the daemon instead of inspecting /proc.
+  * 560bfdf Fix over-eager errors.
+  * ac4806a Fix silly PathBuf recreation.
+  * 64f595f Adjust instance checking to work with separate sockets.
+  * 4008cc2 Bind to a separate socket per-display.
+  * 3a3596c typo when setting output's description
+  * dadee3d Merge pull request #268 from LGFae/transitions-performance
+  * a9653df fix transitions performance
+  * 22dceb1 Merge pull request #266 from LGFae/nuke-sctk
+  * c77cdff add SIGHUP to list of signals we catch
+  * 363fb76 update TODO
+  * a5ba2fb reimplement the cache and error on unknown events
+  * cadc2fe fix initialization
+  * c35a818 delete sctk dependency
+  * 4c99503 Implement layer shell manually
+  * a9b2a09 implement WlOutput manually
+  * cedc630 implement WlRegistry
+  * 8eeb7bf implement wl_shm
+  * 8d69f74 delete CompositorState import
+  * 341c31a implement delegate_compositor manually
+  * 8a7a00a Merge pull request #265 from LGFae/sigaction-on-freebsd
+  * 432b713 Merge pull request #267 from LGFae/simple-transition-performance
+  * 33500c4 do not parallelize the simple transition
+  * f67e9a2 fix sigaction on systems with different libc
+  * 7d02c39 Merge pull request #258 from LGFae/rustix
+  * 4c88449 use rustix instead of nix
+  * eeb4738 Merge pull request #257 from LGFae/bitcode
+  * 4d07b8f add bitcode git url to exceptions in cargo-deny
+  * c5eb27b Merge pull request #250 from LGFae/refactor-img-format
+  * e060dd4 use bitcode instead of rykv
+  * 42f12ff Merge pull request #254 from Calandracas606/fix_build_on_32bit_x86
+  * e0dc01e Fix build on i686 (32bit x86)
+  * cb8795d Merge pull request #252 from LGFae/automatically-delete-old-socket
+  * 820ea90 automatically delete old socket in daemon
+  * 1f403e8 Update README.md
+  * 2f84873 use eventfd instead of pipes to awake the daemon
+  * a21d191 fix resize when image is larger than monitor
+  * 902c212 simplify daemon's transitions
+  * 610aae0 refactor client's image format choice
+  * 815f637 update TODO
+  * dcf0d4e Merge pull request #240 from iynaix/main
+  * 4288739 Increase thread pool stack size of daemon to 512KiB, fixes #239
+  * 06ede52 master version at 0.9.1-master
+  * ad22bbf Version 0.9.1
+  * 9c58d6e master at version 0.9.0-master
+  * f2ea5a7 Version 0.9.0
+  * e016f48 Merge pull request #238 from LGFae/deprecate-swww-init
+  * 8cafdab deprecate swww init
+  * 62b31fc update CHANGELOG.md
+  * 8ebb5a3 Merge pull request #237 from LGFae/animate-stdin
+  * 777c55e Merge pull request #236 from LGFae/fix-licenses
+  * f7ff80a add BSD2 and Apache2.0 with LLVM-exception license
+  * 46a4e96 update MSRV to 1.74.0
+  * bdf9cb0 support animations when piping from stdin
+  * bee601f update dependencies
+  * bae1be9 Merge pull request #235 from LGFae/option-to-force-wayland_shm_format
+  * 50bd078 forward init format option to daemon
+  * eb7dbb8 option to force use of a wayland_shm format
+  * 0516ea0 update master version
+  * a4667d9 Merge pull request #226 from LGFae/use-3channel-format
+  * 24cc0c3 Merge pull request #228 from hsnovel/fix-typo
+  * 078b41a Fixed a typo
+  * 9f9a7fc fix cache yet again
+  * 261b9f1 Merge branch 'main' into colour
+  * 1bc0046 cargo fmt
+  * 55a8570 build image instead of resizing to screen dim
+  * b6b9a2d prevent UB from a malformed BitPack at decompression
+  * 5cd00b2 do not use unsafe for the FORMAT statics
+  * 0aad5f2 specialize transitions for 3channels
+  * d67bb8b Use 3 channel formats when available
+  * 4d64e09 only swap R and B channels when necessary
+  * f77d1e0 Merge pull request #209 from LGFae/new-compression-functions
+  * 112858d document unsafe invariants
+  * e2483f2 compression functions api signal errors better
+  * 1904b2d reuse the buffer when compressing
+  * d23b6f7 use system lz4 library
+  * 617ff27 implement sse variants of compress and decompress
+  * b84a1f2 new compression functions
+  * d174d13 Merge pull request #221 from LGFae/go-back-to-slot-pool
+  * 9fcc9f9 Implement frame callbacks and a new memory pool
+  * 0f8d1ac refactor version.sh
+  * 913c6bd fix out-of-bounds access in decompression
+  * 8f9b980 process clear-cache before sending requests
+  * 47cf607 Merge pull request #225 from musjj/wait-init
+  * a766ed8 rename `Init` request/answer to `Ping`
+  * d0e7a0d wait for daemon initialization before any requests
+  * 5019028 wait for daemon initialization before certain requests
+  * b6003b8 Merge pull request #223 from musjj/restore-cache
+  * 9b8f2c5 add restore command
+  * 590aed2 Merge pull request #215 from LGFae/fix-zombie-process
+  * 9b01a04 wait for child swww process, to prevent zombies
+  * a3dc064 fix randomize script trying to use directories as images
+  * b843150 Merge pull request #212 from LGFae/fix-overlapping-gif-animations
+  * 764c27d fix gif animations overlapping when sending two gifs
+  * 6202bff Merge pull request #211 from LGFae/always-center-cropped-images
+  * bb0e036 center cropped images larger than the monitor
+  * 7d9579f Merge pull request #210 from LGFae/make-fps-an-u16
+  * bf8d1e7 make an fps an u16
+  * 58ce329 Merge pull request #192 from MichaelOultram/github-actions
+  * 4b8aeb6 Format code with cargo fmt
+  * 24b3181 CI: print version of rustfmt and clippy
+  * 632c478 CI: ensure rustfmt + clippy components are up to date
+  * 89ae20c Update ahash to 0.7.8
+  * fadc0c0 CI: initial github actions
+  * 1eecca7 remove all cache contents on clean-cache
+  * 6df8df0 Merge pull request #207 from LGFae/support-for-apng
+  * d162c48 support animated pngs
+  * 0105341 Merge pull request #206 from LGFae/fix-busyloop-on-waiting-wlbuffer-release
+  * 60dc938 typo in comment
+  * 6fd4661 fix busyloop while waiting for WlBuffers to be released
+  * 10987c3 create a dummy workflow file
+  * 0b07d27 Merge pull request #205 from LGFae/fix-single-image-webp-and-gif
+  * 9b86f05 fix single image webp and gif
+  * 01e9cf8 Merge pull request #203 from Akida31/fix_underscore_lock
+  * 3d001fa fix let_underscore_lock lint
+  * ad3d406 my stupid ass broke the build because of versioning
+  * a699349 Update version to 0.8.2-master
+  * a4c5bdb explicit versions for all dependencies
+  * d60139d Version 0.8.2
+  * 88c6477 add doc
+  * f5878de clippy && fmt
+  * 5feedba fix some cache stuff
+  * 085c82e allow giving hex values to img
+  * 0908f36 update daemon dependencies
+  * 287db7e implement clear-cache command
+  * 3fae374 Merge branch 'main' of github.com:Horus645/swww
+  * d5f2f76 bump dependencies and fix versioning
+  * e12ae9e Update README.md - add final photo source
+  * f9be679 Merge pull request #189 from MichaelOultram/animated-webp
+  * 2ae9eb6 Animated WebP Support + Memory Optimisations
+  * 4150198 Merge pull request #187 from MichaelOultram/vec-capacity
+  * b82af85 image_pad: fix capacity of Vec
+  * 52205ca README.md - formatting
+  * 0d092f2 Document wallpapers used in README.md
+  * 5db225c bump dependencies
+  * 7946e63 Merge pull request #155 from Horus645/fix-transition-frame-timings
+  * 344ffda Merge pull request #163 from mausworks/fix-bad-docs
+  * a8acabe Merge pull request #179 from doannc2212/main
+  * 51feefc Merge pull request #177 from Diaoul/patch-1
+  * 3418a24 fix doc spell
+  * b8bb7b4 docs: fix TRANSITION_TYPE in README
+  * 012a524 fix rayon thread having too little stack
+  * 053196e Merge pull request #167 from Akida31/add-msrv
+  * ab052dd Add msrv to Cargo.toml
+  * 8362827 fix: wrong env variable name in documentation
+  * fd61d35 fix timings for transition frame
+  * 517fbeb Merge pull request #143 from ynejmi/main
+  * 970c506 Merge pull request #150 from Horus645/wait-on-init
+  * 45014b7 Merge pull request #152 from m4rch3n1ng/fix-build-script
+  * eaa126c fix build script
+  * a0474af wait for daemon to config outputs on `swww init`
+  * 9edfbec Merge pull request #147 from Horus645/no-cache-flag
+  * 0eeddc7 implement --no-cache flag for init
+  * 9098905 more accurate fit implementation
+  * b56a314 Merge pull request #141 from micielski/main
+  * d5d42ea Update MSRV in README.md
+  * b7cde38 version 0.8.1
+  * 48ef2ef fix sending images in quick succession
+  * 481fefc remember to set exclusive zone to -1
+  * 7ef0a2e Merge pull request #139 from Horus645/nuke-gif-pipeline
+  * 2b2474e remove condvar from wallpaper
+  * 461e813 overhaul transition waiting mechanism
+  * a43ae16 nuke gif processing pipeline
+  * aab50c5 Merge pull request #137 from Horus645/load-cache-on-init
+  * 013d4ef load cache on `swww init`
+  * 3471a74 add a `none` transition
+  * 74b0cf8 fix clear exiting daemon
+  * 11129a3 Version 0.8.0
+  * a99be7f update CHANGELOG and man-pages
+  * e848e5b Merge pull request #123 from Horus645/sctk-0.17
+  * 9713f74 fix rebase error
+  * 0187e34 spell check example scripts
+  * 9166e2c fix fade transition
+  * c524f19 fix failing test
+  * b0e5798 update changelog and todo
+  * d597132 stop using signals hack to wake main thread
+  * f76f2fd cache only tries loading gifs from correct version
+  * d4551fb fix deadlock when resizing monitor
+  * 4f39c1a put Arc<SlotPool> in wallpaper struct
+  * 004ba59 name threads for better errors
+  * ec0de31 Rework syncing animations between monitors
+  * a8a1b78 bump dependencies - new rust version
+  * bfbabb1 reimplement cache with a different strategy
+  * f8cd291 fix scaling images
+  * 8ab8a7d fix deadlock on `clear` with on-going animation
+  * 90b618c update documentation
+  * 69babdf reimplement syncing animations
+  * 0d2abe5 fix wrong transmute
+  * 4525a08 rename utils::communication -> utils::ipc
+  * 43fda23 use Box instead of Vec in all communication types
+  * 691a24b better values for step when falling back to simple
+  * 53858dc fix animation preventing transition to begin
+  * db665cf change serde for rkyv for serialization
+  * 2a68789 compress animation frames in a pipeline
+  * 2a88714 only lock what is necessary
+  * 4053c5c Rename daemon's modules and structs for clarity
+  * 4da148a Sending RGB instead of RGBA images
+  * 1bcf08e nuke cache
+  * 1b43822 syncronizing with condvars
+  * f478599 fix canvas pool not being ready
+  * 80486b1 fix crash when changing scale factor
+  * 7d0d0bd rename modules and fix cache import
+  * 67518a5 animations working
+  * 1bb9bf6 transitions working
+  * 266b360 begin implementation - working for static images
+  * 4aef7e3 Merge pull request #125 from SignalWalker/main
+  * 1387e8b Merge pull request #94 from flick0/bezier_fade
+  * 0d6d532 Merge pull request #129 from flick0/invert_y
+  * c95ffb3 add to docs
+  * 5c3c858 add doc for --invert-y
+  * 69cd95d fix invert_y for percentage values
+  * 92fe6ef impl invert_y flag
+  * 938d112 Merge pull request #128 from RiedleroD/patch-1
+  * 5c7d93e fix spelling
+  * 67fd905 feat: add option to resize image to fit screen instead of cropping
+  * 08122fa fix: don't skew images padded from odd widths
+  * 1112c2d prepare 0.7.3 release
+  * 96061f7 Merge pull request #116 from b3nj5m1n/sd_notify
+  * e0ada26 Log error instead of returning
+  * 1711140 Send status update to systemd when daemon has initialized
+  * 8e18928 Merge pull request #114 from potatoattack/main
+  * d98816f split outputs with ,
+  * bd70807 bump dependencies
+  * fa0ff81 Merge pull request #112 from Horus645/animate-after-transition-finish
+  * 3ef75ae start animation right after finishing transition
+  * ac16a4c Merge pull request #110 from Horus645/utils_benchmarks
+  * c4b818b better spread of different bytes
+  * 68080ff create benchmarks for compression functions
+  * a122388 update dependencies
+  * 2fc1798 Merge pull request #109 from Horus645/stop-gag-zip_eq-panic
+  * 745518b stop-gag zip_eq panic on slices of unequal size
+  * 6739c9c check if cache dir is actually a dir
+  * cc1f9af fix
+  * 40a0c49 add doc
+  * e73483b readd `simple` and rename to `fade`
+  * ad6439d Merge pull request #93 from Horus645/animated-gif-hangs
+  * 24d6518 cargo fmt && cargo clippy
+  * 2cb763a re add fallback
+  * 3775515 impl beziers for simple
+  * 99a64a4 use std::thread::scope for gif frames
+  * b00300a wait until all gif's frames are ready
+  * 3325ffc Merge branch 'main' of github.com:Horus645/swww
+  * 6cfd7b7 `--transition-step` with `simple` saner default
+  * 6086df4 Merge pull request #88 from max-ishere/main
+  * 5a5bbea fix: Missing `/` when using `$HOME/.cache/swww`
+  * 9df72ca prepare 0.7.2 release
+  * f9967f6 update dependencies
+  * c1a4a05 man-pages (#84)
+  * 77d5b9c Sync animations (#82)
+  * a6b9ee8 update changelog
+  * b786874 ignore integration_tests by default
+  * 12b80a5 cache the images to reload them on startup (#80)
+  * 25f0e8e prepare 0.7.1 release
+  * bec2a88 update dependencies
+  * 3925922 cargo clippy and style
+  * c03c732 update CHANGELOG.md
+  * 14fa436 fix integration_tests calling incorrect daemon bin
+  * e483d29 add ability to use screen cords instead of percentages in `--transition-pos` (#71)
+  * 5a45f29 typo: pipw -> pipe
+  * 370498c Merge pull request #79 from Horus645/fix-read-img-from-stdin
+  * 90e898a fix reading image from stdin (don't cannonicalize)
+  * ad3d260 document `--no_resize` and `--fill_color` args
+  * d0cdd38 Merge pull request #77 from Horus645/fix-query
+  * c114b4c fix `swww` query not returning correct image
+  * d2f3570 change the version in Cargo.toml
+  * 63075f3 update changelog
+  * 5a3dbfa nuke `fix_zsh_completion.sh`
+  * b67657c bump dependencies
+  * 76b001b Merge pull request #75 from thedmm/main
+  * 3d86779 inline printed variables where possible
+  * 71aedc5 Merge pull request #76 from Horus645/detect-format-by-mime
+  * 12bca20 use `with_guessed_format` to detect image type
+  * 13e3e16 [utils/comp_decomp] handle scale factor reduction
+  * ac26976 new transition: wave (#66)
+  * a3c5d1e [client] use scaling when sending images
+  * a5abb25 Merge pull request #69 from Horus645/fix-panic-on-gif-with-identical-frames
+  * a007b01 fix panic on gif with identical frames
+  * 36ab205 Merge pull request #64 from Horus645/no-resize-option
+  * 5c08924 implement --no-resize for animated gifs
+  * 8923524 implement --no-resize option
+  * 86b674e fix insane problem introduced by 29e2683
+  * ac30c1f Merge pull request #62 from Horus645/read-img-from-stdin
+  * 42d1e5e change default transition step value
+  * 6757f21 change default transition step value
+  * 8d1e1b4 implement reading image from stdin
+  * 29e2683 don't try to animate inanimate gifs
+  * 6f57216 Readme: specify both binaries needed to install
+  * 358eaa2 Separate client and daemon (#57)
+  * 27b048d Make it clear our dependency with wlroots
+  * 215744d bump dependencies
+  * 798f30d add new transition previews (#53)
+  * fc998b3 Merge pull request #54 from aouerfelli/patch-1
+  * b6d86c5 Update README.md
+  * 21eddb2 prepare for new version release
+  * 762e6a1 Bump dependencies; warn SWWW_TRANSITION_SPEED
+  * 97e081d update Changelog, Readme and Todo
+  * 0beef5d Merge pull request #50 from flick0/bezier
+  * 6bc20eb outer,grow step changes and run cargo fmt
+  * 32a71e9 alias left|right|etc.. and improve wipe logic
+  * 9037e9e ensure full screen fill if transition takes long
+  * 79bf064 add check for 0,0,0,0 bezier
+  * 368ad69 small changes
+  * acd9da8 cargo cliipy, and added docs
+  * 4b779a7 fix wipe transition to wrk with bezier
+  * e0a464b transition duration
+  * da489a8 cargo clippy
+  * 082a63e use floats for math
+  * 5c5228c bezier cli
+  * a788ff7 merge branch
+  * 6aa41b8 Merge branch 'bezier' of flick0/swww into bezier
+  * 21bf5b3 beziers
+  * 2dd952f several minor changes
+  * bc928c8 Merge pull request #44 from flick0/grow
+  * 97e1467 cargo clippy
+  * 769f1c0 more changes
+  * 4f4c6ad some changes
+  * c04cd39 Merge branch 'Horus645:main' into grow
+  * a31ca98 Merge pull request #46 from BeanProto/main
+  * ff797ae Fix a typo at line 133
+  * 35b905f run cargo fmt
+  * 42ce960 grow transition and --transition-pos flag
+  * d45ab41 Update CHANGELOG - prepare release
+  * 59a6463 Merge pull request #38 from flick0/wipe
+  * 71245a4 Merge pull request #43 from Horus645/fix-unplugging-monitor
+  * 05a4d2f add breaking change to changelog
+  * 235aa3a change comments
+  * 601df3b update test to new query answer
+  * 31bbd85 fix new problems with hidp
+  * 31dec6a better debug msg
+  * 416ea68 swww doesn't halt when pluging a new monitor
+  * 7f15f33 run cargo fmt
+  * ed886e0 wipe transition
+  * 09bc431 bump dependencies (clap went from 3.x to 4.x)
+  * 62f5827 Merge pull request #34 from WhyNotHugo/render-cursor
+  * d92c815 Render the cursor on an empty desktop
+  * 7ec45eb Merge pull request #29 from WhyNotHugo/minor-tweaks
+  * 1505813 Merge pull request #35 from thebenperson/typo-fix
+  * 59d7096 Fixed a typo
+  * 1d23395 Merge pull request #33 from WhyNotHugo/unecessary-protocol
+  * 67de30f This protocol is not actually required / used
+  * 0478b9d Use safer type conversion
+  * 07fd302 docs: Put type in backticks
+  * 0fea579 Formatting
+  * 1750164 Simplify closure that just calls a function
+  * 870b9d2 Avoid copying data unnecessarily
+  * 5388275 Remove unnecessary Option
+  * 2089bbc update changelog and prepare new version
+  * 4596c81 Merge pull request #23 from Horus645/fix-dpi-scaling
+  * cb58b84 update changelog
+  * 88f8acd Merge pull request #24 from Horus645/check-if-daemon-is-running
+  * 0960ff1 Note scale changing problem in TODO
+  * 6c9172a configure the surface to the correct scale
+  * 8120053 fix dpi scaling
+  * 6a8a29d look at /proc to see if daemon is really running
+  * fc502dd prepare v0.4.2
+  * ba20d80 Merge pull request #21 from Horus645/deadlock-when-sending-imgs-in-quick-succession
+  * 60cbb46 Fix deadlock when sending images quickly
+  * dd0e947 Correct regression with init && img.
+  * f8a31f7 Merge branch 'main' of github.com:Horus645/swww
+  * 6d896fd improve debug logging
+  * 2ccebee Merge pull request #19 from Horus645/better-error-msg-when-daemon-is-not-running
+  * 6a0961e better error msg when socket is not found
+  * f1e1155 Build while updating version, to update Cargo.lock
+  * 6e48b45 Script to help versioning and bump minor version
+  * 432123a Merge pull request #17 from Horus645/resize-image-by-zooming
+  * 36a4cb6 Don't stretch the image, zoom into it instead
+  * 2bb8562 Add troubleshooting to README (reducing cpu usage)
+  * 433b137 Bump dependencies and prepare for v0.4.0 release
+  * 6a5124d Handle errors in image resizing properly
+  * 474f40c README: typos
+  * 910b525 Merge pull request #14 from Horus645/increase-answer-timeout
+  * 036e9ea Increase timeout for waiting the daemon's answer
+  * dcb9fed Update README.md with new gif links
+  * 28a0325 README: add transition examples
+  * e4f4b24 Dependency bump
+  * a36c09c update CHANGELOG, README and TODO
+  * 5fed107 lock dependencies and bump
+  * f7408a8 refactor loop code and handle error properly
+  * 06a95d9 refactor socket handling
+  * f15f3bb Merge pull request #10 from Horus645/new-transitions
+  * 4755ee1 create any transition, speed option and update doc
+  * 26363e9 refactor transition code
+  * 0f31564 Implement center, outer and random transitions
+  * a2ed015 implement transitions right, top and bottom
+  * e48e98c execute moves transition
+  * 8bf37d4 Implement the plumbing for multiple transitions
+  * 252bae1 Merge branch 'main' into new-transitions
+  * 386a11e bump crate version in Cargo.toml
+  * c041c04 fix rebase errors
+  * f48a220 special transition going left to right
+  * 08394bb bump crate version in Cargo.toml
+  * 844f0c4 Merge pull request #9 from Horus645/fast-image-resize
+  * d1c5f51 README.md: typo
+  * 4bff9dc accept new filter types from command line
+  * 04697c0 using fast-image-resize crate
+  * c58e2c2 Fix read out of bounds in decompression
+  * d00c3d7 Changed pack_bytes to accept a function with array
+  * 1954f6c Using img buffer openned in split on animatior
+  * 1eaa48d Merge branch 'main' of github.com:Horus645/swww
+  * cb1fcb4 README was pointing to river's package. Woops
+  * 0d3b666 use Box::from instead of creating a vec first
+  * 2fe8646 removed `init -i` and `init -c`
+  * c475f51 release v0.3.0
+  * 43e7014 small refactor of img_resize
+  * ece6a39 add tests for from_hex function
+  * 81e019b Remove Hex crate dependency
+  * c70080d Merge pull request #8 from Horus645/remove-bytemuck-and-itertools
+  * 272dc6e move stuff in utils into comp_decomp
+  * ade38f7 Only one true pack_bytes function
+  * 38a230e Small refactor on gif animation
+  * 3588c76 better documentation for new compression func
+  * 7f13969 Big refactor of animaitons using custom functions
+  * a410234 Removed bytemuck and itertools crates
+  * 18e4053 removed superfluous "derive(Debug)"
+  * 1c1e1a2 fix_zsh_completion: remove avif, dds and exr
+  * 2bf0bf7 Dependencies bump
+  * 0111836 Update CHANGELOG with recent changes
+  * 57a40c5 Spawn threads with name and custom stack size
+  * a79bb7e Changed lz4 compression level to 9
+  * 70cab7a Fix anim not stopping since fr_recv wasn't dropped
+  * 916cedd Stop animations only if img sent could be openned
+  * 8dab0a4 README: add aur package
+  * f74db7c Merge pull request #6 from Horus645/dependencies-cleanup
+  * 495ba5e Document supported img formats and lz4 dependency
+  * 4e0cc0e Excluded some image formats from the image crate
+  * f876d56 old_img is now a box
+  * d21c62a Better compression function
+  * ee73ea7 Disabled some unnecessary features
+  * 5fd5b90 Updating 'now' right after sending msg
+  * d5113cf Faster transition code
+  * f5fa165 Merge pull request #5 from Horus645/better-cache-setup
+  * f002aa3 Transition skipping the lz4 compression
+  * e34454f Merge branch 'main' into better-cache-setup
+  * 70e4b01 Fixed transition fps not accounting time elaped
+  * 2b6031d calculate timeout after readying the frame
+  * c2cc02a Doing half the decompression when readying
+  * 6f6a745 Storing expected_buf_size only once
+  * 161951f forgot to turn cached frames to box
+  * 5d4ea13 Using boxes instead of fec when appropriate
+  * 5416633 Moving vec into unpack_bytes
+  * 997be2c Shrinking bit_pack for less memory usage
+  * 872e138 Fixed processor sending superfluous msgs on drop
+  * 6be620f Don't stip debug symbols from bench profile
+  * e11a89a Formatting and organizing
+  * a5c4b38 Changed option strip from 'symbols' to true
+  * 7b08a01 Using handles to prove when threads finish
+  * 8d1271f Transition doesn't spawn a new thread
+  * 0e78a75 Bumped dependencies
+  * 40c360f Comp and decomp are much faster, and compress more
+  * 9bb2b05 Merge branch 'main' of github.com:Horus645/swww
+  * d94b3ac Using itertools for a slightly faster compression
+  * 7375bd7 Version bumps
+  * b8193b0 README: links, links are the death of me
+  * 02c8b09 Updated changelog and readme
+  * b51c849 Merge pull request #3 from Horus645/animation-overhaul
+  * 8dc48f5 Moving and renaming things
+  * 10b3dca Dropping unused things before looping
+  * bd45458 Solved extra memory use on superfluous clone
+  * 93d4590 Implemented animation logic with pipeline
+  * 4018a86 Created basic functions for overhaul
+  * 69caa2c Merge pull request #2 from Horus645/bytemuck-for-compression
+  * 9263608 Using bytemuck for compression
+  * cfe1230 Removed superfluous features for clap build-depen
+  * d04a30c Bumped rust edition to 2021
+  * fd7f904 Changed example script not use deprecated options
+  * 38881f8 Now swww is in version 0.2.0
+  * c95ade1 Removed init -i and -c caveat
+  * ef154ff Deprecating init -i and -c
+  * f038aff Changed Answer::receive to not use a mut ref
+  * 04c8c27 Updated TODO
+  * 3286bf8 Using unsafe to speed up decompression
+  * 16fd8fc Dependency bump
+  * 3ff766e Update README.md
+  * a2528d4 Merge pull request #1 from Horus645/example-scripts
+  * 1cf789d Meantioning the examples in top-level README
+  * 17b9b4e Fixed formatting on init script
+  * 6c4bc92 Added README for the example scripts
+  * 4c921f8 Created randomize example script
+  * a780a55 Added a note at the end of scheduler example
+  * 1d9250a Created init and scheduler example scripts
+  * 32e0f19 Dependencies version bump
+  * 4fdb178 Add alternatives to README.md
+  * 6a81ce4 Fixed typo in readme
+  * 0e126d4 Updated README
+  * 12dbdb4 Activated strip option in cargo
+  * b723887 Bumped clap version
+  * 33ad898 Processor - added comment for ProcessorRequest
+  * c517f6f Bumped up dependencies
+  * 56ec133 Formatted README
+  * a76aa88 Updated README
+  * 1f74646 Able to set transition step and fps through envvar
+  * 6c6672c Moved the content of CONTRIBUTING to README
+  * 1b37562 README: added acknowlegdments
+  * 144e2cc Merge branch 'main' of github.com:Horus645/swww
+  * 095a317 Removed outdated comment in comp_decomp
+  * 8b57c6b Update README.md
+  * abeae20 Update CONTRIBUTING.md
+  * 1780cc6 Update README.md
+  * 911ed49 README - fixed typo
+  * 7f4d87e CONTRIBUTING - fixed typo
+  * 145d6d2 Added contributing
+  * 8ab8996 README - better explanation of ram usage
+  * 21d1d6a Changed project name: fswww -> swww
+  * dbd4d88 Updated TODO
+  * 7a3fcd0 No longer accepting fps of 0
+  * 5af356c Updated README
+  * c884638 Processor: separated loop_animation from animate
+  * fbcc5e6 Processor - created animation and transition structs
+  * a02c3e1 Changed Answer enums to contain values directly
+  * d83e338 BgInfo is now a separate pub struct
+  * edcd883 Implemented option to control the transition fps
+  * b1ccd8f complete_transition refactor returns
+  * faa4277 Eliminated dups in send_frame matches
+  * 0de148d Better formatting of code when sending frame
+  * ade1583 Getting gif frames before sending them to animation
+  * 95601a2 Renamed animation_stoppers to anim_stoppers
+  * 8166a63 Renamed processor to proc
+  * d2b340f Updated TODO
+  * f83be8c Processor - transition no longer being optmized away
+  * 1efa536 Processor - assigning to ani directly
+  * 28825e2 Stopping animation with channels instead of arcs
+  * f5a33b3 Cleaner function for clear_outputs
+  * 249e5c1 Prevent deadlocks in a saner way
+  * d60d237 Struct ProcessorGroups no longer exists
+  * 9d0449f Changed processor interface to accept ProcessorRequest
+  * bae6636 Making the processing groups in daemon
+  * 5fb52a6 Processor - looping through frames with while
+  * b0592d2 Processor - transition with iterators instead of indexing
+  * cc310c9 Processor - removed superfluous clone on send
+  * 76b6b96 Daemon - changed more loops for iterators
+  * 5023f15 Processor - changed more loops for iterators
+  * 44b1181 Processor - changed for loops for iterators
+  * b3ef1d4 Daemon - changed drawing forloop for functional iterators
+  * 2b661d0 Changed unit tests for compression to use pub fn
+  * 0a42f82 Using a wrapper struct for comp and decomp
+  * 1bcd327 TODO -> update README
+  * 9c64c7f Bumped up dependency versions
+  * 63a664b Incresed timeout on debug mode to 15 secs
+  * 0645716 Fixed typo on Cargo.toml
+  * 90fb0da Ignoring directory created by integration test
+  * f691f16 Renamed cmdline_test to integration_test
+  * 1fbeefb Changed compression tests
+  * 4879677 Renamed run_main_loop to main_loop in daemon
+  * 6da59ff TODO - done the image generation
+  * 1ff7b76 Making test images with the image crate
+  * 0d66656 Todo - removed fix zsh completion
+  * e6d3932 Much better script for fixing zsh completions
+  * d140bd0 Fix zsh completion eliminating superfluous &&
+  * 31f96ed Updated TODO: solved interface problem
+  * ebb68a6 Fixed animations not stopping on clear
+  * bf1a801 Implemented init with options
+  * 7c880c2 Created options for initial color and img
+  * 7d3229a Added TODO improve cli interface
+  * db99802 Moved communication stuff into own module
+  * 34395b8 Removed unused debug for clear
+  * 3091e67 Removed unused debug derives for cli
+  * a2bf90a Removed implementation of display for cli::Format
+  * e96f0ba Specialized struct for sending answer from daemon
+  * ae00e00 Updated README
+  * 9f475b0 handle_event returning more precisely
+  * b5ea135 Better compression and decompression functions
+  * d849da1 Switched lz4_flex for lzzzz
+  * 3c31f0b Update README.md
+  * 2e92093 Saner headers for README
+  * 4fd9f65 Added README
+  * 9d312a3 Preventing 0 transition step
+  * 0dc1828 Remove img storage problem from TODO
+  * 56ad24b Query now gives us the img currently being displayed
+  * ee4b99c Note problem with img in bg struct
+  * 72465d4 Making sure to always send an absolute path
+  * a42d8d6 Eliminated manual serialization code
+  * 33cb00a Using serialization instead of strings for ipc
+  * fd0db45 Abandonned idea of reading image on client
+  * c72d85e Deriving serialization from fswww
+  * 8b6a8a0 Added serde and bincode as dependencies
+  * 9119059 Documented choice for sync_channel with buffer 1
+  * f009fe4 Eliminated superfluous cleanup variable
+  * 2bbeb74 send_frame now tries to send without blocking
+  * 19ce773 Anotated stuff for next major refactor
+  * 31f85cf Registered ideas for serialization in TODO
+  * c56359a Fixed clap and clap_complete versions
+  * d1636b6 Fixed indentation in fix_zsh_completion script
+  * f2a7537 Fixing the zsh autocomplete output
+  * ecc06c1 Treating errors on socket correctly in daemon
+  * 515faa3 Forking child correctly
+  * bae3383 Only trying again when the error is timeout
+  * 59d999e get_socket with custom attempts and wait interval
+  * f27277a Improved documentation of wait_for_response
+  * 0b540de Checking socket 10 times on kill
+  * 72b0e58 Setting socket to blocking mode in client
+  * babc60d Documented when the daemon can't fail
+  * df0f808 Removed superfluous kill() function
+  * 8059afd get_socket with custom attempts
+  * 6972bbe Cleanup always happens at the daemon.
+  * c895bf7 Added a test for clear command
+  * 23e487f Fixed how we pass the transition-step arg
+  * a4e878e Fixed stop animation logic
+  * 6302a81 Signal handling is done
+  * 7cf9f46 Handling signals now
+  * ce3b732 Improved CLI documentation
+  * 7f940b5 Removed use clippy from TODO
+  * 1651aa1 Fixed cargo warning for build script
+  * 9ec6dd9 Changed structopt for clippy 3.0
+  * d29598d Removing socket when fswww closes unexpectedly
+  * 96f723a We need to exit cleanly on sigterm
+  * 19bbbad Moving img into processor
+  * bdcf218 Fixed transition-step argument
+  * 495c7d3 Not printing newline on return message
+  * d7df5c0 Reformatted code according to clippy
+  * 5865a40 Noted that autocompletion is funky
+  * e21d694 Added completions dir
+  * 97a486c Created build script that makes autocompletion sources
+  * d8db778 Moved implementations from cli to main for build script
+  * 5a8369d Fixed transition test
+  * be1a96d Changed PLAN for a TODO file
+  * 2a63f67 Improved documentation
+  * 7eee8eb Implemented transition-step option
+  * 035eb8b Added note that scaling images at runtime increases ram usage
+  * 26ec836 Renamed struct Background to Bg
+  * b4782df use better organized
+  * e649861 Make sure to wait for animators on drop
+  * 63a90b4 Using mutexes instead of channels so we can wait for threads to finish
+  * 97c1334 Sync channel with buffer size 1 to avoid blocking
+  * aac721b Added explanation for abort on panic
+  * 9e2c0b8 Changed channel to sync_channels for callop
+  * ebf0c10 Processor givin back the answer directly
+  * 95b5380 Changed log message for configuration
+  * 5ef8f71 Sending all images from processor in a diff threads
+  * ea497fb Transition is now always forced
+  * 4a29277 Going directly from transition to animation when appropriate
+  * d9f1613 No longer creating a vec from mempoll
+  * f4e0de2 Removed the stream module - twas a flawed idea
+  * f69d0dd Update image crate version
+  * b32cf07 Using rgba on resize and manually changing to bgra
+  * 48c2cbe Documented choice for initialization inside loop
+  * edf85be Dropping stuff before moving into loop_animation
+  * 4095ea7 No longer decompressing onto canvas
+  * 3168688 Creating transition img before going into the loop
+  * f23e630 No longer cloning the transition image
+  * 8033fd6 Changed html for filter type to latest image version
+  * 750c13e Updated no-daemon documentation
+  * a84ab31 Changed loggings from info to debug. Release now logs info
+  * e630a3b Solved the initialization problems
+  * 87be356 Solved some problems, created new ones
+  * 6aa3fa3 Fixed not exiting threads when we should
+  * f21977c Documented clear and mempoll choice
+  * f820a4c Only reconfiguring output when dimensions change
+  * 734d49a Setting transition image alpha to 255 manually
+  * db6ecfd Changed format to xrgb, since we ignore color anyway
+  * a9f413e Added TODO
+  * 98e8e45 Added idea for major refactoring
+  * 7b21e38 Correctly clearing screen during initialization
+  * 4e725ca Logging when clearing output
+  * 91c9e47 Implemented clear subcommand
+  * db56f48 Added hex as dependency
+  * b4875e9 New dependencies versions
+  * 99895e9 Logging when outputs are configured
+  * c5a9f00 More efficient functions
+  * d1957d2 Sleeping before second init to avoid races
+  * 3f89983 Different waiting timeouts for debug and release buidls
+  * e1b5814 Registered problem with stream
+  * b737c86 Only one true way to draw to the surface
+  * 56de429 Only one function to get msg from processor
+  * d19de3d Moving bgs into run_main_loop
+  * b7735a6 Logging current mempoll state
+  * b38a16f Implemented the stream loop
+  * 6c67d93 Removed superfluous modulus division
+  * 3d8971f Refactored send_frame into own function
+  * 3b1b888 Started implemented the loop for streams
+  * b78faa8 Always doing transition, by default
+  * d40f949 Clearing bg with black during configuration
+  * 0788b1b Better casting
+  * b386d32 Simplified getting currect image logic
+  * 23adb5e Shrinking first frame before caching it
+  * dfa2f23 More restricting dependencies
+  * 04d9f13 Stopping on going animations before starting stream
+  * f590dfc Inserting first frame directly in idx 0
+  * 7581699 Updated plan
+  * f5de66d Added log messages for when animations stop
+  * 4daf681 Basic stream with one frame working
+  * 820e0e0 Created streams subcommand
+  * 1741913 Stopping animations when outputs is disconnected
+  * 14dec88 Created no-transition flag for img command
+  * 7f0837d Registered Problem with mem usage
+  * 2500fea Updated PLAN
+  * 635fe61 Removed unneeded comment
+  * b98b94c Processor working with Fswww struct
+  * 31a8fd2 Transforming Filter into image Filter directly
+  * 8aa7bdf Img command now as an independent struct
+  * 9ff2c2a Eliminated request enum, using Fswww enum instead
+  * 6a53985 Create cli file
+  * 4610000 Default-run no longer needed
+  * b32b58b Put everything in a single binary
+  * f5818c0 Created transition effects
+  * acd5174 Put transition before gif animation
+  * 7ba7095 Preparations for transition effect
+  * bc97d2c Changed from automempoll to mempoll
+  * e4ad6f8 Processor accepts optional Vec for old-img
+  * a6baafd Storing current img path in background struct
+  * 34dcf00 Created types ProcessorResult and ProcessorRequest
+  * 579f2d3 Checking if outputs have same dimensions
+  * 98e77ab Refactored build_img_request into own function
+  * bf1f910 Fixed now not waiting when moving into loop_animation
+  * 1077089 Removed nix as dependency
+  * 9c952df Updated PLAN
+  * 1f958bc Using TermLogger directly during release builds
+  * b545dd0 Moving now into loop_animation
+  * 22bb2ac Documented compression and decompression
+  * b253daa animate function doc update
+  * 78c557d Refactored query into own function
+  * 72e19c3 Fixed query test
+  * 1c49dd1 Sending back error on nonexitant monitor
+  * df7c45f Refactored receiving socket msg into own function
+  * 8bee02a Changed msg from __DIE__ to __KILL__
+  * ea0d943 Documented failure handling strategy
+  * 22a0490 Changed DIE for KILL to conform with client cmds
+  * ccd8106 Better documentation for init command
+  * 389786c Updated get_socket documentation
+  * 9f52b7c Updated documentation
+  * b56f219 Initialization waiting FINALLY working
+  * e559bbc Waiting for response properly on init
+  * 27423a9 Never setting timeout, instead trying multiple times
+  * 4821abd Waiting 100 milis instead of having timeout on send
+  * 8850f82 No longer dying on wrong msg format
+  * 9a6afbe Updated plan
+  * 4b9d9e5 No longer printing newline on empty answers from daemon
+  * c3515ee Fixed error during initialization
+  * eda7c3d Fixed and documented tests
+  * 0b040ce Reordered functions
+  * ace604e Implemented Query command
+  * 60b407a Reordered subcommands enum
+  * e19a577 Fixed IPC when killing daemon
+  * 081fffd Using sockets instead of files of IPC
+  * 5858511 Documented compression strategy
+  * 1d6ed58 Using a custom compression scheme
+  * 05bf001 Moved processor into own mod
+  * b021fb9 Animation receiving first scaled frame directly
+  * e2e6e5f handle_img and handle_frame separately
+  * 119deac Always sending uncompressed img from processor
+  * b0319aa Removed superfluous comments
+  * 8869d8b Moving bgs and display into main loop
+  * 9067672 Renamed img_processor to processor
+  * 410384c No longer creating frame sender dynamicaly
+  * d3ad04f Log creation with only one debug_assertions
+  * 6545696 Updated plan for fifo files
+  * 0a2d10c Fixed typos
+  * 0061e6f Added bench profile
+  * 3edc886 Updated plan with long term goals
+  * 923064b Sending the compressed image
+  * 5bc168d Much better memory usage with compressing library
+  * 1f95300 Changed from brotli to miniz_oxide
+  * a7b6119 Added compression crate
+  * 6f333ca Correct logger during release
+  * cf01902 Fixed formating
+  * 15fda17 Fixed segfault using references to globals
+  * fec285d Refactored loop logic outside of main
+  * 116b028 Better help text
+  * c93cd83 Better log messages
+  * 7715042 default run to the client
+  * d976b7b Documented --no-daemon option in relation to loging
+  * 2507f0a Changing loging solution to simplelogs. Logging to file in release mode
+  * 871e675 Improved help mesaage
+  * 8c3102f Separated project in two binaries
+  * 4024e53 Working with chunks
+  * dd28cca Made basic caching logic
+  * 20faa2a Preparing to start caching
+  * 1fbb621 Attempt to desyncronize gif processing
+  * c5bbe8e Factored loop animation into own function
+  * ca06c8b Fixed time calculation
+  * cf16ef6 Separated handle_usr_1 into multiple functions
+  * 889f361 Preparing to finalize calloop
+  * 4f222cb Removed superfluous print
+  * 68a2fcb No longer spawing threads for processor
+  * ff3e349 No longer collecting gif in a vector
+  * 681394d Support for animated gifs
+  * 8484c82 Checking if img sent is a gif
+  * 25476b3 Updated plan
+  * 28cd305 Now supporting chosing the filter
+  * d1ecd53 Sending format in msg
+  * 0523c6d Added program description
+  * 1648c4d Created filter cmdline option
+  * 87bd286 No longer sending an optional from processor
+  * ce2ae79 Checking if image can be openned before sending it
+  * ef61813 Updated plan
+  * 6e471d7 Added simple integration test
+  * b419362 Changed run_script for assert_cmd
+  * 6d6e90f Making sure pid is of correct process before sending signal back
+  * 3aa8988 Counting number of msgs sent before signaling back
+  * 29cd82e Renamed img_processor function, changed where debug msg is
+  * 6905629 Updated plan
+  * d6b2289 Output control is working
+  * deea80e Now outputs have proper names
+  * 4fa1f9d Using a custom wayland environment
+  * ff62391 Printing output info during initial config
+  * 03632e7 Added run_script as a dev dependency
+  * 3624813 Now doing all processing with img_processor
+  * 2ebe0fd Added outputs option, and fixed sleep timeout
+  * 40b7598 Removed all calls to exit
+  * c193b2f Using main's result instead of exit
+  * 1615411 Resposability of cleaning up the fswww directory is the daemon's
+  * e2f458e Main now returns a result
+  * d0c8111 Send signal now gets the pid by itself
+  * b9403a1 Using sigusr2 to terminate instead of sigterm
+  * a5d0ccf Running event_loop with run()
+  * aeb2c97 Flushing after event_loop dispatch
+  * 62dffae Updating plan - no longer making custom wayland protocol
+  * 4074079 Removed superfluous print statement
+  * 3ea4056 Moved daemon.rs to deamon/mod.rs
+  * 45ce4b8 Documented pos args in img
+  * 5bb2a87 structopt now accpets a path directly
+  * 8eeb3dc Now waiting for daemon to say it initialized ok
+  * 9242ced Killing daemon cleanly with SIGTERM
+  * fbd8070 Moved logger creating into own function
+  * 0ace183 Pid verification fixed
+  * d9a342c Factoed send_answer into own function
+  * 820c12d Making sure we have the correct pid before signaling
+  * f292491 Added todo note
+  * c1c5e5f Merge branch 'main' of github.com:Horus645/fswww
+  * dd00431 Initial commit
+  * 692f25a Documenting handle_usr1 behaviour
+  * 177edb8 Daemon now sending answer back
+  * de81ff3 img command now works with relative paths
+  * 266fbb6 Exiting with failure code, and checking if already running
+  * d78e743 Release options that will descrease binary size
+  * 1d771ee Openning and resizing async with threads
+  * 941712c Getting name as the info, instead of id
+  * 725f6bc Resizing before drawing, in different loop
+  * a72a061 Removed update_img from Background
+  * 3cd683b Proper independent function for usr1 handling
+  * b4bce36 Factored open and resize img out of background
+  * 3b55d99 Moved output handle logic into own function
+  * 00d2292 Created img and kill commands
+  * 6631eb6 Put nix back in for pid and kill
+  * 1080a67 Default log level for release is warn
+  * 9f290fc Better match
+  * 7a0d509 Forking process when running in daemon mode
+  * d10c499 Using String::new() now
+  * 0a59e64 No longer storing img
+  * e45a6c9 Not trying to render immediately anymore
+  * f601d5b Removed nix as a dependency
+  * 9fea92a Added gitignore
+  * 7d2bef6 Moved main to daemon
+  * 9fd5aeb Using simple files in /tmp folder for IPC
+  * 9061531 Writting directly to file in /tmp
+  * e3dde32 Propper error handling when reading fifo
+  * 8322e32 Fifo now in temporary dir
+  * 95e2bcb Removed unwrap from buffer request to poll
+  * 335b653 fswww now waits for signal to read fifo file
+  * c467ed5 Converting img into, which should be more efficient
+  * af894a8 Using bgra directly, instead of converting manually
+  * d07339c Droping the vector after we've used it
+  * 465d23a Updated plan for only resizing once
+  * 65c3720 Logging what's hapenning during image resize
+  * b1dc8aa Only resizing when dimensions are different
+  * 9095aca Rescalling image to proper dimensions automatically
+  * 3a3ded6 Different logging schemes according to build type
+  * afba89c Added a logger
+  * 736cc83 Updated plan
+  * 9652768 Printing an image to all outputs
+  * 4d1e642 Layer dimensions same as output's
+  * cad5f6a Added our plan for development
+  * 623055d Initial commit - adapted from smithay's example
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Fri, 10 Jan 2025 17:30:22 +0000
+
