@@ -115,11 +115,20 @@ def parse_args() -> Arguments:
 
 
 def get_last_release_info(repository: str) -> dict[str, Any]:
-    url = f"https://api.github.com/repos/{repository}/releases"
-    response = requests.get(url)
+    # Only github releases supported for now
+    repository = repository.replace("https://", "")
+    repository = repository.replace("github.com/", "")
+    repository = repository.replace(".git", "")
 
-    releases: list[dict[str, Any]] = response.json()
-    last_release: dict[str, Any] = releases[0]
+    url = f"https://api.github.com/repos/{repository}/releases"
+
+    try:
+        response = requests.get(url)
+
+        releases: list[dict[str, Any]] = response.json()
+        last_release: dict[str, Any] = releases[0]
+    except Exception as e:
+        raise RuntimeError(f"Could not get release info: {url}") from e
 
     return last_release
 
@@ -242,7 +251,6 @@ def format_debian_changelog(
             ), f"`start_commit` cannot be None: {prev_version}"
 
             if start_commit == commit_hash:
-                changelog = "  * updated package"
                 cmd = None
             else:
                 cmd += [f"{start_commit}..{commit_hash}"]
@@ -258,6 +266,9 @@ def format_debian_changelog(
                     filter(lambda x: len(x.strip()), changelog.split("\n")),
                 )
             )
+        else:
+            changelog = "  * updated package"
+
     else:
         changelog = get_changelog_from_release(repository, version)
 
@@ -319,8 +330,9 @@ def main(args: Arguments) -> None:
 
     with open(args.changelog, "w") as file:
         _ = file.write(debian_changelog)
-        _ = file.write("\n")
-        _ = file.write(contents)
+        if len(contents):
+            _ = file.write("\n")
+            _ = file.write(contents)
 
 
 if __name__ == "__main__":
