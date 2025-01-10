@@ -3,7 +3,7 @@
 ## Build
 
 Create the following files, and replace the placeholders:
-* `.env`
+* `.env` - you need to source it
 ``` bash
 export DEBFULLNAME="YOUR NAME HERE"
 export DEBEMAIL="YOUR EMAIL HERE"

@@ -1,48 +1,83 @@
+DATE			:= $(shell date '+%Y%m%d')
+BUILD_VER		:= $(VERSION)$(BUILD)
+ifneq ($(COMMIT_HASH),)
+BUILD_VER		:= $(BUILD_VER)+git$(DATE).$(COMMIT_HASH)
+endif 
+ifneq ($(STATUS),)
+BUILD_VER		:= $(BUILD_VER)~$(STATUS)
+endif
+PKG_VER_BUILD	:= $(PACKAGE)-$(BUILD_VER)
+BUILD_DIR		:= ./build/$(PKG_VER_BUILD)
+TARBALL_PKG		:= $(PACKAGE)_$(BUILD_VER).orig.tar.gz
+SOURCE_CHANGES	:= ./build/$(PACKAGE)_$(BUILD_VER)-$(REVISION)_source.changes
+
 .PHONY: build
 build: __prepare_pkg sign_pgp_init 
-	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
-	debuild -S -d -k${DEBEMAIL} --source-option=--include-binaries
+	cd $(BUILD_DIR) && \
+	debuild -S -d -k$(DEBEMAIL) \
+		--source-option=--include-binaries \
+		--source-option=--extend-diff-ignore='.*'
 	echo "done"
 
 .PHONY: build_deb
 build_deb:
-	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
-	mk-build-deps --install --tool "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" --remove && \
+	cd $(BUILD_DIR) && \
+	mk-build-deps \
+		--install \
+		--tool "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" \
+		--remove && \
 	dpkg-buildpackage -us -uc
 	echo "done"
 
-.PHONY: download
-download: 
-	$(info Download $(PACKAGE) version $(VERSION))
+.PHONY: download_tar
+download_tar: 
+	$(info Downloading $(TARBALL_URL))
 	mkdir -p build && cd build \
 	&& \
-	curl -LJ -o $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz $(TARBALL) \
+	curl -LJ -o $(TARBALL_PKG) $(TARBALL_URL) \
 	&& \
-	tar xf $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz \
+	tar xf $(TARBALL_PKG) \
 	&& \
-	([ -n "$(BUILD)" ] && mv $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION)$(BUILD) || echo "skipping renaming")
+	rm -fr $(TARBALL_PKG)
+
+.PHONY: download_git
+download_git: 
+	$(info Git clone $(REPOSITORY))
+	mkdir -p build && \
+	git clone $(REPOSITORY) $(BUILD_DIR) && \
+	cd $(BUILD_DIR) && \
+	git checkout $(COMMIT_HASH)
 
 .PHONY: __prepare_pkg
-__prepare_pkg: download
+ifneq ($(TARBALL),)
+__prepare_pkg: download_tar
+else ifneq ($(COMMIT_HASH),)
+__prepare_pkg: download_git
+endif 
+__prepare_pkg: 
 	$(MAKE) prepare
 	$(MAKE) __prepare
 
 .PHONY: __prepare
 __prepare:
-	$(info Build $(PACKAGE) from release $(VERSION))
-	cd build/$(PACKAGE)-$(VERSION)$(BUILD) && \
+	$(info Build $(PKG_VER_BUILD))
+	tar -C $(BUILD_DIR) -czf ./build/$(TARBALL_PKG) .
+	cd $(BUILD_DIR) && \
 	mkdir -p debian && \
 	$(ROOT)/scripts/build_changelog.py \
-		--github-repo $(REPOSITORY) \
-		--package $(PACKAGE) \
-		--version $(VERSION) \
-		--package-version $(PACKAGE_VERSION) \
-		--build-version $(BUILD) \
-		--target $(TARGET) \
-		--urgency $(URGENCY) \
+		--git-repo "$(REPOSITORY)" \
+		--package "$(PACKAGE)" \
+		--version "$(VERSION)" \
+		--revision "$(REVISION)" \
+		--build-version "$(BUILD)" \
+		--target "$(TARGET)" \
+		--date "$(DATE)" \
+		--commit_hash "$(COMMIT_HASH)" \
+		--status "$(STATUS)" \
+		--urgency "$(URGENCY)" \
 		--maintainer-name "$(DEBFULLNAME)" \
 		--maintainer-email "$(DEBEMAIL)" \
-		--changelog $(PACKAGE_ROOT)/debian/changelog \
+		--changelog "$(PACKAGE_ROOT)/debian/changelog" \
 	&& \
 	cp -r $(PACKAGE_ROOT)/debian . && \
 	decopy --root . --output ./debian/copyright --exclude ./debian/ --mode full
@@ -55,7 +90,7 @@ sign_pgp_init:
 
 .PHONY: publish
 publish:
-	dput $(PPA) ./build/$(PACKAGE)_$(VERSION)$(BUILD)-$(PACKAGE_VERSION)_source.changes
+	dput $(PPA) $(SOURCE_CHANGES)
 
 .PHONY: clean
 clean:
