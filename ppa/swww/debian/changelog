@@ -1,4 +1,4 @@
-swww (0.9.5c-1) noble; urgency=medium
+swww (0.9.5d-1) noble; urgency=medium
 
   * Fixes
     - fixed wallpaper never setting `configured` to 'true'
@@ -12,4 +12,4 @@ swww (0.9.5c-1) noble; urgency=medium
     - remove an extra call to `thread::sleep` when loading the cache
     - no longer using an `event_fd` to wake up the main thread
 
- -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Wed, 24 Jul 2024 09:44:35 +0000
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Fri, 10 Jan 2025 18:16:06 +0000
