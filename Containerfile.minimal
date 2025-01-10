@@ -1,0 +1,12 @@
+FROM ubuntu:24.10
+
+RUN apt update && apt upgrade -y
+
+# Install Debian build deps
+RUN apt install -y \
+    build-essential \
+    devscripts \
+    debhelper \
+    decopy \
+    dh-cargo \
+    equivs
