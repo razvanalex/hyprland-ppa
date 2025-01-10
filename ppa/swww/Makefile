@@ -1,17 +1,19 @@
 SHELL			:= /bin/bash
 PACKAGE			:= swww
+REPOSITORY		:= https://github.com/LGFae/swww.git
 VERSION			:= 0.9.5
+COMMIT_HASH		:= 
 BUILD           := c
-PACKAGE_VERSION := 1
-REPOSITORY		:= LGFae/swww
-TARBALL			:= https://github.com/$(REPOSITORY)/archive/refs/tags/v$(VERSION).tar.gz
+REVISION		:= 1
+STATUS			:=
+TARBALL_URL		:= https://github.com/LGFae/swww/archive/refs/tags/v$(VERSION).tar.gz
 TARGET  		?= noble
 URGENCY 		?= medium
 DEBFULLNAME 	?=
 DEBEMAIL    	?=
 PPA				?= ppa:razvanalex/hyprland-ppa
 ROOT			:= $(shell pwd)/../../
-PACKAGE_ROOT    := $(ROOT)/ppa/$(PACKAGE)/
+PACKAGE_ROOT    := $(ROOT)/ppa/swww/
 
 include $(ROOT)/Makefile.defs
 
@@ -19,14 +21,7 @@ include $(ROOT)/Makefile.defs
 # Launchpad, we need to include the dependencies in the archive. In addition,
 # we need to allow binaries in the archive, otherwise build will fail.
 prepare:
-	cd build/$(PACKAGE)-$(VERSION)$(BUILD) \
-	&& \
-	mkdir -p .cargo \
-	&& \
-	cargo vendor > .cargo/config.toml \
-	&& \
-	( \
-		cd .. && \
-		rm -f $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz && \
-		tar -czf $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz $(PACKAGE)-$(VERSION)$(BUILD) \
-	)
+	mv build/swww-$(VERSION)/ $(BUILD_DIR)
+	cd $(BUILD_DIR) && \
+	mkdir -p .cargo && \
+	cargo vendor > .cargo/config.toml

@@ -49,7 +49,7 @@ download_git:
 	git checkout $(COMMIT_HASH)
 
 .PHONY: __prepare_pkg
-ifneq ($(TARBALL),)
+ifneq ($(TARBALL_URL),)
 __prepare_pkg: download_tar
 else ifneq ($(COMMIT_HASH),)
 __prepare_pkg: download_git
