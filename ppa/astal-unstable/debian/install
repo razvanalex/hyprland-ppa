@@ -1,0 +1,4 @@
+usr/bin/astal
+usr/lib/*/libastal-io.so.*
+usr/lib/*/libastal.so.*
+usr/lib/*/libastal-4.so.*

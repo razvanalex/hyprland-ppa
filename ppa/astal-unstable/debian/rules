@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	meson setup build-io lib/astal/io --prefix=/usr
+
+override_dh_auto_build:
+	meson compile -C build-io
+	mkdir -p $(CURDIR)/build-stage/usr/share/vala/vapi
+	meson install -C build-io --destdir=$(CURDIR)/build-stage
+	vapigen --library=gtk-layer-shell-0 --pkg gtk+-3.0 --directory=$(CURDIR)/build-stage/usr/share/vala/vapi /usr/share/gir-1.0/GtkLayerShell-0.1.gir || true
+	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
+	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
+	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
+	meson setup build-gtk3 lib/astal/gtk3 --prefix=/usr
+	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
+	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
+	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
+	meson compile -C build-gtk3
+	vapigen --library=gtk4-layer-shell-0 --pkg gtk4 --directory=$(CURDIR)/build-stage/usr/share/vala/vapi /usr/share/gir-1.0/Gtk4LayerShell-1.0.gir || true
+	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
+	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
+	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
+	meson setup build-gtk4 lib/astal/gtk4 --prefix=/usr
+	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
+	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
+	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
+	meson compile -C build-gtk4
+
+override_dh_auto_install:
+	meson install -C build-io --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-gtk3 --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-gtk4 --destdir=$(CURDIR)/debian/tmp

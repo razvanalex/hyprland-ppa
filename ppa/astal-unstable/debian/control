@@ -1,0 +1,49 @@
+Source: astal-unstable
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: x11
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ valac,
+ valadoc,
+ gobject-introspection,
+ libgirepository1.0-dev,
+ libgtk-3-dev,
+ libgtk-layer-shell-dev,
+ libgtk-4-dev,
+ libgtk4-layer-shell-dev,
+ libjson-glib-dev,
+ libgjs-dev,
+ libnm-dev,
+Homepage: https://aylur.github.io/astal/
+Vcs-Git: https://github.com/Aylur/astal
+
+Package: astal-unstable
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides: astal
+Conflicts: astal
+Description: Building blocks for creating custom desktop shells (unstable git version)
+
+Package: astal-unstable-dev
+Architecture: any
+Depends:
+ astal-unstable (= ${binary:Version}),
+ ${misc:Depends},
+Provides: astal-dev
+Conflicts: astal-dev
+Description: Building blocks for creating custom desktop shells - development files (unstable git version)
+
+Package: astal-unstable-gir
+Architecture: any
+Depends:
+ astal-unstable (= ${binary:Version}),
+ ${misc:Depends},
+Provides: astal-gir
+Conflicts: astal-gir
+Description: Building blocks for creating custom desktop shells - GObject introspection (unstable git version)

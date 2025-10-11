@@ -1,0 +1,880 @@
+astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 11 Oct 2025 21:35:46 +0000
+
+astal (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
+
+  * updated package
+
+ --  <>  Sun, 12 Oct 2025 00:35:17 +0000
+
+astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 11 Oct 2025 21:25:26 +0000
+
+astal (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
+
+  * updated package
+
+ --  <>  Sun, 12 Oct 2025 00:23:00 +0000
+
+astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
+
+  * updated package
+
+ --  <>  Sat, 11 Oct 2025 21:15:51 +0000
+
+astal (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
+
+  * updated package
+
+ --  <>  Sun, 12 Oct 2025 00:15:41 +0000
+
+astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
+
+  * 71b008e Update notification.vala
+  * 8d9ed4c fix(mpris): cli player filter flag
+  * 06279a1 fix(mpris): trackid meta type
+  * 511bae1 fix(mpris): listmodel impl
+  * 4340f05 feat(notifd): default-timeout
+  * a0b8264 feat(notifd): Notification.expire
+  * a7bf244 Notifd update (#407)
+  * 12c15b4 fix(gir): property getter attributes
+  * a8e2862 Make mpris lib fully async (#406)
+  * 97fe471 nix: add uncrustify
+  * 55b24cd Add Uncrustify.cfg for formatting (#71)
+  * 344a6dc showcase: typo in retrozinndev/colorshell image name (#402)
+  * 0f59749 showcase: add retrozinndev/colorshell (#401)
+  * 20bd831 chore: update examples
+  * 6ae3a97 chore: deprecate astal-io
+  * 5d4eef6 fix(AstalTray): improve detection of removed tray items
+  * d3ebf72 chore: update cava to 10.4
+  * 2c5eb54 Add new Gizmo widget helper to create custom widgets in GTK4 (#293)
+  * 81eb377 feat(AstalWp): automatically reconnect if pipewire connection is lost (#379)
+  * 57e7efe fix typos (#381)
+  * ac90f09 fix(gjs/binding): check if signal is connected with `#emmiter` before disconnecting  (#345)
+  * 4b15232 Merge pull request #283 from tokyob0t/lua-docs
+  * a5606ae Merge remote-tracking branch 'upstream/main' into lua-docs
+  * e6cc62d Merge pull request #273 from Mabi19/binding-doc-comments
+  * 6ce0695 Merge pull request #13 from AhmedSaadi0/main
+  * fea5126 simplify accesspoint connection
+  * bb73ce8 Merge remote-tracking branch 'upstream/main'
+  * 95c6d6d Update .gitattributes
+  * 71e88fc fix: docs link
+  * bc79a3d Merge pull request #369 from Aylur/remove-higher-level
+  * 3618e15 link legacy docs
+  * 82b00fb fix(AstalTray): tooltip markup
+  * 36f1daf fix(astal4): slider value notification
+  * 8337304 docs: update formatting
+  * 113fc6d restore files
+  * 07d7f99 feat(river): add geometry constructors
+  * ca3190d fix(build): migrate network and hyprland gir generation to valadoc
+  * fefc1b6 Merge branch 'main' into remove-higher-level
+  * a3ea4f3 update readme
+  * ed8ad16 remove higher level libs
+  * 4e455bb fix(gjs): add more property overrides
+  * ade3b94 fix(AstalWp): fix wrong gir annotation
+  * 5810d20 feat: monitors notify signal
+  * 822c0d6 fix(gjs): add missing AstalWp overrides
+  * dd8a466 fix(river): focused-tags setter used int instead of uint
+  * 6d809a7 feat(river): add layout protocol support (#366)
+  * 7f2292f fix(AstalWp): segfaults when channel volume has no name
+  * 7d28889 cli: fix typo in 'request' in help message (#363)
+  * 2f2f231 wireplumber: improve property handling
+  * c1bd89a AstalWp: add missing features (#297)
+  * c01aaef fix: stop_poll and arg assumption (#362)
+  * 4820a3e Update README.md
+  * 776a5f5 fix(mpris): multiple emission of player-closed
+  * 07583de nix(tray): update appmenu-glib-translator version (#346)
+  * c96126c fix(mpris): skip unnecessary notify emission
+  * d4dd7fc docs: add Astal4 documentation link to navigation
+  * 8f020e6 fix(AstalApps): increase min score threshold to 0.5
+  * 3ac89ca AstalTray: make dbus calls async (#323)
+  * c61ddf1 AstalWp: fix Video recorders property annotation
+  * dc0e5d3 Astal4: fix namespace setter
+  * e5a8e3b fix: battery cli flush output
+  * 69efb4c AstalTray: reduce dbus call timeout
+  * 48f049f Merge pull request #2 from Aylur/main
+  * e9c4963 fix typos
+  * 2b8f849 Fixed JSX syntax typos (#321)
+  * bedc1fe fix missing get-type for enums in cava and river
+  * f384335 astal3: centerbox Gtk.Buildable impl
+  * e14e19c AstalRiver: fix memory leak
+  * db51a2b AstalRiver: fix scale-factor type
+  * f0a760b AstalRiver: add wl_output properties.
+  * ca988d3 AstalTray: isMenu default to true
+  * 4b283b0 feat: follow symlinks in file write and monitor functions (#303)
+  * 23cdbc8 add gtk4 examples
+  * dfd1f23 feat: Astal.Bin
+  * 98a488d rename: message -> request
+  * b7f10b9 feat: apply_css from resource
+  * 71864c1 Merge branch 'Aylur:main' into lua-docs
+  * 3620d51 fix broken links (#294)
+  * a0de152 Fix/circular progress (#289)
+  * cbfe69a tray: fix last commit
+  * 32084b0 tray: add small check
+  * 956b74f Update widget.md
+  * b315002 tray: add missing doc comments
+  * cff43dc wireplumber: fix lint
+  * cd2214d wireplumber: add more properties
+  * ee91402 fix(gjs): pass type to vfunc_add_child
+  * d0517df update showcase img
+  * a3f4c23 docs: lua gobject.object example, lua cava example
+  * 8f64c2d fix(window): anchor getter
+  * 5e0e00e Revert "fix(window): auto shrink gtk4 windows"
+  * 173e35f fix(window): auto shrink gtk4 windows
+  * c0eaca2 fix(notifd): invalidate props from proxy
+  * fe82061 fix typo
+  * 79ff594 Fix lint
+  * bd1d11c Add a bunch of doc comments
+  * 32348e7 fix the other typo in ifaces (#272)
+  * 09c9df0  upower.vala: fix typo (#269)
+  * 24430c6 Merge pull request #270 from Dr0med4r/focused_workspace
+  * 9e08e69 fix(hyprland): focused_workspace
+  * cb1578a fix #264: mpris exampe
+  * a23ef6a Merge pull request #141 from ojaskavathe/main
+  * d0de56e fix(gjs/overrides): add patch for Hyprland.prototype.binds (#257)
+  * 3573ac6 Fix this in default signal handler (#263)
+  * 5418f29 fix(bluetooth): battery between 0-1
+  * 127e9cd chore: nix flake update
+  * cee2576 update popover example #249
+  * 9cadfed update popover example
+  * 9a83bcd feat: monitor get_current_monitor
+  * 907230e add: lua gtk3 examples (#156)
+  * 4d6d855 Fix signal names for EventControllerFocus (#251)
+  * 8b84161 Update theming.md
+  * 897c6d8 fix(hyprland): update clients on openwindow if needed (#148)
+  * 8e00ed9 add: OSD ts example #195
+  * 9e8634d add: gtk3 ts popover example
+  * bc796ac Update installation.md (#248)
+  * cac0fc6 notification example: fix implicit destroy
+  * 6fd7ae5 chore: update gjs example
+  * 82fd9e6 Added HyprPanel to showcase. (#244)
+  * 50500a4 fix #228: gjs: onScroll controller flags
+  * 692de64 chore(hyprland): add 3 missing properties for `Bind` (#234)
+  * 487f274 fix #238: Astal.Slider page increment
+  * 667040c fix #241: gjs: return value of hook callback
+  * bbe81f8 docs: update nix page
+  * ef4f956 tray: add a way to call the menus AboutToShow
+  * c5b2191 apps: fix wrong penalty
+  * fa2d55e Merge pull request #225 from matt1432/types
+  * f68d4ca chore(gjs): update meson.build
+  * 4de428b fix(vala): add namespace and version annotation for gir files
+  * 5c33998 fix 70ed5584
+  * 70ed558 fix(gjs): app.launch
+  * 3cf849f Merge pull request #233 from ezerinz/main
+  * f5c1d29 add epik-shell to showcases
+  * a3bb83a Merge pull request #227 from tokyob0t/lua-smol-fix
+  * 94d0fad lua: Variable.derive fix
+  * 801a8db docs: remove random line
+  * 547e44c docs: update tray install guide
+  * 378c75b docs: update tray installation guide
+  * 207557d Merge pull request #222 from matt1432/nix-passthru
+  * d6c3c9c docs(faq): how to register keybindings
+  * f2244c2 docs: update showcases
+  * cbb59aa feat(nix): expose girName with passthru
+  * bd8bfcd fix(nix): add nativeBuildInputs param to drv
+  * ce9ba0d feat: auto create parent dirs on write_file
+  * 998b57d feat: AstalIO.Daemon
+  * 20535db style(gjs): reexport Time and Process
+  * f4377f3 Merge pull request #218 from Aylur/feat/gtk4-css-error
+  * 5767814 Update faq.md
+  * 71d0a75 gtk4 print error when css loading failed
+  * 307b1ff fix: python example
+  * b89b08e Merge pull request #208 from matt1432/main
+  * 5dd99fb fix: binding return type
+  * ebcccc4 fix: examples without wifi
+  * 661b14c feat: Process exit signal
+  * b840544 Merge pull request #212 from jgroboredo/fix/ubuntu_install_doc
+  * 5e31ba5 fix #199
+  * 56332b1 fix(gtk3): add actionGroup to jsx ConstructProps
+  * eb3b820 doc: Add valadoc as a dependency for Ubuntu&Arch
+  * 696165b fix(astalify): get ActionGroup type from Gio
+  * 6c84b64 fix: d8664da0
+  * 077bc87 docs: how to install on nix
+  * d8664da fix(gjs): handle children prop as a Binding
+  * 9a7e40a docs: fix cssClasses in gtk4
+  * 37f0d24 Merge pull request #196 from Aylur/feat/jsx-gtk4
+  * 0f2fefd docs: fix missing import
+  * f00e558 docs: add gtk4 jsx documentation
+  * 553b218 fix: MenuButtonProps
+  * 22ab42c Merge branch 'main' into feat/jsx-gtk4
+  * 3468763 Merge pull request #186 from Aylur/feat/wayland-glib
+  * d6f4e86 fix: docs ci
+  * c8e705a nix: fix river build
+  * 4043e46 fix: docs ci
+  * e0a6b7f Merge branch 'main' into feat/wayland-glib
+  * 0507a6b nix: refactor (#197)
+  * dafb191 astal3 icon: use Gtk Image's GIcon (#187)
+  * 2754470 fix types
+  * ed23ce2 export hook and widget
+  * 5a16cd2 fix: slider
+  * 53bfc09 Merge branch 'main' into feat/jsx-gtk4
+  * fcef5ce Merge branch 'main' into feat/wayland-glib
+  * 5ed7a14 wayland-glib: rename namespace
+  * d7d11b3 Revert "Add aarch64 Compatability to Flake (#183)"
+  * 11425c9 fix(gjs): filter undefined props
+  * a60c44c fix(lua): visible binding
+  * d16c856 chore: simple-bar filter special workspaces (#168)
+  * 23083cd Add aarch64 Compatability to Flake (#183)
+  * 0cf43e5 Fix typo in docs (#190)
+  * c34349c Merge pull request #68 from Aylur/feat/tray-gtk4
+  * c5664e2 update examples, fix styling
+  * 61637d6 Merge branch 'main' into feat/tray-gtk4
+  * c12fb05 style: IO.Process constructor
+  * 5b2a0e8 wayland-glib: clean up vapi
+  * 5860d72 wayland-glib: fix freeze
+  * 1bc38cf move wayland-glib into its own lib
+  * 4f47b69 fix #179: power profiles missing profile key
+  * d8d62d7 fix(gjs): string property default value
+  * 6fbeb92 gjs: fix typo in overrides
+  * 64150c7 tray: use highest res pixmap available
+  * 4c19d8d Merge pull request #164 from danielwerg/fix/shuffle-loop
+  * ae85ea9 fix(mpris): shuffle/loop unsupported
+  * c9f8f98 Merge pull request #159 from muni-corn/network-enum-fix
+  * 92ed247 fix(network): specify values for State enum
+  * 2f09ed8 gjs gtk4 support
+  * 990f031 fix(mpris): reset cover_art
+  * 7b4d2eb fix(hyprland): sync monitors on focusedmon
+  * 95b2daa bluetooth: percentage notify on change
+  * 358044b feat: add battery_percent to bluetooth devices
+  * 361fe5d tray: workaround for icon name as path
+  * 12fa0fb gjs: add workarounds for AstalWp
+  * b7af61d example: cleanup
+  * 3d9c50c fix(hyprland): update title
+  * ac304ef fix(hyprland): sync monitors on activeworkspace
+  * 3f55440 fix(hyprland): client creation
+  * 3e6c7ee add changelog
+  * 2cc6a25 Merge pull request #77 from ratson/fix-sass-warniing
+  * c9bd179 Merge pull request #126 from 44mira/patch-1
+  * 60e0dfc add: nix support
+  * 57c3bf4 doc: fix incorrect arch package
+  * d953f4b Update gobject.md
+  * 4b87bb6 docs: highlight global module tip
+  * d3d95aa Merge pull request #123 from 44mira/patch-1
+  * 03b7209 doc: fix broken links to gtk docs
+  * f9a3526 fix #114 create client on windowtitlev2
+  * 4fcf3c9 Merge pull request #118 from Aylur/fix/mpris-dbus-property
+  * dc4d5a4 mpris: fix typo in dbus property
+  * e196403 Merge pull request #117 from hashcowuwu/patch-1
+  * 0cd2569 Update first-widgets.md
+  * 920e7d2 docs: list of how widgets are passed
+  * 664c7a4 fix: f5ed9aad meson
+  * 41c002f docs: add examples pages
+  * f5ed9aa fix(gjs): add workaround for array props
+  * 48692ff fix: #110 notifd urgency hint
+  * 852cf24 Update question.md
+  * 291c5b8 example: fix sass deprecation warnings
+  * 078ac4c Merge pull request #104 from Aylur/fix/circularprogress
+  * 813abca fix #88: hyprland sync workspaces before signal emission
+  * 5f35244 fix: #106 gtk3 Fragment
+  * 7c33269 circularprogress: remove comment
+  * aab1161 circularprogress: fix size calculations
+  * 5c7e82b Update README.md
+  * 1351db8 Merge branch 'main' into feat/tray-gtk4
+  * e674e8f examples(vala): update tray
+  * 3c33226 lua: add actionGroup property
+  * ce64b07 gjs: add actionGroup property
+  * 433984c chore: update license on gjs and lua package
+  * 2dd071c fix(gjs): gobject decorators
+  * 5a09ab8 Update cli-app.md
+  * 27bc3dd examples (vala): fix tray
+  * 984d9e9 tray: fix missing vapi
+  * d538d8e update example readme
+  * 03a062b docs: fix import paths
+  * a60ad45 Merge pull request #75 from Aylur/docs/remove-ags
+  * f7cfc8e fix: powerprofiles
+  * 9652fb8 add: hyprland.monitor.transform
+  * 75f7888 example(simple-bar): fix sass deprecation warnings
+  * b6532ef docs: powerprofile doc comments
+  * 2ce8203 Merge pull request #65 from tokyob0t/lua-refactor
+  * 47f0439 Merge pull request #73 from samuraikamel/main
+  * 5e6844e Merge pull request #74 from rkben/fedora-doc-fix
+  * f59f96f docs: correct fedora package dep for tray
+  * f5284bd Change gir.py's to symlink
+  * ad7aa1d Change cmd to use VALADOC env, fallback to valadoc
+  * bf5b1d8 Change cmd to use VALADOC env, fallback to valadoc
+  * 17aeb9e docs: remove ags related docs
+  * 2a9bb96 gjs: define pkg-config variable
+  * 990feb3 core: Variable.derive fix
+  * 8829157 Merge branch 'Aylur:main' into lua-refactor
+  * 302fcae example(applauncher): hide on app launch
+  * 48b6b07 example: fix applauncher text reset
+  * 321350f docs: swap install and usage sections on lib pages
+  * 07bcaf9 tray: icon lookup
+  * 44710fb stoopid zed
+  * 5ee98ff Merge pull request #69 from ttoino/nm-device-state
+  * 588c349 fix: network manager device state values
+  * 1ee73ec tray: use appmenu-glib-translator for menus
+  * c84ede5 update gitattributes
+  * 779ec44 example: applauncher
+  * 5151434 example: media player
+  * 5074a76 style: indent example scss
+  * daee063 fix: notification example
+  * 12ee15f docs: showcase notification example
+  * c414933 example: notifications
+  * 5217df9 Merge branch 'Aylur:main' into lua-refactor
+  * 84c02e5 docs: adjust for ags changes
+  * 684dd1c Update client.vala
+  * ca6a37c Merge pull request #66 from Aylur/feat/greetd
+  * 524030a feat: greetd ipc client
+  * b1da91d oops
+  * f02e583 core: typing for lua
+  * 8c6d218 Update first-widgets.md
+  * b697dd8 core: smol lua fixes
+  * 5489883 core: smol lua fixes
+  * c5eba25 fix: rename to astal4
+  * c989a36 gjs: throw error instead when adding child to non container
+  * 510b233 Merge branch 'feat/gtk4'
+  * c0612d1 lib(astal4): touchups
+  * da892f0 nix: fix lua devshell
+  * 3bec67f docs: astal4
+  * cdaf890 Merge branch 'main' into feat/gtk4
+  * 031321b feat: gtk4
+  * d47b470 Merge pull request #63 from kingmaj0r/patch-1
+  * df4c505 apps: remove redundant properties
+  * 0608b6b Merge pull request #61 from matteo4375/apps/categories
+  * e5d1838 fix: trailing empty category
+  * 646cff6 Removed 'gcc' from dependencies for Fedora.
+  * 2585ca7 cli: new lines on error
+  * e2b297d auth: fix gir warning
+  * c1eb257 fix(mpris): bus_name setter
+  * 58e947d fix(mpris): bus_name constructor setter
+  * 479e85a fixup(notifd): make dismissed signal internal
+  * 8705ab4 Merge pull request #31 from Aylur/feat/cava
+  * 078dc04 touchups
+  * f6163f1 docs: add cava
+  * 57f2066 Merge branch 'main' into feat/cava
+  * 4d9ae88 cava: add libcava as subproject
+  * c3557e4 Merge pull request #9 from kingmaj0r/patch-10
+  * 2bacf0f Merge pull request #8 from kingmaj0r/patch-9
+  * 90be3e4 Merge pull request #7 from kingmaj0r/patch-2
+  * 55e459f Merge pull request #6 from kingmaj0r/patch-3
+  * 0d7809a Merge pull request #5 from kingmaj0r/patch-4
+  * 5423807 Merge pull request #4 from kingmaj0r/patch-5
+  * dea06ab Merge pull request #3 from kingmaj0r/patch-6
+  * 7c47f4d Merge pull request #2 from kingmaj0r/patch-7
+  * ba52596 Merge pull request #1 from kingmaj0r/patch-8
+  * 070c156 Update powerprofiles.md
+  * c9f1246 Update notifd.md
+  * 3d53f80 Update network.md
+  * 306f78b Update mpris.md
+  * cdf3f17 Update bluetooth.md
+  * 99f69cd Update battery.md
+  * 3fd4673 Update wireplumber.md
+  * ca0d72b Update apps.md
+  * 5636812 Update hyprland.md
+  * 4b13564 Update installation.md
+  * 7e48418 fix: #57 hyprland fullscreen enum (#58)
+  * b56e169 fix(astal3): windowanchor annotation
+  * 5e227f6 fix: mpris constructor
+  * 439571a cli: better err logs
+  * 197bffb docs(mpris): doc comments
+  * 17987c6 Update FUNDING.yml
+  * 2cd3b8a docs(bluetooth): doc comments
+  * f679c48 apps: add option to include categories in queries
+  * ab64f9e docs: fix gtk3 widget broken links (#60)
+  * 4a5308c fix: lua flake and lib
+  * 8306ec0 docs: lua docs (#50)
+  * e8715ae docs: battery doc comments
+  * d6bdcff tray: fix method visibility
+  * 510ba0b docs: add tray docs
+  * 61727b0 apps: add option to include keywords in queries (#56)
+  * e6250c7 lib(apps): make scoring mechanism public
+  * 306e649 docs: astal3 and io comments
+  * 7267022 docs(mpris): mention gvfs #52
+  * 02fdcbe docs: fixup notifd and apps
+  * 9a6c776 docs: notifd doc comments
+  * e220873 Update nix.md
+  * 004b123 fix(gjs): property decorator
+  * bfb7e27 fix #51 keymode enum
+  * eb3912a update installation.md
+  * 41fcfae Update installation.md
+  * f763c44 Merge pull request #48 from tokyob0t/lua-refactor
+  * 0e52e1b fix(gjs): Overlay.overlays
+  * e7762eb reexport modules
+  * 4628ed5 Update FUNDING.yml
+  * 61f7c53 core: fix typo
+  * 3ea9d58 core: lua refactor
+  * 05b5d76 Merge pull request #43 from tokyob0t/main
+  * 6e15da7 Merge pull request #47 from Aylur/fix/fuzzy-search
+  * c012b56 Merge branch 'main' into fix/fuzzy-search
+  * 8368b20 fix io send_message
+  * 5d37115 docs: update widget subclass example
+  * 2ad95e0 apps: fuzzy: reduce panalty for not matching
+  * dcb7cb3 core: lua fix require
+  * 2b1e850 Merge branch 'adapt-upstream-changes'
+  * 2364870 revert example-lua commit
+  * 1a1c8a6 notifications lua example
+  * 9e25573 core: table.unpack compat in lua, fix typo in astal/init.lua
+  * 4dd0b18 core: lua compat 5.1/5.4/luajit
+  * ecfbf08 docs: astal-io doc comments
+  * 0cb8733 docs: apps doc comments
+  * dcc3870 nix: expose the gjs package
+  * c84d710 Merge branch 'small-refactor'
+  * b33c3bf docs: fix links
+  * cbe650a Merge pull request #46 from Aylur/small-refactor
+  * bafd48d update lua and gjs layout
+  * fe11c03 docs: recommend /usr prefix by default
+  * dde50e3 docs: update references flake
+  * 03f2c47 revert example-lua commit
+  * ede8890 docs: better explain ags
+  * d63332b update examples
+  * 2f71cd4 refactor lua and gjs lib
+  * 9fab134 feat: Astal3
+  * 6a8c41c feat: astal-io
+  * ea6b3e6 notifications lua example
+  * 1426fc6 core: table.unpack compat in lua
+  * 906e9a3 Merge branch 'Aylur:main' into main
+  * 025d39a cava: initial nix build
+  * bdb23e2 Merge pull request #44 from 0x6e6174/main
+  * f8745db lib(hyprland): check if conn and strea is not null
+  * 7adf558 Merge pull request #41 from Aylur/feat/fuzzy-search
+  * 25528b0 check that conn is not null
+  * 18df91b core: lua compat 5.1/5.4/luajit
+  * 27e76f4 Merge pull request #42 from Aylur/showcase/kotontrion
+  * 6b35fe1 showcase: update kotontrion
+  * 815ebe9 showcase: kotontrion
+  * 289df35 docs: fix lock
+  * 856f6d0 apps: fix style
+  * ccdbe4d feat: App window-toggled signal
+  * ec5c6c9 Merge pull request #38 from tokyob0t/main
+  * 79a96d4 switch to VPButton
+  * 9141dea Merge branch 'Aylur:main' into main
+  * dd3bae5 Update installation.md
+  * 1a1ffe5 Merge pull request #40 from 0x6e6174/main
+  * 36907d5 Update
+  * 7dbcef8 Merge branch 'Aylur:main' into main
+  * d0fb3d0 docs: fix link
+  * 9da171f cava: added remaining properties
+  * eb5ca11 apps: better fuzzy search algorithm
+  * 958ec66 replace widget_set_class_names with wiget_get_class_names
+  * 031673f docs: update widget page
+  * 921272a docs: fix typo
+  * 800af10 docs: gobject, variable, binding page
+  * 5d93852 Merge pull request #39 from NotAShelf/patch-1
+  * 08f10ce Merge branch 'main' into feat/cava
+  * 10447f5 cava: add doce
+  * 6ffd3a0 cava: make properties changeable during runtime
+  * c6e16ff docs: fix typo in nix guide
+  * 03f1a08 docs: add eslint
+  * 68b2cda Merge branch 'Aylur:main' into main
+  * 075c7e3 core: reverse constructor props order
+  * 6589834 Accurate lua example
+  * b5fc6cd Merge branch 'Aylur:main' into main
+  * e6c35cb Added hover effects to Showcases
+  * 0def6d7 core(gjs, lua): widget constructor set props before children
+  * 49ca1b8 Added contrib to showcases page
+  * f36feb0 cava: add audio selection
+  * eb41193 gjs: update package.json
+  * 8108bcc gjs: fix widget props type
+  * 7f7d053 cava: add more properties
+  * d6cbbdf core: implement generic no_implicit_destroy prop
+  * 2fa83eb gjs: refactor widgets into classes
+  * f294fd8 gjs: add gobject decorators
+  * 6932db5 notifd: fix notification setters
+  * 2a3bb3a notifd: add doc comments
+  * d39d76e Merge pull request #35 from Jas-SinghFSU/patch/library_urls
+  * 770c320 fix #36: battery-icon-name
+  * f15f579 Updated the library documentation URLs for the bar examples.
+  * dfc240d docs: window toggling
+  * e8536ed Update cli-app.md
+  * a614101 docs: window toggling
+  * c3093f1 docs: update lock files
+  * 10a0659 cava: don't use config file
+  * 9c2f6ab river: fix ouput remove bug
+  * 4a7fa90 Update FUNDING.yml
+  * cb6fd7b add CONTRIBUTING.md
+  * d463f15 docs: update readme
+  * 5b78a1b Create FUNDING.yml
+  * 014e3d0 Update issue templates
+  * b07dee6 fix(core): MouseButton enum
+  * 2eb8ee6 fix(lua): correctly handle nil values in Variable.derive
+  * e164aaf fix(notifd): check ignore-timeout after Notify calls too
+  * 8046363 docs: clarify ags installation #30
+  * 0fed84e fix autoconnect_priority name
+  * c4de413 Finish ap profiles
+  * cfe8616 improve accesspoint_profile.vala
+  * 3ff35e4 new lib: cava
+  * f17b28d fix typo
+  * 9fe5923 Merge pull request #27 from tokyob0t/main
+  * df57a20 lua: fix tpyo
+  * 3c555d5 Add accesspoint_profile.vala and its logic
+  * 9e63fe3 Merge pull request #25 from Aylur/fix/astalify-remove-children
+  * 7b4ae28 gjs: astalify fix indentation
+  * 0fd6a5f lua: fix astalified container
+  * d884f19 core: fix astalified container not removing children
+  * d9cdac2 fix #24 correctly insert nil vaues into transform params
+  * 5e6246e docs(faq): is there way to limit size
+  * ac5f7d2 Merge pull request #18 from Aylur/feat/idle-inhibitor
+  * d035a53 style: fix indentation
+  * 27d8bbf core: move vapi dir to src
+  * 6916d59 core: idle inhibitor fix code style
+  * c68d116 fix #20: hyprland sync workspaces on focused_workspace
+  * 36e810d river: make focused-tags property writable
+  * 662f714 lua: add notify::prop signal support for hooks
+  * 22fece4 fix #19: lua widget_toggle_class_name
+  * 00738c9 add: python example bar
+  * d24e3e3 docs(gjs): add example reactive map
+  * 6565428 docs: restructure
+  * 628f894 core: reregister inhibitor when window is shown
+  * ca33d97 use global uuid
+  * 0922ff6 core: inhibitor remove debug statement
+  * 122112c core: add window inhibit property
+  * fd8c3e8 docs(ags): $GOPATH tip
+  * ba7d92d fix: hero bg blur on mobile
+  * 006651b docs: nix derivation for vala
+  * 8cab7d0 wireplumber: fix race condition
+  * 75057a2 docs: add icon
+  * bcd9127 examples: add vala bar
+  * 5ae0a9e Merge pull request #15 from zoriya/main
+  * df8cc73 examples: update battery widget to use battery_icon_name
+  * f3762b9 fix(box): children setter
+  * ad8d340 fix(Variable): remove explicit run_dispose
+  * c1443c5 Fix flake for river
+  * 6531324 Add disconnect_from_ap() & improve code
+  * a819c41 Update wireplumber.md
+  * 1484b53 Improve set_attrs()
+  * 9975551 Merge pull request #1 from Aylur/main
+  * 85a8292 add functions to accesspoint.vala
+  * 36adb5a Merge branch 'fix/wireplumber-11'
+  * 10b9cde add version constants to auth, river and wireplumber libs
+  * de096e1 wireplumber: rename get_default_wp to get_default
+  * 18c0a31 device id null check
+  * c37823a cleanup workflows
+  * 95c2658 style(gjs): binding runtime private properties
+  * 1cceb88 fix(battery): charged 100 battery icon
+  * 1798245 battery: use json-glib for cli
+  * 21cd759 fix(notifications): urgency getter
+  * e240676 fix(mpris): length getter
+  * 71ee1ea fix
+  * c57a304 battery: use numbered battery icons
+  * efb2828 docs: versioned gi-docgen
+  * 8524efb Merge pull request #10 from tokyob0t/main
+  * f1e3c7a docs: fixed typo in mpris.md
+  * 44c5814 Update installation.md
+  * 7da67b6 lua: adjust Variable.poll for 25664dbe
+  * 25664db lua: adjust exec functions
+  * cdfa11f fix: Network.get_device #6
+  * 45a3118 Merge pull request #9 from tokyob0t/main
+  * 4d5c7a7 docs: lib examples consistency
+  * c2308da Added examples for python and lua
+  * e9f9de6 Merge pull request #7 from marleypowell/patch-1
+  * 8147e6d docs: fixed typo in faq.md
+  * 6fce8da fix: widget constructor assigning order
+  * 3a057f5 docs: list of jsx available widgets
+  * e1fa0fc fix: box and stack children setter
+  * ef46b75 lua: rockspeck urls
+  * e04c00a lua: fix hook
+  * 56aa40a fixes and touchups
+  * 865675a docs: fix url
+  * cbedb70 docs: touchups
+  * 6c5d765 Merge pull request #5 from Aylur/nix/lua-builder
+  * d203255 add: stack widget
+  * 8b75dad docs: package lua on nix
+  * e2b9013 nix: touchups
+  * 0e259e4 example: add lua simple-bar
+  * 374d76f nix: move devshell into its own file
+  * dc3cec5 add lua builder
+  * 1373457 docs: document libraries
+  * 56dd3eb tray: Change return type of create_menu method
+  * 68e46d2 example: fix link
+  * 7761228 lib: notifd check for valid replace ids
+  * 6986693 lib: hyprland 0.42 fullscreen changes
+  * bcf6917 docs: how to create regular windows
+  * da08ef9 docs: document list type properties
+  * f9ab5e4 docs: note deprecated child widgets
+  * 6fc8883 Merge pull request #4 from Aylur/fix/example_bar
+  * 6686c4d example: use gicon for tray
+  * 8e44219 example: add python starter bar
+  * 81f2655 example: add Tray to js Bar
+  * 4407152 docs: dark brand colors
+  * 92ad8d8 docs: add feature icons to frontpage
+  * 4c3bef1 docs: add example js bar
+  * 1eaf72a add screenshot for bar example
+  * 9675783 add: js bar example
+  * 639e92a fix: default slider draw_value to false
+  * 191d5e5 docs: apps page
+  * e06ae73 feat: App monitor signals
+  * 3c68f1e docs: add nix page
+  * 125ed58 docs: fix edit link
+  * 13b6c88 docs: touchups
+  * 758550f docs: ags theeming
+  * 0b3ea5e nix: propagate dependencies
+  * e31eeaf docs: add ags installation page
+  * cf5e93f cleanup: meson gjs variable
+  * cd132bb river: improve docs
+  * 67055f4 wireplumber: improve docs
+  * c097bd5 update readme
+  * 93e41a3 docs: fix links
+  * 539a6b4 fix: github action
+  * c9c7ba4 fix: docs urlmap
+  * ee8ed80 docs: add urlmap to gi-docgen
+  * 44e0b9e fix github action
+  * 3f8ed34 nix: cleanup
+  * 6299b0a fix: job names
+  * 67c8c97 add gi docs deploy workflow
+  * 6f39857 docs: migrate to vitepress
+  * b8acc38 fix(notifd): urgency getter
+  * d9a514a fix enum values
+  * f5d5376 rename: box implicit_destroy to no_implicit_destroy
+  * 8071a20 docs: reference links
+  * bf639c4 Merge pull request #3 from Aylur/feat/circular_progress
+  * 4891da8 copy draw method from ags
+  * 2927230 core: add g_icon property to icon widget (#2)
+  * d248645 fixes circular progress widgets
+  * 8da6a21 docs: variable
+  * 9be159f docs: utilities
+  * 6c4753b initial docs
+  * 27c25b0 add attributes
+  * 3e3f045 monorepo structuring
+  * 408faee merge battery
+  * 95b9406 move to monorepo
+  * 6b18cf5 merge apps
+  * 556dfb4 move to monorepo
+  * 8407b44 merge hyprland
+  * 20617eb move to monorepo
+  * 054cbb9 merge powerprofiles
+  * 10f67b0 move to monorepo
+  * 9573f14 merge river
+  * 247ac06 move to monorepo
+  * 3390e65 merge network
+  * b3a98b2 move to monorepo
+  * b5b84c8 merge mpris
+  * becc002 move to monorepo
+  * 8afaaf7 merge bluetooth
+  * c5342a9 move to monorepo
+  * 15408c6 merge auth
+  * 6adcd28 move to monorepo
+  * db04099 merge wireplumber
+  * eacac66 move to monorepo
+  * 276f4a8 merge tray
+  * 6142022 move to monorepo
+  * 18bbf27 merge notifd
+  * d08cc85 move to monorepo
+  * 0738194 move libastal to /core
+  * 49cdf5d add icons option to App.start
+  * d262454 fix missing singals
+  * 24af00f feat: async Process.exec
+  * 6dd5200 fix: display_icon.begin
+  * 6a5fdcb add gicon property for easier icon usage
+  * 7706d24 add property for linear or cubic volume scale
+  * 99dc6d3 add microphone volume icons
+  * 3391246 better handling of multiple channels
+  * 43e6bd4 removed old license from readme
+  * 0722cfa improve docs
+  * c898e65 limit volume to 150%
+  * ff45291 remove changed signals
+  * e14677c add volume-icon
+  * d94b135 Merge pull request #2 from NicolaiVdS/main
+  * fee3ba9 added missing  to rockspec
+  * c6f2420 feat: Process.signal
+  * c52e414 fix: dangling socket on crash
+  * c6b669f feat: Window.namespace
+  * ce866f7 fix: notify device properties
+  * 14d2615 feat: device.connecting
+  * 2591355 icon load pixbuf async
+  * 67326ad fix(gjs): monitorFile callback return value
+  * 995098b fix: enums
+  * 4da9ccc add: layer shell check on window
+  * 652e23a feat: accesspoint icons
+  * 3f47385 fix(binding): kebabify
+  * 99e4673 add: custom accesspoint
+  * 302536d fix: default instance_name
+  * 7662145 init 0.1.0
+  * a0680e3 feat: optiona exit code on App.quit
+  * f86a908 fix(process): exec
+  * e0c70f0 fixes, features
+  * e398c9f feat: optional Variable.derive transform
+  * 4853378 fix: position setter
+  * e56a7f5 fix: message api
+  * 6755374 fix(astalify.ts): toggleClassName
+  * cf2260d add: Label widget
+  * 8f3eca7 fix(endpoint.h): icon getter
+  * 22132ef fix: time functions
+  * 1956ad6 fix: css autoload
+  * 7757661 fix: synchronous constructor
+  * 0a8a39d switch to LGPLv2.1
+  * 573f5b1 switch to LGPLv2.1
+  * aad0859 switch to LGPLv2.1
+  * 5db80aa switch to LGPLv2.1
+  * 2773e83 switch to LGPLv2.1
+  * 48ff840 switch to LGPLv2.1
+  * 562401b switch to LGPLv2.1
+  * 1e230ba switch to LGPLv2.1
+  * 1487240 switch to LGPLv2.1
+  * b6ca176 switch to LGPLv2.1
+  * bc436cc switch to LGPLv2.1
+  * f0d902d switch to LGPLv2.1
+  * 4a7ecd7 add video device support
+  * d5596c4 add icons
+  * af2ae01 add audio devices and profiles
+  * 1c9377e update eslint, ts-for-gir
+  * 86bff65 move headers to the correct location
+  * 5cd9f20 move mixer handler to endpoints
+  * 31776f4 add default speaker/microphone objects
+  * a1f9272 fix(gjs): binding setters
+  * 62d71a3 remove leftover print statement
+  * 9eb1131 add Audio object and default nodes api
+  * 35cd0fb add nix flake (#1)
+  * 15592c0 move c header back to astal-powerprofiles.h
+  * 6c7da25 move c header back to astal-notifd.h
+  * 0bfd3a2 move c header back to astal-mpris.h
+  * 8d35135 move c header back to astal-hyprland.h
+  * feef98d move c header back to astal-bluetooth.h
+  * ac97217 move c header back to astal-battery.h
+  * 06ef052 move c header to astal-apps.h
+  * 97040ef auto apply bundled css
+  * d048f20 fix(jsx): fat arrow widgets
+  * bf95e10 improve docs
+  * fea47f7 improve docs
+  * b18faef move c header back to astal-tray.h (#2)
+  * 8ed44bd fix header location in gir file
+  * 3e9d84a move header to astal-auth.h
+  * edc4848 move header to astal-river.h
+  * bccb034 initial commit
+  * e5251d2 remove python and node
+  * be163b3 move message logic to Application class
+  * 68b58c9 install gjs package to pkgdatadir
+  * 1a3b14d add: cli options
+  * 0cace31 fix daemonize flag
+  * dba9727 fix(app): handle null message
+  * 4e54401 add slider default step value
+  * 2e67649 move c header back to astal-mpris.h
+  * 6b63c58 fix position getter
+  * e046d94 feat(slider): dragged signal
+  * 6793184 chore(gjs): JSX types global
+  * 996c00b fix(slider)
+  * 0e1008a cache cover art
+  * 1296dc8 Add flake (#1)
+  * 017b9ba fix(Time): canceling
+  * bd1d1f0 fix(Application) css providers
+  * 50a6ab6 few touchups
+  * c0f813e init 0.1.0
+  * c3c807c add icon-name
+  * 952e733 init 0.1.0
+  * d5cda16 fix typelib name
+  * 9a484bd add flake, format, small fixes (#1)
+  * 2708747 move c header to includedir/astal
+  * 1f66a54 move c haeder to includedir/astal
+  * 5ed3561 move c header to includedir/asta
+  * ba5a93c fix(gjs) apply_css
+  * 0f63a52 feat(application) add_icons
+  * 61796bb fix vapi name
+  * 33ad109 move c header to includedir/astal
+  * 1e0f338 move c header to includedir/astal
+  * 302172a fix button hover event
+  * 889d426 cleanup
+  * 0a34dd3 init 0.1.0
+  * a5d2c94 cleanup flake and meson
+  * 710e419 feat: widget click through
+  * 03228cd fix gjs types
+  * 90608af box implicit destroy default to true
+  * b152dd6 add global default getter
+  * ec8e1c3 add global default getter
+  * c20896d cleanup(meson.build)
+  * 757dbd9 fix(box): only destroy old children
+  * b975520 try catch file utils
+  * 4f3cc1d remove kbd and powerprofile
+  * 4c8d032 init 0.1.0
+  * faf40c6 automatically init object on creation
+  * 9e0a977 fix vapi names
+  * 1b726cf fix vapi names
+  * df04162 fix vapi names
+  * bb059d3 fix: id counting
+  * 3500457 fix: cli hanging on empty args
+  * 9812a21 feat: notified replaced parameter
+  * 758f1b3 fix(config): export version numbers
+  * a8319e1 fix: vapi files
+  * 0cc1b27 init 0.1.0
+  * 4e32f62 add file utils
+  * 976638c add(box): implicit_destroy
+  * 049aeae set eventbox css name
+  * 9f775f3 expose toggleClassName
+  * 4e2fefe fix(gjs): interval types
+  * 2c701b9 add missing methods
+  * 13beb20 fix enum representation in json
+  * 46368a2 add get_default method to obtain the singleton instance
+  * b35a38a fix code style
+  * 36ce326 fix code style
+  * d7884d0 fix(gjs): css, class_name setter
+  * 49f0ffc fix(Variable): pass emitting object on observe
+  * a4229d6 fix(gjs): property getter in binding
+  * 6378756 add river-control-unstable-v1 support
+  * 23b9314 Add get_default method to obtain the singleton instance
+  * 6974f20 fix vapi path
+  * 60730fa fix: layout_name use after free
+  * 183e68d fix overlay setters
+  * b6ba3c7 fix introspection data
+  * 2788317 fix: avoid unnecessary Binding.get calls
+  * 721f9c8 fix: centerbox setters
+  * 41cb376 support deeply nested layout structures
+  * 29b1060 initial commit
+  * 15285a1 fix: jsx edge cases
+  * c3c294c fix: client behaviour
+  * be3623a fix: empty constructor
+  * 234dbff add client capabilities
+  * 900a742 add overrides
+  * 0d262d6 return bool from launch
+  * 100502a fix: gjs child setter
+  * b55675d improve matching
+  * f22459c export Binding
+  * 1e06ed0 add widgets for jsx
+  * e675e97 more widget subclasses
+  * ca74fb7 small fixes
+  * cfe3244 update readme
+  * 776fc80 improve ts types
+  * e5868a2 add button and eventbox events
+  * 785867f fix(astal.vala): fix super.vfunc_request
+  * ecf4783 fix(astal.vala): avoid throwing
+  * efa11df fix(lua): child and children bindings
+  * 57a4950 fix(astal.vala): instance_name setter
+  * ae2b733 rename vfunc_response to vfunc_request
+  * 9d83811 fix(jsx): handle children better
+  * ca26397 improve jsx edge cases will need to be handled as widgets are added
+  * d11c29d add(gjs): jsx support
+  * 24322cb rename runJS to eval
+  * da135bb feat: npm installable gjs package
+  * 58fa1ab separate node and gjs into its own package
+  * a7e25a4 hardcode GtkLayerShell enums
+  * 3486989 add cli tool
+  * 2a14888 Create README.md
+  * f54981f code formatting
+  * fc09b26 clean up small things
+  * cabaf24 fix item registration on watcher owner changes
+  * c9d7394 implement tray items
+  * 5bcaaa6 add: Window.margin v2
+  * 3bfdda5 add: Window.margin
+  * 7c2bdd4 init 0.1.0
+  * e88b3da fix --help output
+  * b4eeb97 remove leftover log
+  * 7b74826 init 0.1.0
+  * 2f8354f update meson format
+  * 297126f fix(cli): flush stdout on each new notification
+  * cf9125c refactor meson into a reusable format that can easily be copied
+  * 81c4e3a fix proxy, add remaining cli functionality
+  * 33b3b60 Merge pull request #1 from astal-sh/nix-flake
+  * 5929e35 fix introspection
+  * cbe86c0 add license
+  * 0a20968 add flake.nix
+  * 76036a1 init 0.1.0
+  * 611f7ec fix: pkgconfig url
+  * 6bfba43 add: astal-auth executable
+  * f81468a Merge pull request #1 from kotontrion/package/luarocks
+  * 913738c add rockspec file for packaging lua bindings
+  * 2308e48 add: Readme and gjs examples
+  * df48cbd fix: so version
+  * ba9562c fix: build example
+  * 29b8807 fix gir version
+  * 30b7ccf fix header paths
+  * d8802b1 init 0.1.0
+  * 3fc76b2 Initial commit
+  * 5f41c07 Update pyproject.toml
+  * c00f449 add LICENSE
+  * 1425b39 init 0.1.0
+
+ -- Test Builder <test@example.com>  Sat, 11 Oct 2025 20:26:39 +0000

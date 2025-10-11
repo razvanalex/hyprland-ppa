@@ -1,0 +1,7 @@
+usr/include/*
+usr/lib/*/libastal-io.so
+usr/lib/*/libastal.so
+usr/lib/*/libastal-4.so
+usr/lib/*/pkgconfig/*.pc
+usr/share/gir-1.0/*.gir
+usr/share/vala/vapi/*.vapi
