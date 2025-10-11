@@ -12,11 +12,23 @@ docker_build_minimal:
 
 .PHONY: docker_bash
 docker_bash:
-	$(DOCKER_EXEC) run -it --rm -v $(shell pwd):/build -v ~/.gnupg:/root/.gnupg $(DOCKER_IMAGE):$(DOCKER_LABEL) bash
+	$(DOCKER_EXEC) run -it --rm \
+		-v $(shell pwd):/build \
+		-v ~/.gnupg:/root/.gnupg \
+		-w /build \
+		--user root \
+		$(DOCKER_IMAGE):$(DOCKER_LABEL) \
+		bash
 
 .PHONY: docker_bash
 docker_bash_minimal:
-	$(DOCKER_EXEC) run -it --rm -v $(shell pwd):/build -v ~/.gnupg:/root/.gnupg $(DOCKER_IMAGE)-minimal:$(DOCKER_LABEL) bash
+	$(DOCKER_EXEC) run -it --rm \
+		-v $(shell pwd):/build \
+		-v ~/.gnupg:/root/.gnupg \
+		-w /build \
+		--user root \
+		$(DOCKER_IMAGE)-minimal:$(DOCKER_LABEL) \
+		bash
 
 # .PHONY: docker_push
 # docker_push:

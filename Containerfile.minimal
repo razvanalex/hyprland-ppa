@@ -1,5 +1,6 @@
-FROM ubuntu:24.10
+FROM ubuntu:25.04
 
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt upgrade -y
 
 # Install Debian build deps
@@ -9,4 +10,16 @@ RUN apt install -y \
     debhelper \
     decopy \
     dh-cargo \
-    equivs
+    equivs \
+    sbuild \
+    schroot \
+    debootstrap \
+    eatmydata \
+    fakeroot \
+    git \
+    ca-certificates
+
+RUN useradd -m builder && usermod -aG sbuild builder
+
+USER builder
+WORKDIR /home/builder
