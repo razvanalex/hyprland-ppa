@@ -1,0 +1,741 @@
+ags (2.3.0+git20251011.772f6ad-1) plucky; urgency=medium
+
+  * 772f6ad fix(docs): fixed broken link in docs/guide/install.md:24 (#767)
+  * 36b8334 chore: update lockfiles
+  * f68a0d0 docs: update stack example
+  * 829827d nix: link to coreutils
+  * aa7a8a2 chore: update lockfiles
+  * 231a1f9 fix(nix): add coreutils
+  * c8d2b56 chore: update lockfile
+  * aaae4d2 fix #756: missing type annotation
+  * 5347d21 fix(Process): write method
+  * 04d51ac chore: update lockfiles
+  * 8ff792d Merge pull request #754 from Aylur/io-migration
+  * 48fcd21 chore: impl monitorFile
+  * 8ab96a1 chore: update docs
+  * b6c7907 chore: update simple bar example
+  * 0d3c1da fix: app monitors
+  * 59d2d82 chore: use godbus
+  * 2837aa3 migrate off of astal-io
+  * 0603f82 docs: update window per monitor example
+  * c674fe0 chore: update lock
+  * 9e6912b fix: gobject export path
+  * d303d09 chore: update nix hash
+  * 960f040 chore: refactor building process
+  * 8e91fcd docs: fix import path
+  * 4b208a0 fix: jsx import paths
+  * d2f7ab4 chore: update lockfiles
+  * d637fba fix(example): remove onHoverLost
+  * fecd2d5 docs: fix Binding -> Accessor
+  * 2eb3ea5 Update migration-guide.md
+  * 22f37cc chore: update lockfiles
+  * e5e2efa docs: fix typo
+  * cb66590 fix import in docs (#718)
+  * 27407f1 docs: add tip about gnim reexport
+  * 7b06a79 docs: update migration guide
+  * 74cdd7e chore: exit meson with error
+  * 8633971 chore: update lockfiles
+  * c443575 fix: partial intrinsic props
+  * d394ee2 docs: update install guide
+  * 5ee4f3c Merge pull request #697 from Hasnep/replace-magic-nix-cache-action
+  * 402cbd7 Merge pull request #685 from Aylur/v3
+  * 48ada2c chore: update lockfiles
+  * bff0f67 feat(run): pass rest args to gjs
+  * 045f25b docs: some smaller fixes
+  * 3271ebc fix: notification example replaced handler
+  * bbc3d04 fix: meson build
+  * 4ffe17a Merge branch 'main' into v3
+  * 225f6e3 add: package.json to init template
+  * 71d2ab6 docs: list intrinsic elements
+  * 79a3b05 docs: add app example
+  * 04083eb chore: update
+  * a887fa5 docs: add cleanup comment
+  * a7fb9c6 fix: dispose root on shutdown
+  * fb15a5e fix typo
+  * 1aba234 fix: default exports
+  * 17a6bc4 chore: update
+  * a0f1dd8 fix: update tsconfig
+  * 29773f6 add: notifications example
+  * 28e249f chore: update
+  * bdb3c40 fix: export paths
+  * 6f4b77b chore: update
+  * bb06b97 update docs
+  * 3545797 chore: update
+  * 439fd5d chore: update
+  * 62e95f8 Replace magic-nix-cache-action
+  * a0c5df1 update docs
+  * 27508c1 docs: init
+  * 13b61ef add examples
+  * 117fbd3 fix: build
+  * 3ed9737 chore: nix flake update (#688)
+  * 6b4221c chore: lock update
+  * da269f6 use Gtk.Box instead of Astal.Box
+  * 0674b28 chore: lock update
+  * fc60310 chore: lock update
+  * 925f81c chore: lock update
+  * 41463da docs: init
+  * 38af11f chore: format
+  * 6bd3011 chore: update
+  * 1ce617b fix: entry filepath resolution
+  * 2340267 feat: support empty Poll State init
+  * 32bf35a fix: get rundir at runtime
+  * ad142b4 fix: use unique id for tmpfiles
+  * d127afc fix: read jscode from memory
+  * b892521 fix: bundle pass args to gjs
+  * 17b103b fix: strings.Contains -> regexp
+  * 6e3f138 fix: escape template string
+  * 84307df fix: gtk version infer
+  * e7db015 default to gtk4
+  * 978c7c3 nix: fix hm module
+  * bc94f67 nix: remove bundle util
+  * be02c37 fix: stop poll and watch on destroy
+  * baac142 feat: fetch api
+  * 71eba5f chore: update deps
+  * 3049a63 fix js module path
+  * 9044e07 chore: update lockfils
+  * 3b81cdf add: fix for AstalTray.Tray.items
+  * 4b96df7 init 3.0
+  * a6a7a0a refactor(nix): minimize files included when building (#664)
+  * 198ac8e correct build output file name (#671)
+  * 17df94c nix: remove XDG_DATA_DIR env reference (#673)
+  * cbe373f chore: nix flake update
+  * 92bdcb2 feat: types cmd verbose flag
+  * 7eb6555 Nix flake update (#670)
+  * 90db9b9 fix #661: relative run -d paths
+  * 5527c3c doc(example): modify shebang to accommodate nix users (#663)
+  * 251d394 nix: fix gtk3 bundle
+  * 2031496 remove agsFull from template to avoid confusion
+  * 99f1c3f Update quick-start.md
+  * 8eded03 fix: root directory resolution
+  * bb963ed Update README.md
+  * cd2879a nix: add support for other architectures (#652)
+  * 479b83e Merge pull request #643 from ys5g/main
+  * 631f462 feat: gtk4 support
+  * 1baed2f update 2.2
+  * 46aad56 docs: rephrase hm description
+  * 27cd931 fix: SRC variable substitution
+  * ce27d30 Merge pull request #647 from NinjacksonXV/main
+  * b6c46b0 chore: update flake.lock
+  * e7a1d3f feat(nix): install shell completion scripts
+  * 8115996 fix env.d.ts
+  * 12e0bfe Merge pull request #631 from PierreBorine/main
+  * e5276d1 chore(nix): add meta.mainProgram to lib.bundle
+  * 027a441 chore: update flake lock
+  * 7dff0fe feat: `--log-file` flag
+  * 3dd3eac Merge pull request #630 from ojaskavathe/main
+  * bc46e27 chore: update nix flake
+  * ac798e6 Changed overrideAttrs to override in the nix docs
+  * 3e270c8 docs: typos
+  * f608c66 docs: migration guide
+  * 78bfd51 cmd: init use abs dir path
+  * 10cad17 Merge pull request #624 from ratson/nix-package-meta
+  * b79fffa Merge pull request #623 from ratson/fix-home-manager-service
+  * 5e493f1 chore(nix): add package meta
+  * b54b23e fix(nix): run ags correctly in systemd service
+  * d8c2748 bump version
+  * 802292e fix #616
+  * fb47b50 docs: distributing
+  * 1734ff9 Update cachix.yml
+  * 7c04d1a revert: 771a44ba
+  * e9577cb docs: fix navbar guide link
+  * 7772428 docs: deploy ci
+  * 965e48e chore: update flake
+  * f9d6718 Merge branch 'v2'
+  * 771a44b docs: aur
+  * c93a906 docs: nix lib.bundle
+  * 967b5c9 nix: lib.bundle and template
+  * fe6d5dc finish up docs
+  * 9b22cd9 rename bundle flag cwd -> src
+  * 5ec5640 docs: update install from source section
+  * 2373858 docs: add initial docs
+  * 9f46c91 revert and fix 0865e8c
+  * fe56428 bundle: check cwd for tsconfig
+  * 0865e8c bundle: remove working dir
+  * 1bc2c98 fix: tsconfig update logic
+  * c64f8d3 feat: update tsconfig command
+  * 821c38c feat: use internal tsconfig
+  * f89742e add: bundle tsconfig flag
+  * 250d501 rename flag config -> directory
+  * e04f229 fix #606
+  * 42624a5 migrate to cobra
+  * 198993b feat: blueprint plugin
+  * 4b1e7da Merge pull request #602 from olifloof/v2
+  * 65aa0bf nix: make inputs follow nixpkgs
+  * 9fe75a1 nix: update lock
+  * b7f3896 fix: ts-for-gir version
+  * a93f0ac nix: fix gjs package path
+  * 89b8918 chore: adjust for astal core lib split
+  * 5838646 chore: update lockfile
+  * 1c1dcc1 error out if writing files fails
+  * 35e40fd nix: update lock
+  * e2aa34d cleanup: default tsconfig
+  * 60180a1 nix: add systemd bus name option
+  * 1341310 fix: expose astal cli to ags
+  * ff3740e fix: sass plugin import deprecation warning
+  * b394551 chore: update lockfiles
+  * cd543af Merge pull request #505 from preenx/typo/MenuItem
+  * 21f1600 Update README.md
+  * 9c1b7ba fix #579 --message flag
+  * 7aa1030 chore: update flake
+  * 6dce522 chore: update
+  * a15d1ae nix: systemd option
+  * 5079c19 chore: update flake
+  * 1771699 chore: update lockfiles
+  * aaef50b fix: start notif counter from 1
+  * 8971835 fix: check if notification replace id is valid
+  * c9a7ddd fix: hm-module
+  * b6566f2 Merge pull request #560 from NotAShelf/nix-cleanup
+  * 473d052 Merge pull request #546 from no-mood/main
+  * 7c90007 nix: fix maintainers field; add mainProgram
+  * 9d31d76 nix: use top-level gnome-bluetooth
+  * fa6b268 nix: make source path reproducible
+  * e936642 nix: update nixpkgs input
+  * 76ed370 nix: add agsFull package
+  * 2ce353a feat: support running file
+  * 41b059b fix: types
+  * fd95433 feat: bundle flag
+  * 3cb293e move implementation to go
+  * 1a673cb include esbuild
+  * 9c4ae76 ags: added option to enable systemd integration
+  * 99fc2f9 ags: added systemd to run
+  * 15de565 qol fixes
+  * 0752b95 fix flake input
+  * e10133b update ts-for-gir, add eslint
+  * 344ea72 Nix Housekeeping (#507)
+  * 60c4fdc Fix playerctld incorrect properties (#496)
+  * ec2e769 Fix MenuItemProps.Properties typo
+  * 8194f0c post_install.sh: create ags symlink relative to Root directory (#503)
+  * e1908e3 v2
+  * 646d5ad check wifi enabled earlier (#442)
+  * 0da9dcb add getGdkMonitor to hyprland service (#400)
+  * d56509b fix #454 Variable.is_polling
+  * b97b36d Fix inverted circular progress (#423)
+  * b284ae9 chore: update flake lock
+  * 1115022 fix #415: missing vertical prop on slider
+  * 05e0f23 specify GIRepository version #412
+  * bb91f7c bump version to 1.8.2
+  * c93e32c fix enter press triggers only filtered items (#380)
+  * 486027c fix(network): handling multiple adapters (#384)
+  * edea9ee add write and writeAsync to Utils.subprocess (#388)
+  * 2be95ed Fix sockets on hyprland (#398)
+  * 33bcaf3 properly log errors from Variables
+  * c13bcba bump version to 1.8.1
+  * a626865 improve exec utils
+  * d0ebc14 nix: adjust for aa55cdb
+  * 7525198 update media example check for length and avoid setting slider value less than 0
+  * d589077 skip unnecessary value setting in Utils.derive and Utils.merge
+  * aa55cdb fix(#375): remove -I flag from --help output
+  * 20c6325 set meson build_types option to true by default it needs to be to true for the --init flag to work and it might confuse people building from source
+  * eedd643 fix(eslint): space-before-function-paren
+  * 707a779 Update CHANGELOG.md
+  * 0f3abad feat: add vpn to the network service (#341)
+  * c9c8ed4 Stream.is_muted corresponds to actual mute state #365
+  * 915c3df fix monitorFile skip recursive if not a directory
+  * 304c42d build(nix): split outputs into out and lib (#360)
+  * f9c6cfc update changelog
+  * 36312fe fix lint
+  * 72c2526 feat(Network): add access point frequency (#358)
+  * 9e05a96 added recursive option to monitorFile (#345)
+  * cd1ac1f fix(example): applauncher ignores search query when pressing enter (#357)
+  * 75df974 fix(Icon): queue resize on size
+  * 5dec6c7 Update CHANGELOG.md
+  * a6b0aa4 Fix "dispose" signal emission (#355)
+  * b40b8d8 update examples
+  * b7bf238 add readmes for examples
+  * 987894c fix #329: hyprland active client empty on windowclose
+  * 5da9b96 add SpinButton.range, SpinButton.increments
+  * dfff165 update init sample
+  * ab52ced fix: DrawingArea.draw-fn
+  * afde5bc Calendar.detail
+  * 5ada482 Improve reproducibility of the nix workflows (#328)
+  * 8f344a8 style simple-bar example functions instead of fat arrow, Utils.watch instead of hook, LevelBar instead of ProgressBar
+  * 6ac6c92 tsc >= 5.0.4 support (#332)
+  * ff07ff4 Fix typo (#335)
+  * 4a22f38 update examples
+  * 33b0341 bump version to 1.8.0
+  * a336e1b warn instead of print for notification daemon
+  * 1baf67c deprecate: default export config object in favor of App.config
+  * 3460f2a print notification daemons's name when its already running
+  * 23a5c87 fix switch onActivate
+  * 8f8e6d3 fix Bluetooth device removed callback
+  * b716af2 small code style changes
+  * 8365642 update changelog FileChooserButton was already named FileChooserButton
+  * 2d42f37 ci: build agsWithTypes for the binary cache (#326)
+  * 1c57316 improve widget subclasses
+  * f905abf fix App.closeWindowDelay
+  * ee3e65e add: App.config
+  * 2e80d4e revert 52b2e57
+  * 60e69ac fix: Widget.attribute falsy values
+  * 17cd70f small code style changes
+  * f6de371 fix: PowerProfiles dameon dummy proxy
+  * e1f2d31 fix powerprofile.profiles type
+  * 958b9c3 bump version to 1.7.8
+  * 5054fa9 Utils.watch, custom hookable objects .hook() now checks for a connect and disconnect function instead of GObject instance, which makes it possible to create custom objects that are passable to .hook()
+  * 1415605 chore: update flake
+  * 7252482 App.applyCss take stylesheets, and an optional reset parameter
+  * 29d143d fix spread children type inference on box, menu, overlay turns out ts won't infer spread arrays the same way as non spread arrays it is a temporary fix until I figure out a way to make the infer correctly but it will probably stay this way, because if inference is needed the children prop can be used instead
+  * 7465dcf Widget.keybind modifier support
+  * 04327eb deprecate Window.popup #63
+  * e257efa add Widget.keybind #248
+  * 5e3f479 add MprisPlayer.metadata resolve #301
+  * 44c1d93 Added xesam:album in mpris (#305)
+  * cb9ed8c fix: Utils.merge forgot to convert it to kebab case, so it just didn't if the prop was in camel or snake case
+  * 87192d7 add: Notifications.clearDelay fix #307
+  * 622e808 fix label markup (#309)
+  * 5c23b1e fix null Gtk.Setting
+  * d859899 bump version to 1.7.7
+  * b78fb62 improve App: gtkTheme, iconTheme, cursorTheme, addIcons
+  * 1e8edb8 fix: Utils.merge connect to notify::prop instead of changed
+  * e82a46b fix: network.wifi enabled signal
+  * abfef5d touch up init code snippet
+  * 785f1a9 update example configs
+  * 4ac0dbb writeFileSync return Gio.File
+  * 0cf4049 fix: Scrollable destroy child on destroy event
+  * ca4ce5a Remove the `type` parameter from `Utils.monitorFile` (#302)
+  * 7d0945a add Utils.merge, Utils.derive, Binding.as
+  * ca32986 add `finalPackage` for the `home-manager` module (#293)
+  * e117758 Fix typo in `src/widgets/widget.ts` (#298)
+  * 16ca0fd fix click through setter
+  * 912a69c Variable: value check on setter, force on setValue when a listen or poll callback returns the same value its safe to not emit a signal there are cases when the value is an objcet in which case the user might want it to emit a signal in which case the setValue can be used
+  * 255ac2b Stack.add_named fix #296
+  * 7ba2efd hyprland: deprecate sendMessage, introduce message and messageAsync
+  * 52b2e57 hyprland service: workspace and monitor signal emit number
+  * 8ab35d1 fix Gtk.Bin.prototype.child override
+  * 28d62b3 Remove extra callback execution on widgets' `.poll()` method call (#292)
+  * 45be37a add Utils.writeFileSync
+  * 109faf5 add fallback generic Attribute type to widget functions
+  * 58e1b14 fix eventbox second child parameter
+  * f5ed524 make closeWindowDelay writable
+  * 1afe020 small type fix
+  * bbbf87a bind service methods
+  * 47cea77 update changelog
+  * faea7c8 fix button second child parameter
+  * fa59075 make Stack.children writable
+  * d9169df add fallback types for Props types
+  * 1130d04 bump version to 1.7.5
+  * 395e1ce add Stack.children and deprecate Stack.items items was a list of tuples which made it complicated to make it typesafe and it was also possible to add multiple widgets with the same name. children is an object, so only uniquely typed widgets are possible and the shown attribute is also typed correctly. The only drawback is that its not possible to set the children of a Stack to a new one without altering its type, which is a headache in plain JS. In that case the solution is to make a new Stack which shouldn't be complicated.
+  * 942f824 export gobject utils in Utils
+  * e6594b2 generate types for utils subdirectory (#287)
+  * b5ac1ba fix icons relative path (#283)
+  * 52580fd move options to their service instances add icons config option
+  * 5d94ad9 fix types
+  * dca6849 child property as second parameter (#265)
+  * db37e5f bump version to 1.7.4 and update changelog and todo
+  * 81e0ee4 feat: greetd service (#282)
+  * 8bb757d feat(pam): Utils.authenticate (#273)
+  * 8211529 add all casing for constructor props
+  * f5c2bbe fix: common props being optinal in getters
+  * 8ef5174 fix(CenterBox): children
+  * 881f0fd fix(Audio): notify Stream.stream
+  * e64c0bb make Audio.microphone and Audio.speaker always this makes microphone-changed and speaker-changed obsolete
+  * beb7654 export modules globally
+  * 6fa8cdf use gdkmonitor as the setter for Window.monitor
+  * f1fea1e update changelog
+  * 317490d add: Window.gdkmonitor  (#174)
+  * 5d4a62e fix/mpris: update identity on _updateState() (#271)
+  * 12a4e9b bump version to 1.7.3
+  * 54e9a39 refactor widget subclassing round 2 (#272)
+  * 8e94d3b update changelog
+  * a338229 temporary fix #262
+  * 8327bfa fix #274 parsing Array<string> Variable.listen
+  * 1becec0 feat(Window): keymode
+  * c96f8ec fix typeof Variable.bind
+  * c706e43 fix types
+  * 0d1770a fix Utils.subprocess cmd parsing
+  * 63f46de add icon browser example
+  * 0617c02 fix --init when tsconfig exists
+  * 524bad0 add --init cli flag
+  * 43a0a62 fix post install and hm-module
+  * c87f57f Revert "fix style passed with ./file.css"
+  * ee76e60 fix style passed with ./file.css
+  * f5fc7f7 chore: update flake
+  * 3e07d1b add option to generate types to share/com.github.Aylur.ags/types
+  * bfae00b fix default notification timeout not applied (#263)
+  * abf4c95 support async poll functions
+  * 1813f51 fix Variable.poll error logging
+  * 1c95191 bump version to 1.7.1
+  * 827fe12 fix Utils.notify and Notifications halting
+  * 16b4f2e fix startup error logging
+  * 6eb6755 pass this variable in transform functions
+  * 106b4f3 fix typo
+  * 58a7ee4 small fix
+  * 2a60bd9 fix small type issue
+  * 552c9c0 allow ./ notation for style config attribute
+  * adae4fe add Utils.HOME
+  * 085aa2f exit on no config
+  * 8430f05 click-through constructor setter fix #259
+  * 205fc55 fix hyprland race conditions
+  * 3fce4ef move version number into a file
+  * d243a45 add warning message to Utils.notify
+  * f8a3ec9 Update CHANGELOG.md
+  * acb9fa5 add: Widget.click-through (#245)
+  * 4939aea Multiple changes for Hyprland.ts (#257)
+  * 0da5fbe fix(hyprland): close connection despite of promise error (#247)
+  * 0ae33bd fix missing centerbox prop #258
+  * 3dfd57a make libsoup3 an optional dependency #253
+  * 4780082 feat(Utils.notify) and Notification hints
+  * f681ba2 Update CHANGELOG.md
+  * a8c34c4 feat(circular-progress): end-at property (#239)
+  * 3af85de update TODO.md
+  * 19f823b add mpris widget example
+  * 268c081 remove mpris warning message
+  * 0b5bf82 update starter-config
+  * dcb24f8 mark connections and binds deprecated
+  * 9aac2aa add url params to fetch (#233)
+  * 1a494e1 feat(widgets): add child and overlay props (#237)
+  * 3f12ab5 notifications: fix error in parseImageData on invalid pixbuf (#238)
+  * 7be7b44 fix #234
+  * 6a89299 Update README.md wiki link (#231)
+  * b2dc5f0 fix chaining of transform function (#229)
+  * 3ecc2e2 fix example bar
+  * 6059c72 update examples
+  * b5ee44f fix(label): use overidden label setter in constructor
+  * 2991312 fix(mpris): missing player initialization
+  * 02928d5 Update TODO.md
+  * 1342fbd fix: Widget.subclass type
+  * a6f2387 make Variable privates protected instead
+  * d1835ca Update TODO.md
+  * f6ce496 Update CHANGELOG.md
+  * fe36e27 add: PowerProfiles service (#218)
+  * 767b188 fix: unspecified gtk version
+  * 52b0d3e bump version to 1.6.3
+  * b3605a2 Update CHANGELOG.md
+  * 0827203 overwrite toJSON to include ParamSpecced properties (#203)
+  * 2022081 feat: Utils.fetch (#187)
+  * 8624c13 use GLib.shell_parse_argv on Utils.execAsync
+  * bf90022 style: split up utils
+  * b97623a add: Utils.idle
+  * cf0b0b5 add: Applications.reload
+  * 073b023 use logError
+  * f6dd934 fix mpris
+  * 5156a34 fix missing type exports
+  * 4948b14 update: Mpris proxy ready callback
+  * a303325 bump version to 1.6.2
+  * ce63bf6 update: Hyprland.active.monitor
+  * 6a76546 nix/hm-module: cleanup (#220)
+  * ab56031 bump version to 1.6.1
+  * 00c361e feat: AgsWidget.register
+  * 92cea92 fix Network.primary type
+  * ec9d837 fix hook, bind, on, poll types
+  * fd4dc0c fix hyprland socket issue with many requests in a short amount of time (#216)
+  * 00724c0 bump version to 1.6.0
+  * 5a1a4b2 fix: widget attribute
+  * 1bbd7e8 feat: service bind
+  * 79d0f05 update changelog
+  * c997321 add: hook, on, poll, bind, attribute
+  * 162f856 fix lint
+  * 6cfc5ac add: hyprland generic event signal
+  * 21540c3 fix: kebabify function
+  * 4064016 fix: default bind transform
+  * 869c6f1 improve types
+  * b7cc41b improve types
+  * a74dda5 Update TODO.md
+  * 46e73ba CI: nix binary cache (#212)
+  * 03a2201 update starter configuration (#213)
+  * 0a7cc9b Update TODO.md
+  * a6c13de Update TODO.md
+  * 0762f57 style: use objects instead of arrays for enums
+  * 90fcaf6 improve error logging
+  * 1500cea Update TODO.md
+  * 81bf370 Update TODO.md
+  * ef87643 add todo list
+  * c3305bc chore: npm update
+  * 4d65f3b add: cache option for cover art (#207)
+  * 909b301 parse passed file starting with .
+  * 93af4d4 bump version to 1.5.5
+  * 0c23615 improve Button, EventBox hover events
+  * 86a826d feat(widget): add ListBox subclass (#199)
+  * 52363e5 fix: Mpris Player unnecessary notify signals
+  * a6a1b87 add: Utils.monitorFile
+  * 6249a71 feat: support printing from client, shebang for run-file
+  * 8f86ae9 Update CHANGELOG.md
+  * 0fbc750 feat: --run-js async support, --run-file
+  * 3e5daa0 add marks property to slider (#186)
+  * 8871cea add: target prop kebab-case check
+  * bc5cd46 use logError
+  * f466fd1 add: config.onWindowToggled & config.onConfigParsed
+  * 49f7e78 fix typo
+  * 1c23a1c fix(systemtray): dynamic IconThemePath
+  * ca8db23 fix(hyprland): notify clients on closewindow #181
+  * 01bbf2d fix: type generator #183
+  * 2c2fa98 bump version to 1.5.2
+  * c0527d2 feat: window popup close on click away #63
+  * 0c20e26 fix: assigning after gc
+  * b47fa9d fix: setting cursor at runtime #176
+  * e6870fd update changelog
+  * cc8d6e8 add: cursor property (closes #175 )
+  * 7a1699f Overlay.pass-through fix #168
+  * 42314ef feat: Window.exclusivity
+  * 1919f4b fix: error logging
+  * e0b1af4 add: notificationForceTimeout option
+  * a53020e add: bluetooth device-added, device-removed signal
+  * 54fd9cf send messages to hyprland IPC (#162)
+  * 93d188b fix(icon): lookUpIcon before checking file
+  * 75edd51 fix(widget): child setter
+  * 99e6ab7 fix(overlay): pass-through getter #168
+  * ec54428 fix(widget): child setter
+  * 19d13a2 fix(Audio): mark speaker and microphone as possibly undefined
+  * 0de95b3 export Icon.Props
+  * a6db660 export Label.Props
+  * 2879164 add gi types to setup.sh
+  * 781dc82 export widget prop types
+  * d98bcf7 feat(utils): readFile returns empty string on error
+  * adafc42 fix(icon): sizing #167
+  * b7c8ddd update example configs
+  * 75f866c move applauncher from wiki to example/applauncher
+  * c8f77f3 fix(widget): use double underscore for private props
+  * 11414ff refactor how widgets are subclassed (#153)
+  * 7720f98 Update notifications.ts (#159)
+  * 505fa76 feat(notifications): default value for hints
+  * 15710c5 feat(notifications): expose all hints #158
+  * dc3439f nix: make configDir optional (#155)
+  * 10e95d7 fix: Applications.App.executable not returning full exec string
+  * 0a34894 fix(hyprland.ts): correct the name of floating signal (#151)
+  * 96f1dc8 fix: class-names inconsistency #140
+  * 2f7167b style: small refactoring
+  * 985e3f3 fix: typo (#139)
+  * 9315667 Update README.md
+  * 127e6a1 fix: hyprland client not removed on closewindow #147
+  * 59377ec fix: bluetooth notify connect-devices on device disconnection
+  * e98c644 fix: scrollable widget vscroll
+  * 1229e88 add: extraPackages option to the home manager module (#144)
+  * ba348b8 fix: example anchor
+  * da52505 feat: log css errors
+  * 1c0b049 mpris: use sha1 for caching
+  * b903646 fix: mpris cover-path notify
+  * 741d8f9 fix: circularprogress default values
+  * 7805289 Add signal for fullscreen state in Hyprland service (#132)
+  * 7802efe fix: typo (#137)
+  * 9da16e1 fix: empty constructors
+  * 5cde653 fix: Variable types
+  * e2717d2 fix: Variable types
+  * 694aa78 make nm client synchronous
+  * d46c4b7 fix: mpris incorrect length #135
+  * acc7a57 fix: notification icon with file prefix #134
+  * 57f9ba2 fix: fix types
+  * 24cc942 add: Audio.recorders
+  * 6b6ac65 widget mixin class
+  * c7b2607 migrate to girs types
+  * c91274e bump version to 1.5.0
+  * 4a0a54c remove: Connectable interface
+  * bf3f13d bump version to 1.4.0
+  * 1fd39c0 small fixes
+  * 7512796 remove global ags object (#114)
+  * 7b8e30b use Gio.File.trash for clear-cache
+  * df4d3d5 remove: launched signal from Application
+  * fecafd9 add: node_modules to release (#125)
+  * 24ebbf7 fix: missing error handler
+  * a3cfe8c feat(Applications): add setter to frequency (#124)
+  * 70b8966 small fix
+  * 38c4c4d better error logging
+  * 1230c2f fix: missing slider pspec
+  * 54a6a61 remove leftover files
+  * 6cd0530 fix: notification example
+  * 25f0973 add: widget prop setter checks
+  * 528b51b add: Window pspec definitions
+  * e8e8212 add: leftover notify emits
+  * 5158079 Add more props to battery service (#119)
+  * 5f3cc84 fix: prop getters return default value at first
+  * 417f440 nix: use wrapGAppsHook (#116)
+  * 991c23c fix: Wired._device undefined
+  * 39b0e8b fix icon scaling (#113)
+  * b0f5c15 notify::prop-name signals and bind transform method (#109)
+  * 70041f3 fix: hyprland client title not set correctly when containing a comma (#111)
+  * f987765 fix: systray freeze (#104)
+  * be89214 fix buffer too small error (#110)
+  * 364fde9 bump version to 1.3.0
+  * 9a2a8b8 Create create_release.yaml (#102)
+  * bbfbd6c fix: Label label getter
+  * ce35824 chore: update npmDepsHash
+  * 0bd14ef add: widget css property (#100)
+  * 402bfc6 fix: check for invalid markup on label (#99)
+  * cb0661c add: monitor-added and monitor-removed signals to Hyprland service (#98)
+  * 0c22b0b Create FUNDING.yml
+  * 58516e5 return id from timout so it can be cancelled with GLib
+  * d554146 fix: consistency in Hyprland client addresses #96
+  * 5a67a00 add cacheNotificationActions config option
+  * 96812bf move default config values to App
+  * d14043d add onHover and onHoverLost to Button
+  * 1d6e4a8 fix: dont start on -q flag
+  * 4ea99bc fix: dont cache notification actions
+  * 89c6a85 feat: add hm module (#90)
+  * 7b14830 Mpris.getPlayer small fix
+  * fd250ae update example configs
+  * 50c5edf bump version to 1.2
+  * 3321e77 service getters return Array instead of Map (#80)
+  * 736c89c style: sort widgets
+  * 846690e Add circular progress widget (#87)
+  * 0770a8b add variable stop, start and transform methods  (#88)
+  * 43ced1c fix trayIcons using custom iconTheme (#86)
+  * 85f0849 add gvfs to buildInputs
+  * d20445c add: maxStreamVolume config
+  * 317e319 Update README.md
+  * 1d52f0d add iconName to Network.wifi.accessPoints
+  * d199249 fix: npmDepsHash
+  * c3c1079 fix: make Variable option parameter optional
+  * a52031c update version to 1.1.0 (#77)
+  * 1a49826 add connecting prop to BluetoothDevice
+  * 3d85dad Add LICENSE (#79)
+  * c06156c fix touchpad scroll for buttonsi #5
+  * 6491b26 add libsoup_3 to gjs.nix
+  * 665c46b System tray (#70)
+  * 6b043b3 ags.Variable and Widget.binds (#76)
+  * 7add863 Update lint.yml
+  * 4761a23 quality of life changes
+  * da97971 Merge pull request #71 from Aylur/feature/client-process
+  * 9618b1f Merge pull request #73 from Abaan404/touchpadfix
+  * 496e7a5 fix touchpad scrolling on eventbox
+  * 3d2171c fix: trigger slider by keyboard arrows (fixes #72)
+  * e669c4f fix run-js semicolon check
+  * 8463d2c use current time as client bus name
+  * 226b051 update help message
+  * a1e4def use dbus proxy instead of gtk actions
+  * 3023967 update eslintrc
+  * facc291 overried Gtk.Bin child property
+  * d33a849 Merge pull request #58 from benthejack-vuw/fix/only-destroy-removed
+  * aa5b547 update nix npmDepsHash
+  * c59a920 fix overlay child and overlays attributes
+  * e722606 linting fixes and overlay
+  * 7732841 print run-js to stdout
+  * 4b294a2 only destroy children that aren't re-used
+  * b02412c add monitor getter for Window #56
+  * 8aed167 add App.addWindow and App.removeWindow #56
+  * 99018c0 fix slider min, max, step (fixes #57)
+  * 86ef61b add iconName to Network.wifi Network.wired Battery
+  * 305dc16 remove cairo import
+  * 3ac91ee move interface definitons to xml files
+  * 2a875d4 fix: setting className resets it #53
+  * 57e339c fix hyprland keyboard-layout signal #52
+  * 0ee0d52 rename Window.margins to Window.margin
+  * 469d0e1 add getter setter for style and className
+  * a553366 fix typos
+  * 645af14 add notification center example
+  * 09cbb1e eslint: add build and result to ignorePatterns
+  * 030cc51 Update package.json
+  * 21b83c3 fix package.json
+  * 6546ac1 Update package.json
+  * 5c8b350 Create lint.yml
+  * 71ba20b Merge pull request #49 from Aylur/v1-alpha
+  * e53ee49 fix: example config
+  * 92465c0 oops
+  * 71b6e63 Utils.interval return id instead of widget
+  * d3cba27 Merge branch 'main' into v1-alpha
+  * e078336 add label truncate property
+  * 79535ce add Command type to reduce redundancy
+  * 93775bb bump version to 1.0.0
+  * ba23ca4 export widgets, update the example
+  * d488dd8 lint
+  * 84f48d7 monitor and cache number of app launches
+  * d26b867 small fixes and changes
+  * 22d1818 fix icon size, add App.configDir, add hyprland socket read
+  * 1efb673 fix hyprland urgent window #45
+  * 3a407df fix setStyle memory leak
+  * 6f20409 fix setStyle memory leak
+  * 68ce8d0 icon base size
+  * 737fc95 es modules and clean up codebase
+  * 791e3c6 subclass window
+  * 2bf9e59 add remaining widgets
+  * 4998d17 Utils.subprocess handle empty output (fix #42)
+  * efb7e70 map monitors by id instead of name #41
+  * 87a7f0c subclass box
+  * b03d761 subclass box
+  * c776758 remove unnecessary restrictions on hyprland service
+  * c3346f0 add quit cli arg
+  * adcf2e1 optimise hyprland service
+  * 34ce1aa lint
+  * f738369 feature: add readFileAsync util
+  * 9d7be06 feature: add subprocess util
+  * a3f717e fix: mpris cover art with non latin characters not caching  #37
+  * 318752e feature: press and release events #38
+  * 0a9e7e4 fix missing logError
+  * 1571380 Merge pull request #33 from dongsu8142/update-hash
+  * fb98826 update npmDepsHash
+  * 3549611 Merge pull request #32 from Aylur/dependabot/npm_and_yarn/word-wrap-1.2.5
+  * 6611338 Bump word-wrap from 1.2.3 to 1.2.5
+  * 79a37f2 quit without stacktrace when no config found
+  * 0da22e2 use Gio.DesktopAppInfo
+  * 0f381c5 remove unnecessary disconnection
+  * de17d53 Revert "fix: switch onActivate"
+  * 41332aa fix: switch onActivate
+  * f5cc46c hotfix promises
+  * f048455 Merge pull request #27 from Aylur/menu-widget
+  * 26c9c9e Merge pull request #26 from Aylur/async-await
+  * 478cebe Merge branch 'main' into async-await
+  * 39677e7 add menu menuitem
+  * ea4a6fb add App.resetCss
+  * c8b2831 use Promise on execAsync and writeFiles
+  * 7ab91d6 Merge pull request #24 from Aylur/revert-23-async-await
+  * da5bd6b Revert "fix: promise won't resolve"
+  * 2fb9be9 Merge pull request #23 from Aylur/async-await
+  * ef88760 fix: promise won't resolve
+  * c92f2b2 update README
+  * cc9b8ad fix: wrong notification image path
+  * 8517529 popover, revealer props
+  * a200aca lint
+  * 2e91cf8 stricter name filter
+  * 2d7520c Merge pull request #20 from dongsu8142/main
+  * e9215ec fix not found libgvc.so
+  * c5bdb01 added menubutton and popover
+  * c504360 mpris more specific signals
+  * 77ac328 stack widget
+  * af8eb56 eventlistener widget as first arg
+  * 7a9999c formatting and window setup prop
+  * 7df7c35 specify gnome bluetooth version #14
+  * 68eac45 Merge pull request #12 from dongsu8142/main
+  * e5eb9c0 fetch submodules
+  * 1c79a48 change src
+  * 5d313e1 Merge pull request #11 from dongsu8142/main
+  * 609b4c5 support nix
+  * d30f2e9 #9
+  * 7946c3f small fix #7, device state prop
+  * 5fedcba example
+  * 792e61f refactor
+  * a54a7f7 notifications small fix
+  * 606b061 small fix
+  * e411813 not saving actions
+  * a9c22e8 small fix
+  * 0d1e871 invoking action also closes
+  * 8f5d706 toggleClassName optional condition
+  * deef085 ensureDirectory util
+  * 8e2e269 connections optional signal
+  * 309c019 remove builtin widgets
+  * 7e9bee9 readFile
+  * bcef2a8 small fixes
+  * dee15f4 interval returns optional widget
+  * bc2cf6a entry text, label maxwidth
+  * 5f74cca DateTime in unix format
+  * cf1a6b2 GLib.DateTime instead of js Date
+  * bd04fdc disconnect exports
+  * c02c008 formatting
+  * 0412a3f remove Hyprland.Hyprctl in favor of execAsync
+  * f345f76 mpris removed state property
+  * 7c2c30c applyCss moved to App
+  * b5d7ac3 slider defaults between 0 and 1
+  * b0f258a Update README.md
+  * 212ee4e progress bar
+  * 80a80af small fixes
+  * 37a4839 Merge branch 'main' of https://github.com/Aylur/ags
+  * 7b02043 state property access
+  * c62ba97 Update README.md
+  * d9c354d setValue instead of set_value
+  * 96f0fee widget additional properties option
+  * d7700e3 Merge branch 'main' of https://github.com/Aylur/ags
+  * f26afce progressbar widget
+  * d9e9f5f audio small fix
+  * f413544 Update README.md
+  * 3af2e1c app mixer percent label
+  * 4318a35 app mixer
+  * ae05e63 overlay
+  * 8baad7e small fixes
+  * d2054cf close window delay
+  * 6357cd9 exit on error option
+  * 0359f86 service export
+  * 6ca3a9a exported widget definitions to make it extensible
+  * f3306ab cleaner code
+  * 6c0928d apps widget wrapping
+  * e9cd3c1 toggleClassName and setStyle
+  * 659e95b stack trace on error
+  * b4f749e ags
+  * 7e82ac0 Initialize with the GNOME Typescript Template
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 11 Oct 2025 21:59:54 +0000

@@ -1,0 +1,38 @@
+Source: ags-unstable
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: x11
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ npm,
+ golang-go,
+ gobject-introspection,
+ libgirepository1.0-dev,
+ libgtk-3-dev,
+ libgtk-layer-shell-dev,
+ libgtk-4-dev,
+ libgtk4-layer-shell-dev,
+ libgjs-dev,
+ gjs,
+ astal-unstable,
+ astal-unstable-dev,
+ astal-unstable-gir,
+Homepage: https://aylur.github.io/ags/
+Vcs-Git: https://github.com/Aylur/ags
+
+Package: ags-unstable
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ astal-unstable,
+ astal-unstable-gir,
+ gjs,
+ npm,
+Provides: ags
+Conflicts: ags
+Description: A customizable and extensible shell (unstable git version)
+ This is a library built for GJS to allow defining GTK widgets in a declarative way. It also provides services and other utilities to interact with the system so that these widgets can have functionality. GJS is a JavaScript runtime built on Firefox's SpiderMonkey JavaScript engine and the GNOME platform libraries, the same runtime GNOME Shell runs on.
