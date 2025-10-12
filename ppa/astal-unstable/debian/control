@@ -1,7 +1,7 @@
 Source: astal-unstable
 Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
 Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
-Section: x11
+Section: libs
 Priority: optional
 Standards-Version: 4.6.2
 Build-Depends:
@@ -29,21 +29,39 @@ Depends:
 Provides: astal
 Conflicts: astal
 Description: Building blocks for creating custom desktop shells (unstable git version)
+ Astal is a collection of libraries written in Vala and C, designed to serve
+ as the foundation for both lightweight widgets and fully-featured desktop
+ shells. It handles the backend logic, so you can focus entirely on building
+ the frontend.
 
 Package: astal-unstable-dev
 Architecture: any
+Section: libdevel
 Depends:
  astal-unstable (= ${binary:Version}),
  ${misc:Depends},
 Provides: astal-dev
 Conflicts: astal-dev
 Description: Building blocks for creating custom desktop shells - development files (unstable git version)
+ Astal is a collection of libraries written in Vala and C, designed to serve
+ as the foundation for both lightweight widgets and fully-featured desktop
+ shells. It handles the backend logic, so you can focus entirely on building
+ the frontend.
+ .
+ This package contains the development files.
 
 Package: astal-unstable-gir
 Architecture: all
+Section: introspection
 Depends:
  astal-unstable,
  ${misc:Depends},
 Provides: astal-gir
 Conflicts: astal-gir
 Description: Building blocks for creating custom desktop shells - GObject introspection (unstable git version)
+ Astal is a collection of libraries written in Vala and C, designed to serve
+ as the foundation for both lightweight widgets and fully-featured desktop
+ shells. It handles the backend logic, so you can focus entirely on building
+ the frontend.
+ .
+ This package contains the GObject introspection data.

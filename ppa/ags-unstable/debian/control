@@ -34,4 +34,8 @@ Depends:
 Provides: ags
 Conflicts: ags
 Description: A customizable and extensible shell (unstable git version)
- This is a library built for GJS to allow defining GTK widgets in a declarative way. It also provides services and other utilities to interact with the system so that these widgets can have functionality. GJS is a JavaScript runtime built on Firefox's SpiderMonkey JavaScript engine and the GNOME platform libraries, the same runtime GNOME Shell runs on.
+ This is a library built for GJS to allow defining GTK widgets in a
+ declarative way. It also provides services and other utilities to interact
+ with the system so that these widgets can have functionality. GJS is a
+ JavaScript runtime built on Firefox's SpiderMonkey JavaScript engine and
+ the GNOME platform libraries, the same runtime GNOME Shell runs on.
