@@ -1,5 +1,5 @@
 SHELL			:= /bin/bash
-PACKAGE			:= ags
+PACKAGE			:= ags-unstable
 VERSION			:= 2.3.0
 COMMIT_HASH		:= 772f6ad
 BUILD           :=

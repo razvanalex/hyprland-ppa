@@ -24,14 +24,13 @@ Homepage: https://aylur.github.io/ags/
 Vcs-Git: https://github.com/Aylur/ags
 
 Package: ags-unstable
-Architecture: any
+Architecture: amd64
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
  astal-unstable,
  astal-unstable-gir,
  gjs,
- npm,
 Provides: ags
 Conflicts: ags
 Description: A customizable and extensible shell (unstable git version)

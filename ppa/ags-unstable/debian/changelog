@@ -1,4 +1,4 @@
-ags (2.3.0+git20251011.772f6ad-1) plucky; urgency=medium
+ags-unstable (2.3.0+git20251012.772f6ad-1) plucky; urgency=medium
 
   * 772f6ad fix(docs): fixed broken link in docs/guide/install.md:24 (#767)
   * 36b8334 chore: update lockfiles
@@ -738,4 +738,4 @@ ags (2.3.0+git20251011.772f6ad-1) plucky; urgency=medium
   * b4f749e ags
   * 7e82ac0 Initialize with the GNOME Typescript Template
 
- -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 11 Oct 2025 21:59:54 +0000
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sun, 12 Oct 2025 08:58:14 +0000

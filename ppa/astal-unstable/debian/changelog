@@ -1,40 +1,4 @@
-astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
-
-  * updated package
-
- -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 11 Oct 2025 21:35:46 +0000
-
-astal (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
-
-  * updated package
-
- --  <>  Sun, 12 Oct 2025 00:35:17 +0000
-
-astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
-
-  * updated package
-
- -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 11 Oct 2025 21:25:26 +0000
-
-astal (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
-
-  * updated package
-
- --  <>  Sun, 12 Oct 2025 00:23:00 +0000
-
-astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
-
-  * updated package
-
- --  <>  Sat, 11 Oct 2025 21:15:51 +0000
-
-astal (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
-
-  * updated package
-
- --  <>  Sun, 12 Oct 2025 00:15:41 +0000
-
-astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
+astal-unstable (0.1.0+git20251012.71b008e-1) plucky; urgency=medium
 
   * 71b008e Update notification.vala
   * 8d9ed4c fix(mpris): cli player filter flag
@@ -877,4 +841,4 @@ astal (0.1.0+git20251011.71b008e-1) plucky; urgency=medium
   * c00f449 add LICENSE
   * 1425b39 init 0.1.0
 
- -- Test Builder <test@example.com>  Sat, 11 Oct 2025 20:26:39 +0000
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sun, 12 Oct 2025 08:43:56 +0000

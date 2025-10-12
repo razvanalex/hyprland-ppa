@@ -1,5 +1,5 @@
 SHELL			:= /bin/bash
-PACKAGE			:= astal
+PACKAGE			:= astal-unstable
 REPOSITORY		:= https://github.com/Aylur/astal.git
 VERSION			:= 0.1.0
 COMMIT_HASH		:= 71b008e
@@ -13,7 +13,7 @@ DEBFULLNAME 	?=
 DEBEMAIL    	?=
 PPA				?= ppa:razvanalex/hyprland-ppa
 ROOT			:= $(shell pwd)/../../
-PACKAGE_ROOT    := $(ROOT)/ppa/astal/
+PACKAGE_ROOT    := $(ROOT)/ppa/$(PACKAGE)/
 BUILD_ROOT		:= $(PACKAGE_ROOT)/build/
 
 include $(ROOT)/Makefile.defs

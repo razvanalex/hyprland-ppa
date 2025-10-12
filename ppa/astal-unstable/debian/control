@@ -40,9 +40,9 @@ Conflicts: astal-dev
 Description: Building blocks for creating custom desktop shells - development files (unstable git version)
 
 Package: astal-unstable-gir
-Architecture: any
+Architecture: all
 Depends:
- astal-unstable (= ${binary:Version}),
+ astal-unstable,
  ${misc:Depends},
 Provides: astal-gir
 Conflicts: astal-gir
