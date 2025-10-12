@@ -1,0 +1,1384 @@
+appmenu-glib-translator (25.04+git20251012.6665f77-1) plucky; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sun, 12 Oct 2025 15:02:10 +0000
+
+appmenu-glib-translator (24.05+git20251012.6665f77-1) plucky; urgency=medium
+
+  * 6665f77 xfce: remove mandatory expansion
+  * 4ab1fbb Added translation in Occitan
+  * c172702 Merge branch 'patch-1' into 'master'
+  * 4031e98 meson: Move gdk-pixbuf to Requires.private in appmenu-glib-translator.pc
+  * f05d28d service: reference the registrar after the start
+  * beacc0f update build versions
+  * 8c8e788 DBusMenuModel: preload only submenus
+  * 218bb4a importer: do not check version
+  * 5d39a18 xfce: expand now use plugin prop instead of widget one
+  * 6a239ce xfce: try to fix expand with 4.20
+  * 89767e3 Revert "css: use last child for bold appname"
+  * 7631683 Merge branch 'master' into 'master'
+  * 9b3d7f4 Fix Budgie Desktop Settings Launcher  - Fix launcher for Budgie Desktop Settings due to name change of    the .desktop file
+  * 0c914bb xfce: return property base
+  * bada552 xfce: use bidirectional binding in config
+  * fdf2821 xfce: change binding direction
+  * a819ab7 xfce: unbind all properties on destruction
+  * d6f7904 xfce: try to fix double channel
+  * 14d696d meson: remove gio bugfix VAPI
+  * 2112c4e translator: destroy menu on cancel too
+  * 39c508c xfce: remove width request
+  * d4cdd25 css: use last child for bold appname
+  * aa8f0de widget: apply CSS after binding a model
+  * 49aa424 helper-dbus: fixed deprecation
+  * 0904b74 registrar: now it is launcher, not service
+  * fb82ef8 vala: fix object path
+  * d1d2dcf registrar: do not use unique object path for private iface
+  * 241873e vala-panel: require latest one
+  * 1d641f6 Merge branch 'jayatana-meson' into 'master'
+  * 995ce90 cmake: remove cmake now
+  * f5b56b1 ci: adapt to meson
+  * 73951e1 meson.build: remove cmake module, unneded now
+  * 9c72edf jayatana: now builds by Meson instead
+  * 3ae50b0 Merge branch 'new-signals-v2' into 'master'
+  * 512034c translator: even more robust
+  * af0d2b3 item: be NULL-proof to action
+  * 073fc2e translator: try to avoid crashes from removal of xml or menumodel
+  * 3fa2f20 translator: send all section change at once
+  * f92b481 translator: reduce frequency of layout parsing
+  * a14b19f translator: fix glib warning
+  * d296ba2 item: fix memory leak
+  * 24acefd rpm: remove spec
+  * 69f2868 translator: another uneeded function removal
+  * 4b7034c translator: remove unused function
+  * 87f4a44 appmenu-gtk-module: modernize a little bit
+  * ced6ce3 CI: fix release and again
+  * 469739b CI: fix release again
+  * 5a8865b meson: fully switch to yy.mm scheme
+  * d4b2300 CI: fix python on release
+  * 822adaf CI: fix release
+  * d3a7024 meson: ability to use external translator
+  * e20dab4 applet: remove obsolete folder too
+  * 8c75ca3 applet: remove obsolete kdev4 project
+  * 40aa8d4 Merge branch 'remove-bamf' into 'master'
+  * 77ddab0 translator: should not request vala
+  * 92c332f CI: add introspection for translator
+  * fc24493 registrar/module: switch to yy.mm versioning
+  * cd46e28 translator: become subproject now
+  * 4daa259 model: fix doubling first section in certain cases
+  * 448e80a menutranslator: rename to more distrinct name
+  * 71ef597 importer: use GIR
+  * ad750a7 menutranslator: add soversion
+  * 2efc4f1 meson: modernize meson files a little
+  * e48d4c5 imported: now shared library
+  * 57144e2 all: get rid from BAMF
+  * aa25801 update gitignore
+  * 7abc96e Arabic translation
+  * 76442be module: allow disable wayland
+  * 99cd56c Merge branch 'master' into 'master'
+  * 1184e0c Add UnityX to desktop menu helper
+  * 56de7d2 Merge branch 'fix-docs-install' into 'master'
+  * f0a477a meson: fix license install location
+  * 9cc6489 Merge branch 'fix-docs-install' into 'master'
+  * a3f4080 build: fix documentation install path
+  * 87abe53 Merge branch 'mattalxndr-master-patch-70939' into 'master'
+  * d83a33d Update README.md to fix broken link
+  * 90f8584 Merge branch 'patch-pt' into 'master'
+  * 7aa8475 Replace pt.po
+  * 7c11ae9 Merge branch 'fix/docs' into 'master'
+  * 7915c37 update build documentation
+  * ec4ad02 Merge branch 'master' into 'master'
+  * f1b848a Add support for Budgie Control Center
+  * b5e9b0a Update .gitlab-ci.yml
+  * 372ac1b Update .gitlab-ci.yml
+  * ae85f26 Update .gitlab-ci.yml
+  * 5edb95c Update .gitlab-ci.yml
+  * ae241f7 Update .gitlab-ci.yml
+  * 442bceb Update LINGUAS
+  * 46c2fbb Merge branch 'master' into 'master'
+  * db0a42a Added italian translation
+  * 5e40474 Update README.md
+  * 47d5c21 Merge branch 'master' into 'master'
+  * 3704eaf Add support for Budgie Desktop Settings
+  * b980cda Update README.md
+  * f1db9cd ci: fix release
+  * 4e362c2 libwnck: fix desktop
+  * 0091309 all: add alternative wnck backend
+  * 9938a23 appmenu-gtk-module: remove forgotten CMake files
+  * c8745a9 Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu into master
+  * c09323f registrar: reformat
+  * 60e723e Update .gitlab-ci.yml
+  * b75097c Update .gitlab-ci.yml
+  * a560df5 Update .gitlab-ci.yml
+  * c778439 meson: update patch version
+  * 5fcb0a2 Merge branch 'importer-fix' into 'master'
+  * 1250eea importer: new internal layout. Fixes #327
+  * 1e8791e importer: process events after layout parse. For #327
+  * 04a0370 importer: small fixes
+  * 8d67ed1 meson: fix budgie applet name
+  * f4d9d3a ci: fixed release
+  * 8aad83e ci: use VERSION only when required
+  * 634456c ci: add VERSION
+  * 9e42f34 all: fully switch to meson
+  * d5f0df4 Merge branch 'jtojnar-master-patch-50219' into 'master'
+  * dd0364c meson: make docs installation configurable
+  * d286c1b meson: clarify or later
+  * ca3dfe4 Update .gitlab-ci.yml
+  * 4f38def meson: fix vala addons
+  * 872e6c1 jayatana: try to get rid from multiple definition
+  * 617c5ac Update .gitlab-ci.yml
+  * b1b0cc4 Merge branch 'master' of https://gitlab.com/vala-panel-project/vala-panel-appmenu
+  * 9689e97 jayatana: always require X, as Java wants
+  * 76e821f jayatana: fix build
+  * 8da5be9 Update .gitlab-ci.yml
+  * 5798e15 Merge branch 'master' into 'master'
+  * 1c36eb0 Revert to desktop menu if last window is closing and there is no real desktop (gnome-shell)
+  * 80c6c55 vapi: fix libxfce4panel vapi
+  * 334481a Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * 4952c60 WIP: meson: use cmake subproject for jayatana
+  * 060f7ac Merge branch 'patch-1' into 'master'
+  * d4a39ac Update README.md Make clear how to update git submodules.
+  * f817fe9 Merge branch 'master' into 'master'
+  * 6713d8e Update Japanese translation
+  * bd377f4 Merge branch 'master' into 'master'
+  * ac60817 Replace ja.po
+  * 815348f Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * 4fd1461 Importer: use template basename
+  * 8e8b2d0 registrar: remove double free
+  * c2cb48f FindGTK: search for harfbuzz
+  * edac736 appmenu-gtk-module: fix crashes on blacklist
+  * 6001e02 CMake: use vala version table for addons. Fixes #296
+  * 3e0101c meson: use correct kwargs for desktop
+  * 0c921a0 Merge branch 'master' of https://gitlab.com/vala-panel-project/vala-panel-appmenu
+  * 29ce487 appmenu-gtk-module: always run only once per program. For #259
+  * 924a610 Merge branch 'patch-1' into 'master'
+  * 2178bee Add Danish translation
+  * 98e63da Update .gitlab-ci.yml
+  * 75c32f7 Update .gitlab-ci.yml
+  * bb3e3b3 docs: do not install by default
+  * 3d30359 vala-panel: do not use a module
+  * a7893ea vala-panel: use applet as extension point implementor
+  * 5d950a4 importer: optimize a little bit
+  * 3d5fc6a meson: define registrar version
+  * 135c289 appmenu-gtk-module: fix compiler warnings
+  * 62e52b8 Merge branch 'master' of https://gitlab.com/vala-panel-project/vala-panel-appmenu
+  * d63a78b lib: Fix Make generator. Fixes #291
+  * 18a30f2 importer: fix compiler warning.
+  * 6ffa82d meson: fix build on new Vala
+  * 8867008 appmenu-gtk-module: meson as functional as CMake
+  * f8edda2 appmenu-gtk-module: fix CMake formatting
+  * fedf943 appmenu-gtk-module: correct systemd service
+  * 838adc1 appmenu-gtk-module: use pkg-config cmake way.
+  * 38b98f1 C: fixed compiler warnings
+  * d9ea251 appmenu-gtk-module: @only configure for pkgconfig
+  * 9cc6f68 meson: functional applet and registrar
+  * 6d7f1ef lib: use vapi as sources
+  * ab92683 Meson: non-functional now
+  * 7e8f851 all: fix translations
+  * 203fad4 Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * d4cc4d0 data:Renamed desktop files
+  * 8f4818b Update .gitlab-ci.yml
+  * 698a2df vala-panel: use constructed function.
+  * 5a2d630 appmenu-gtk-module: plug memleak.
+  * b573d39 valapanel: set background widget correctly.
+  * d52f44c Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * e11b24c ImporterModel: always preload DBusMenu.
+  * 617b23c item: fix warning.
+  * 1add847 Update CMakeLists.txt
+  * d27fe64 Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * d96530c CMake: check vala version correctly.
+  * f97ac5b CMake: fix build with new vala
+  * 9ad0d6a Merge branch 'master' of https://gitlab.com/vala-panel-project/vala-panel-appmenu
+  * a4945a6 CI: use correct arch image
+  * c573803 Update README.md
+  * 5dd5a62 CMake: compile resources in applets.
+  * bd7d33b Merge branch 'master' of https://gitlab.com/vala-panel-project/vala- panel-appmenu
+  * 0477392 all: move applets to separate dir.
+  * 5bd43fb Merge branch 'patch-1' into 'master'
+  * db7cef8 Create first Hungarian language
+  * 6d30c29 Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * 6a5274c Use fixed matcher
+  * 2371fe8 all: add Wnck matcher for Wnck backend.
+  * 426e0d0 Merge branch 'detailed-compile-guide' into 'master'
+  * a460461 valapanel: use new applets name in 0.5
+  * 6dd6e81 CI: add pacman -Sy
+  * f156c88 CI: replace no longer maintained image
+  * 45f3bc7 jayatana: use deterministic method to generate IDs.
+  * 4d9f5b5 all: fixed formatting
+  * 26eb568 hijack: use all function pointers directly. For #259
+  * bfb7bdf appmenu-gtk-module: remove parentheses on hijack function. For #269.
+  * 21f5618 Merge branch 'patch-1' into 'master'
+  * 2ccb11d Remove double negation
+  * 4ada292 Update README.md
+  * 81afe2e jayatana: enabling instructions. For #262
+  * 8434cea jayatana: Update LICENSE
+  * 3801c08 CI: add releases
+  * 9529188 jayatana: fix build headers with old cmake
+  * 982131d jayatana: overhaul pt2. Only visual issues remain.
+  * e5800bc jayatana: menuitem cache pt1.
+  * 007338b jayatana: check for JetBrains and remove checkboxes. Fixes #137.
+  * 8a72024 subprojects: do not include FallbackVersion if no VCM found.
+  * bc6c2a2 jayatana: attempt 1 to add a JetBrains hack.
+  * 0fa5607 jayatana: refactor.
+  * 44a2b91 git: update ignore list
+  * fc02886 all: formatting by updated clang-format.
+  * ea876ea appmenu-gtk-module: add IGNORE_DEPRECATIONS when dealing with deprecated
+  * a07f26b Update README.md
+  * a789722 Importer: simplify a code a little bit.
+  * fd5b0dd Importer: do not use -pedantic.
+  * 36c16d5 CMake: try subproject versioning
+  * 4fc1de5 CI: add git
+  * 661a2d2 all: subproject versioning
+  * f15ac8a CI: use Java8 pt.2
+  * 0e8a7cc CI: use Java8
+  * 4478139 CI: for test
+  * 39678f5 CI: for test
+  * c173dee CI: for test
+  * a659897 CI: fixup2
+  * a9d6d2c CI: fixup1
+  * 3666b58 XFCE: show config entries. Fixed #252
+  * a57f060 CI: add base
+  * 818008d registrar: fix warnings.
+  * ee3c34b CMake: use TXZ generator.
+  * 998e403 all: remove deprecated show_all
+  * 9e0093b CMake: add FeatureSummary.
+  * 14a2725 jayatana: translate more Spanish
+  * a63047d jayatana: remove remaining Spanish chars.
+  * 12694e3 CMakeLists.txt: allow building without submodule
+  * b1a0c28 data: use confgure_file.
+  * dc3b7e2 po: updated POT and Russian
+  * 388045b Add detailed steps to install dependencies for Ubuntu 18.04
+  * 027bf4c MATE: remove gettext init, because we build in-process.
+  * 4139c08 valapanel-plugin-appmenu.vala: temporary comment gettext init.
+  * 15c2cae valapanel-plugin-appmenu.vala: add gettext init.
+  * 7bf7354 Merge branch 'master' of https://gitlab.com/vala-panel-project/vala-panel-appmenu
+  * 438c44a platform.c: use clang-format.
+  * b6d02ce Importer: reformat.
+  * bbf982a Fixed the improper handling of wayland application menubar.
+  * 731429e MATE: remove unneeded now service file.
+  * 2a3b418 MATE: adapt to 1.20 in-process API.
+  * 305e5b4 Fixup mate install
+  * 7fc6405 Bump required MATE version to 1.20
+  * f8e946c Revert to in-process applets
+  * 4020540 po: added Polish by Adam Galek
+  * 02143c7 all: support ValaPanel 0.5 API
+  * 19b4ed9 Merge branch 'master' of https://gitlab.com/vala-panel-project/vala-panel-appmenu
+  * 3eec018 appmenu-gtk-module platform: move G_MENU_MODEL conversion on getter.
+  * 39f1f6a MATE: remove unneeded now service file.
+  * c5d20e7 MATE: adapt to 1.20 in-process API.
+  * a063633 Fixup mate install
+  * 8a8e8d0 Bump required MATE version to 1.20
+  * 3dd9979 Revert to in-process applets
+  * abc04d2 Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * 8aeb395 po: added Polish by Adam Galek
+  * b31226b all: support ValaPanel 0.5 API
+  * 1216ead model: add more comments in parse_layout
+  * 2affee0 Correct .gitmodules after merge
+  * 80d0669 Revert "MATE: force disable gtk-shell-shows-menubar. For #244"
+  * 1b45615 appmenu-gtk-module: blacklist appmenu-mate
+  * 5bb0a5c MATE: force disable gtk-shell-shows-menubar. For #244
+  * 90b3425 Merge branch 'master' of gitlab.com:vala-panel-project/vala-panel-appmenu
+  * 3d87ff4 CMake: check for ValaPanel 0.5
+  * 245ff02 valapanel: removed old plugin api
+  * f110cd8 Modules now GitLab
+  * 6d744a6 ImporterModel: fix updating parent from DBusMenu
+  * da91a66 Make commands more readable (#240)
+  * be5d9d7 Update README.md
+  * 315dec4 Revert "appmenu-gtk-module: whitelist Glade and Anjuta (3.22 is working)."
+  * 555ab64 MenuWidget: compact mode now correctly shows lone appmenu. Fixes #228
+  * 012f502 MenuWidget: use appmenu as compact if no menubar. For #228
+  * 28677d4 appmenu-gtk-module: made new key actually always show inner menu.
+  * 75a2380 appmenu-gtk-module: fix formatting & replace gboolean to bool
+  * c69bcb8 appmenu-gtk-module: key "always-show-inner-menu" to disable hiding menus
+  * 8616522 dbusmenu-importer: fix formatting & replace gboolean to bool.
+  * 96321c2 ImporterModel: emit all signals without main iteration. For #229.
+  * 04570b2 appmenu-gtk-module: whitelist Glade and Anjuta (3.22 is working).
+  * 856fe95 ImporterModel: do not use refcount. It is only one XML.
+  * db0c776 Importer: clear object after notify.
+  * 32d23f0 ImporterItem: check for DBusMenuXml in preload.
+  * 538a372 ImporterItem: workaround Gtk-CRITICAL. For #223.
+  * d85de92 ImporterModel: workaround Kate crash. For #223
+  * 9886525 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * b2d77a8 ImporterModel: nullify GVariants. For #221
+  * 5455c52 Update README.md
+  * 820675d Update README.md
+  * 553ce49 Registrar: can be disabled in build.
+  * eaa6a36 Jayatana: use CMake 3.6
+  * 58f4c34 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 1754b7c Lib: adapt to CMake 3.6
+  * eb2a828 Data: small install change.
+  * ee14b44 Fix translation for Desktop in XFCE4 (#213)
+  * e9abdf8 Importer: fixed rare crash on menu changes.
+  * 28e6a6e ImporterModel: handle non-standard borders. For #217
+  * 2cde7c5 ImporterItem: do not use continue.
+  * 4666dc8 Importer: Use Opened before AboutToShow. Fixes #212.
+  * 78eb847 Importer: check and ignore firefox stubs. For #212.
+  * 723a7b1 ImporterUtils: send opened before actual load. For #212
+  * 1c2c06e CSS: made separator transparent. For #215
+  * b56bce8 appmenu-gtk-module: move wayland include to correct place. For #210
+  * 5a8f168 MATE: Use EXPAND_MINOR also. Fixes #208
+  * fa133d6 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 412ced9 appmenu-gtk-module: search for Wayland. For #210
+  * c7b9842 French & french canadian translations (#211)
+  * 784c290 Translations：update Simplified Chinese (#207)
+  * ee24d27 Updated cmake-vala. For #206
+  * a3c58aa Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 6736ca3 Updated Russian translation
+  * c13850e Update README.md (#205)
+  * a3702c7 Update PO for 0.7
+  * 25a5911 Update xfce4-plugin-appmenu.vala
+  * 0edfdfb Update mate-plugin-appmenu.vala
+  * 650755a CMakeLists.txt: adapt to more modern CMake.
+  * 9249194 Update README.md
+  * f78fa49 Update README.md
+  * 0ffbb39 Update README.md
+  * 4064aa8 Update README.md
+  * f03a839 Update README.md
+  * c47d73e Update README.md
+  * 90ec55f vala-panel: fix widget has extra ref.
+  * 931272e appmenu-gtk-module: mimic cmake-vala changes
+  * f5c6e07 Lib: move registrar reference to backend.
+  * 0173b7c Registrar: waiting for launch.
+  * b2aec45 Platforms: remove dialog close button.
+  * 593f060 MenuWidget: unref on finalize.
+  * dd1f933 Importer: Truly force toplevel items enabled.
+  * 7628da6 Registrar: Add registrar dbus interface for reference.
+  * 934a0de ImporterItem: use toggled as force enabled. For #199 (QtCreator bug).
+  * 10cd2bc ImporterItem: always enable preloaded items. For #199
+  * b2933ee CMakeLists.txt: Remove unneeded variable.
+  * e183bca ImporterModel: handle updated properties of parent (is this possible)?
+  * 2742cf3 Handle GTKN_LIBDIR. Fixes #200.
+  * 79e4f24 ImporterModel: Use global default main context.
+  * 52d5161 Require layout update after parent changed
+  * 3bf3c6a Connect restock without Vala overhead
+  * b17b50d RegistrarProxy: fix registrar crash handling.
+  * 41d2094 HelperDBus: use vala_panel_launch
+  * 0fa5407 ImporterItem: replace warning to debug.
+  * 1dcc786 HelperDBusMenu: handle root model changes. For #199
+  * b8948f3 CMakeLists.txt: remove unneeded switch
+  * 3821663 Importer: fix spelling and formatting.
+  * f39f5ac Enable compact mode and bold appname settings. Fixes #81
+  * 906bc8d vapi: fixed MATE vapi
+  * 00de0a2 MenuWidgetCompletionFlags was unused for long (after Importer).
+  * 357be44 All: switch to backends an using MenuWidget directly.
+  * b3da386 Lib: refactor code.
+  * a70f591 Revert "We do not need to export empty menu models for now, I think."
+  * d50f9cd appmenu-gtk-module: real unique window_id on Wayland.
+  * 3c0e79b We do not need to export empty menu models for now, I think.
+  * 442c002 MenuModel: remove menubar if no one found.
+  * 1c2f1fc Revert "Do not export empty menu models. Not right, but essential for KDE."
+  * 9c2272c Do not export empty menu models. Not right, but essential for KDE.
+  * e097a80 Lib: fixup CMakeLists.
+  * 10c92d9 BackendBAMF: remove unneeded variable.
+  * 7021e72 Menubar: remove unneeded variable && move menubar to MenuWidget.
+  * 7174637 RegistrarProxy: add registrar_changed signal.
+  * d33b075 lib: prepare to backend-based approach.
+  * 6dec3cb registrar: add license headers.
+  * fc3003e appmenu-gtk-module: fixup autopilot
+  * 76ccad0 CMakeLists.txt: add missing GTK component
+  * 9671e9a All: adapt to new cmake-vala.
+  * bcc3923 Registrar: fix FindGTK.cmake
+  * 33cd92e appmenu-gtk-module: change build system.
+  * d6d0b28 Registrar: search only for needed executables.
+  * 407f3f7 Registrar is subproject now. Can built separately from rest of tree.
+  * 9971c31 Minor changes in registrar CMake.
+  * 6327734 Registrar: switch to C version.Added reference and unreference commands.
+  * 2a9c29a RegistrarApplication: export Registrar.
+  * 974ea5f RegistrarDBusMenu: replace parent.
+  * de9c95a C Registrar: format.
+  * d272e36 C Registrar: almost complete, testing tomorrow.
+  * e303e15 Importer CMake: remove second PkgConfig call.
+  * 1649fc1 MenuWidget: remove window_id. We do not use this since Importer.
+  * 1fc9209 Registrar: add initial C realization.
+  * 5a64c71 All: move all Helpers to MenuWidgetHelpers.
+  * 237b270 All: adapt to new cmake-vala
+  * 5edf969 Better formatting for desktop menus
+  * f858d75 Lib: add simple cmdline read.
+  * d216c08 ImporterModel: do not try to disconnect from NULL
+  * 09cb8f8 Lib Registrar: added necessary throws.
+  * 3d9b15a Lib: refactor out BAMF from helpers.
+  * 695e463 appmenu-gtk-module: kill unneeded file.
+  * 04d0ab2 appmenu-gtk-module: fixup docs.
+  * 591d2cb appmenu-gtk-module: improve gtk-doc support.
+  * a1ad109 appmenu-gtk-module: remove unnecessary linking.
+  * 3488c68 ImporterModel: process events after each signal.
+  * 8f94222 CMakeLists.txt: fix build because now no CORE_FOUND
+  * 906516b All: adapt to new cmake-vala
+  * 5510f2e appmenu-gtk-module: add initial support of gtk-doc.
+  * 371b0f3 All: adopt new cmake-vala.
+  * b5c4dc5 ImporterModel: plug small memory leak.
+  * 0870323 HelperMenuModel: g_get_prgname returns wrong name.
+  * 1298e49 HelperDesktop: remove unused parameters.
+  * ffe77a7 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * dfbdc1c appmenu-gtk-module: fix GTK2 location. Fixes #194
+  * 9f9779b Update README.md
+  * ea772c3 Update README.md
+  * 8026570 JAyatana: Require dbusmenu-glib>=16.04. Fixes #193
+  * b5f4b11 Revert "JAyatana: try to get mod G_MAXINT from menuID. For #193."
+  * 6fa3a42 JAyatana: try to get mod G_MAXINT from menuID. For #193.
+  * 96e60d2 Revert "JAyatana: add x86 id guards. May cause bugs, but better than nothing."
+  * 8375b3d Revert "Desktop-Menus: Capitalize names."
+  * cceff70 Desktop-Menus: Capitalize names.
+  * c97b527 JAyatana: add x86 id guards. May cause bugs, but better than nothing.
+  * c1c5a96 AppmenuBAMF: disable actions if no desktop file available.
+  * 6d933c5 Desktop Menus: fixup name.
+  * cb86a0b All: do not use libwnck
+  * 65b24c7 ImporterUtils: unref state manually. For #193
+  * 191f99f Importer: change project name.
+  * cb54944 Jayatana: added forgotten file
+  * 8417a88 ImporterItem: fix radio buttons crash.
+  * 8f359e5 Jayatana: reuse IDs.
+  * abd5af3 appmenu-gtk-module: optimize blacklisting.
+  * 46b621c PO: Fixed CMakeLists.txt
+  * 8fba205 ImporterUtil: plug one more memory leak. For #118
+  * ea0ee1d ImporterModel: plug more memory leaks. For #118
+  * 6dc3456 Importer: add proper check.
+  * 332ecf4 ImporterItem: add magic to avoid crashes in idle.
+  * 725e54d Importer: plug memleaks somehow.
+  * 1d2f408 MenuModelHelper: remove useless commented code.
+  * dd6149a MenuModelHelper: does not use window name for appmenu name.
+  * 53ed01a Importer: properly show shortcuts.
+  * 397085b ImporterItem: do not use opened and closed in preload.
+  * 40f6427 ImporterModel: really preload a first level. Fixes #190.
+  * dc29ab5 ImporterItem: add forgotten include.
+  * 041c9d8 ImporterItem: send closed event on preload.
+  * 563b39c ImporterUtils: optimize to new model.
+  * 37eb035 ImporterModel:add preloading a first level of items(Breaks IDEA somehow)
+  * 23d926d ImporterModel: add a commented way to update a section.
+  * eeac0c0 ImporterItem: add a complex logic to handle disabled submenus.
+  * 8c0880e Importer: moved GdkPixbuf code to separate file.
+  * 91d859f Importer: fixup cmake.
+  * eb7f167 appmenu-gtk-module: do not link to glib explicitly.
+  * d6ff6a3 All: use find_package instead of pkg_check_modules.
+  * ab0dc3f Importer: document difflicult parsing fuction.
+  * e502604 Importer: validate sections.
+  * 7c92ac2 Make bold_application_name and compact_menu functional properties.
+  * 0a980f3 ImporterModel: add sync version of GetLayout.
+  * ba1b8fc ImporterSection: check for incorrect sections.
+  * c31e463 MenuWidget: add bold_application_name property.
+  * ebbff43 Added settings template
+  * da346ef Vala Panel: Replaced plugin name.
+  * affa4fd Desktop: freeze menubar after hack.
+  * 0fd001a Helpers: fix bold desktop.
+  * c13c0a0 MenuWidget: derive CompactMode menu name from application name.
+  * 3c9c7d8 Definitions: add "action-disabled"
+  * 961e661 Importer: Fix enum header
+  * fbf4ce4 Importer: update enum template.
+  * 14c3316 ImporterItem: fix handling "visible"
+  * 1992444 ImporterModel: fix dbus_menu_model_find.
+  * 82981bc ImporterUtils: commit unused.
+  * 9b64dc9 Revert "Importer: for submenus enabled is equivalent to visible now."
+  * 4ece567 Importer: for submenus enabled is equivalent to visible now.
+  * 26ae2ae Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 2c323f8 ImporterDebug: add GVariant direct print function.
+  * 6660af5 ImporterModel: some refactor.
+  * 270cb0e Update LICENSE
+  * 685d39c Importer: add license header to all files.
+  * b5310d8 ImporterModel: burst-emit a signals. Fixed VLC crash.
+  * 5652034 Importer: add debug print function.
+  * a8cdcb4 Revert "XFCE: Comment out expanding. For #187"
+  * bbc78f6 XFCE: Comment out expanding. For #187
+  * 7d27344 Importer: properly fix submenu copying.
+  * 4cfdb54 Importer: more conststent updates.
+  * a604c05 Importer: correctly reuse a submenu.
+  * fa3255c Remove PropertiesUpdated debug printing.
+  * 450a4db Importer: less crashes and no duplicates AFAIK.
+  * 4a64d70 All: replace gchar to char
+  * 9af0e20 Importer: reusable submenus && Qt4 menus enabled again.
+  * 5739a2a Revert "Importer: use only one signal to update items again (Jayatana broken)"
+  * e3bf1e8 Importer: use only one signal to update items again (Jayatana broken)
+  * cc26c0a Importer: support version 2.
+  * 3d1cc01 Importer: propagate layout update to all submenus.
+  * 3829bbe Importer: Always update layout on LayoutUpdated.
+  * 28e8121 Importer: remove debug printing on destructor (not needed AFAIK).
+  * 4a6a4d0 Importer: enable debug printing.
+  * 9c23747 ImporterModel: add warning.
+  * 0e917fb All: GLib 2.50 is already required by Gtk 3.22 anyway.
+  * c2e5f28 All: Bump required GTK version to 3.22.
+  * 919686a Importer: optimize MenuModel signals somehow (need more work).
+  * cb6a4ba Importer: add more definintions.
+  * ad56fba Importer: update test size.
+  * 01a0662 Importer: warnings on change root.
+  * 869b73e Importer: update menu only if necessary.
+  * bc1fc99 Importer: change to sequences.
+  * 3c59209 Importer: more accurate count item update requirement.
+  * 44971b7 Importer: added SectionModel.
+  * 6f03a28 Importer: properly fix closing.
+  * a850df7 Importer: some refactoring.
+  * 8bf1ab8 Fixed DBusMenu eats MenuModel sometimes.
+  * 961af11 Revert "Importer: change request mechanic somehow."
+  * 16dc0f6 Jayatana: some more English.
+  * ae117ab Importer: change request mechanic somehow.
+  * ac69f7a Jayatana: Google translate all Java Spanish comments to English
+  * 01bea1a Importer:Add signal blocker to not emit signal on unneeded properties.
+  * 642cc40 Revert "Importer: remove test."
+  * 36827b5 CSS: Fix bold appmname.
+  * 6275b88 Importer: remove test.
+  * 7aa8655 Fixup: remove vala-dbusmenu.
+  * 80dfa0b CMake: remove vala-dbusmenu.
+  * 9c91dc2 MenuWidgetHelpers: give proper name to it.
+  * 4796cf4 All: new approach (only one menubar).
+  * 1e22744 Importer: first working realization (can be released).
+  * e84f4c0 Importer: fixed check and radio icon item approach.
+  * 375de26 Importer: fix formatting.
+  * ffc2d26 Importer: fixup properties and disable icons.
+  * 1f42ce5 Add VAPI
+  * 389b011 Datastructs: fixed warning.
+  * 3ef4339 Importer: setup debug environment.
+  * cab10bd DBusMenu-Importer: Add test for importer.
+  * 6fc7cc4 Importer: initial bugfix.
+  * f597111 Added registrar XML
+  * 58f84ce Translator: move to lib/dbusmenu-importer.
+  * ae8318c Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * bea5b21 Block mate-dbusmenu
+  * b72a163 Update README.md
+  * 569e280 Translator: properly react to need_update.
+  * f31c40d Translator: Fixup enums
+  * a39ce15 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 9a87e00 DBusMenu to MenuModel: first version of translator.
+  * 7543c5d Translations：update Simplified Chinese (#181)
+  * c5fd70a Write KDE abstract appmenu interface.
+  * 9e8e1ad Core: make menu links private.
+  * 0df43db Core: make new MenuWidget compiles.
+  * 36e0231 Core: add new folder for new implementation.
+  * fdd48b6 Lib: added tempale for new MenuWidget implementation.
+  * 03de799 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 5a976f2 Appmenu BAMF: temporary disable destructor
+  * 3c7e91f Update .gitattributes
+  * 08652f5 Submodules updated
+  * 6fd3abe AppmenuBAMF: move destructor to destroy handler
+  * d2e2023 @lestcape 4: rename appmenu-gtk-module GSettings schema.
+  * 62ba40f Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 8c8d6b6 Move jayatana and appmenu-gtk-module to subprojects
+  * 91ab7d5 MATE: Fix expand. Fixes #179
+  * ea137e8 appmenu-gtk-module: add forgotten autoptr annotation.
+  * c802da2 appmenu-gtk-module: use registar-only approach almost always.
+  * 130fba0 appmenu-gtk-module: blacklist vala-panel and xfce4-panel
+  * da52426 @lestcape 3: integrate libgtk_only to gtk_wayland_window_get_window_data
+  * 41a28e7 appmenu-gtk-module: try to rework Wayland for all windows.
+  * b60ee97 README: Update
+  * 0b98edb appmenu-gtk-module: Ordinary GtkWindow can also have bound application.
+  * 0bde97f Budgie: fix expand. For #175.
+  * 086ae3e Update .gitattributes
+  * 8f1bd4a appmenu-gtk-module: rename fork completely (it too different now).
+  * 98dc552 appmenu-gtk-module: fix formatting in datastructs.c
+  * 35713c0 appmenu-gtk-module: fix formatting.
+  * 6173eae @lestcape 2: integrate Wayland changes. Mention him as author.
+  * 518890b Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 3661e8b MenuWidget: Fix ScrolledWindow zero size. Fixes #175
+  * aa70c29 on_menubar_sel_move: use menubar from args (#173)
+  * fab7d89 @lestcape 1: use registrar to determine Gtk2's menus.
+  * d01dee1 appmenu-gtk-module: split to files (initial).
+  * 5d3b2f8 Unity-gtk-module: fixed formatting.
+  * 2122d0e MenuWidget: correctly handle menubar.
+  * def6be1 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 209f8ad Registrar: remove dependency on core.
+  * 243404f MenuWidget: remove unneeded private elements.
+  * 040065a All-applet keynav (#172)
+  * 3435f59 CSS: add new private class.
+  * 6e04c3f MenuWidget: add CSS to paned.
+  * 5d418a5 CSS: Paned fixes.
+  * 385f31b Proxy: always want registrar.
+  * dcb30dc Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 6dac537 Proxy: Remove infinite recursion.
+  * 3882697 Remove some vertical padding (#170)
+  * 5e5dc5e Fixes (#168)
+  * c596fb4 RPM: Add registrar for packages.
+  * 339632a Move registrar DBus service to registrar CMakeLists
+  * b184661 Revert "Registrar: remove unneded dependency."
+  * e7a1ce8 Registrar: remove unneded dependency.
+  * 42b0687 Updated submodules
+  * 70ac645 BAMF Appmenu: close active window if no window stored. Fixes #166
+  * 2a4d2da Scrollable menubar: Remove debug prints and optimize somehow.
+  * 3181c41 Make menubar scrollable (#158)
+  * bb089f7 Registrar: own name properly.
+  * 75406c4 Registrar: fix typo.
+  * a68553c Registrar: remove inner registrar.
+  * 653310e Registrar: Fully functional outer registrar. For #123.
+  * 3afc0db MenuWidget: Fix warning.
+  * 5931095 All: Separate new registrar for now.
+  * f5e8823 Registrar: Correct return from register.
+  * 9e42825 Registrar: first version of out-off-process registrar.
+  * 2c9c39b AppmenuBamf: remove destructor nullification.
+  * ed56771 Appmenu: rework to Paned.
+  * d3db4f0 CSS: Simplify
+  * 8731268 CMake: Upgrade requirements.
+  * 75311cb Lib: more locale fixes.
+  * baede47 Update requirementa
+  * b43fd1e Update README.md
+  * 8554fac Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 00b1520 Desktop: force domain. Fixes #160
+  * 32256e1 README: completed instruction to enable Jayatana (#159)
+  * d0edf4e ValaPanel: made plugin expandable.
+  * 394f3f9 MenuWidget: Add compact_mode abstract property.
+  * 534d2ee Translations: update russian
+  * 3761974 Lib: Workaround for #157
+  * 23c94cd unity-gtk-module: rename public headers
+  * 0f2227e Unity-gtk-module: rename unity-gtk-parser.h correctly. For #149
+  * 5fbf869 CMake: Installs unity* headers as appmenu* one.
+  * 4d72da2 Unity-gtk-module: added license. Fixes #149
+  * 5b0ecdd Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 3d25d28 CMake:Replaced some unity to appmenu.Appmenu-gtk-module defaults to on.
+  * 79f2005 Update es.po (#148)
+  * 0369a36 CMake: Added forgotten WNCK_INCLUDE_DIRS
+  * 4441226 MenuWidgetDesktop: More powerful menu.
+  * b458a82 ValaPanel: Fixed Files menu crash
+  * 38e2e5c Revert "Replace action group"
+  * 768deed Replace action group
+  * 0056790 Update zh_CN.po (#142)
+  * c5bed3e README: Note about bamfdaemon.
+  * f9bd5fc Merge branch 'master' of https://github.com/rilian-la-te/vala-panel-appmenu
+  * 731c396 JAyatana: fixed linking && DBusMenu: update revision
+  * e2ec942 Appmenu-Bamf: fixed crash when closing Java app.
+  * 1700587 add Simple Chinese translations (#136)
+  * 534e3d1 Unity-gtk-module: remove desktop_window blacklist.
+  * 5815ed5 Update dbusmenu commit.
+  * ca1cb35 Unity-Gtk-Module: test for GdkWayland. Fixes #133
+  * ee7f910 RPM: fixed spec generation.
+  * 83edd24 unity-gtk-module: try to build docs only when explicitly requested.
+  * baadf3d unity-gtk-module: hard-blacklist mate-menu
+  * cbd7109 Unity-gtk-module: support standalone source generation.
+  * 0831ff9 Unity-gtk-module: Make proper subproject.
+  * a83cea4 unity-gtk-module: fix typo
+  * a3b17dd Merge branch 'master' of https://github.com/rilian-la-te/vala-panel-appmenu
+  * 1ef60c6 unity-gtk-module: blacklist mate-indicator-applet
+  * b924e50 Unity-Gtk-Module: fix formatting.
+  * 1f5ec2b Unity-Gtk-Module: use hack only for DnD
+  * d366c43 Updated dbusmenu
+  * e38d349 Jayatana: Remove unity requirement.
+  * 78f3153 unity-gtk-module: Use RGBA visual always in realize. Fixed #75
+  * a804540 unity-gtk-module: Remove DnD windows from hijack
+  * 0e69a19 budgie: don't install the plugin in budgie plugin root directory (#113)
+  * 083c0df cmake: fix wrong budgie plugin install destination (#112)
+  * aa86ebb Unity-Gtk-Module: fix g_assert_not_reached. Fixes #105
+  * fd084e0 Unity-Gtk-Module: Fix formatting.
+  * 998db81 Unity-Gtk-Module: moved platform-dependent functions to platform.c
+  * c2d0e53 Unity-Gtk-Module: Disable GtkAction after its deprecation.
+  * f237aa8 Added -DMAKE_BOLD_APPNAME flag to compile options. (#103)
+  * acbeb89 CSS: Remove old CSS names. For #81
+  * 1192314 Lib: Bold appname as build option. Workaround for #81.
+  * 044fc17 JAyatana: Fixed manifest.
+  * 23d9088 Create README.md
+  * 68fdb29 Update README.md
+  * 4106c52 Update README.md
+  * 153847b Update readme (#98)
+  * b45b6c2 Fix #97
+  * 8f1ba2a Create README.md
+  * ebc0286 Create README.md
+  * 1339833 CMake: more CMakeDependentOption
+  * fdbe990 Update README.md
+  * f85f1e9 CMakeLists: use CMakeDependentOption
+  * bce9408 JAyatana: removed Spanish letters AFAIK
+  * 98bb703 Fixed LIBEXEC in MATE applet.
+  * 0515055 RPM: Fix again
+  * 82d78ae Fixed RPM.
+  * 780f97a Updated submodules
+  * ae2a831 Update submodules
+  * 8f98fd9 CMake: use DBusMenu as object library.
+  * 553e0b7 Revert "CMake: build all as object library."
+  * bcc2830 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 2e021f1 CMake: build all as object library.
+  * 1584940 MATE: updated dbus path. Fix #87.
+  * f0c37fb Try to fix build.
+  * bf02549 CMakeLists.txt: add VAPIDIR
+  * d10f9d1 CMakeLists.txt: remove unneeded
+  * bf8177f All: DBusMenu is separate package now.
+  * 6762581 CMake: remove comment
+  * 4b60a3f Appmenu-Core: fixed linking.
+  * 1abd536 CMake: Compile core only once.
+  * 52cf3bd Update README.md
+  * 96676fb Unity-Gtk-Module: blacklist desktop.
+  * 20878f7 Unity-Gtk-Module: remove conflict with Ubuntu one.
+  * b4244c5 Budgie: remove unneded try.
+  * 64780d1 JAyatana: formatting.
+  * ee82d6c Unity-Gtk-Module: Blacklist budgie-panel. This fixes #76 & #77
+  * b904fa0 Budgie: use LIBEXECDIR
+  * 4baaf1b Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 6075476 Unity-Gtk-Module: Unify GSettings path.
+  * cdb2e96 cleanup unneeded budgie style provider (#74)
+  * bf3ec7f Budgie: one more attempt to fix transparent items
+  * a8f4a22 Budgie: use connect_after.
+  * d4bbd2f Budgie: try to fix theming again.
+  * 3a0080f RPM: Fix all builds.
+  * 1c22900 RPM: Now it builds again.
+  * fb9116d Unit: Fixed systemd presence.
+  * 8eb7887 Vala Panel: support for 0.4 series.
+  * 385fd7a Update README.md
+  * b3181d9 Budgie: add apply_budgie_style function.
+  * 5805926 CSS: I see no harm, if this will be used as fallback.
+  * f17ef2c Fix #61
+  * 8d13e21 Budgie: Mimic to Menubar settings more.
+  * 95b6504 Budgie: Made theme as fallback priority (want testing)
+  * 22c3582 Merge branch 'master' of https://github.com/rilian-la-te/vala-panel-appmenu
+  * 3a76673 Budgie: integrate @fossfreedom 's CSS (want testing from him). Refs #69
+  * 3e2567a Config: Reduce variables number.
+  * 494462c Unity-Gtk-Module: create variable for deprecations.
+  * 0605dff JAyatana: guard Xorg-specific code for 1.6 only.
+  * 9e67b04 Unity-Gtk-Module: remove warning about always true.
+  * a358d8c Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * bd04c0b CMakeLists: Show deprecations.
+  * eb17f7e unity-gtk-module: Fixed build after formatting.
+  * f237735 Added format file
+  * 462cc7d unity-gtk-module: format
+  * 7fdd869 JAyatana: format
+  * 67d323f Launcher: format
+  * 71a714f CMakeLists.txt: Added formatter.
+  * d377b11 JAyatana: Replaced XLib to xkbcommon, remove X dep.
+  * 5ade2bd JAyatana: Updated DBusMenu check
+  * c894a77 Update .gitattributes
+  * f430a32 JAyatana: check inside folder.
+  * 6da719b JAyatana: config.h include guard
+  * 7f4f97d JAyatana: Added config.h
+  * 1eda2c2 Merge branch 'master' of https://github.com/rilian-la-te/vala-panel-appmenu
+  * 2f970c0 All: Added optional JAyatana (untested!!!)
+  * 0097ff4 Fixed build on non-systemd.
+  * 60215e3 Unity-Gtk-Module: Updated systemd unit.
+  * da32134 Merge pull request #65 from raveit65/master
+  * 034d068 appmenu-gtk-module: improve systemd unit file
+  * b201ea2 Unity-Gtk-Module: remove rename.
+  * d439203 Unity-Gtk-Module: add SOVERSION & Systemd: make user unit.
+  * 692a65b updated spec
+  * a36f49d Fixed pkgconfig files.
+  * ec7a08e Fixed budgie crash for #61
+  * 72be33d Unity-Gtk-Module: blacklist mate-panel
+  * e5c6bdb Experimental Budgie support. Fixes #61
+  * d5a3ce4 Add LICENSE
+  * 22a98cb Unity-Gtk-Module: Fix naming again
+  * 8ded2d1 Fix naming of modules.
+  * c2e2832 Unity-Gtk-Module: another linking fix.
+  * baba7cd Fixed build
+  * ed47686 Mark unity-gtk-module as vendored
+  * eb5f202 Unity-Gtk-Module: Fix appmenu-gtk3-parser versioning
+  * 3b0f45f Update README.md
+  * 84b7b95 Update README
+  * a9e0244 Update README.md
+  * 09cbd51 Update READMEs
+  * a58eded Unity-Gtk-Module: Renamed demos option.
+  * fee6cf2 Moved GTK check to core CMakeLists
+  * d9d73c4 Unity-Gtk-Module: integrate into build structure.
+  * 711765e unity-gtk-module: apply GSettings patch
+  * a5850a6 Add unity-gtk-module to repo.
+  * 6199d6a Moved stuff into folder
+  * a1a558b Removed bzr artifacts
+  * 24ee4e2 Update README.md
+  * 9f3909c Moved debian
+  * 7a50d84 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * e68ff8e Moved ArchLinux
+  * b4e2aa8 Update README.md
+  * f9db188 Releasing 0.0.0+17.04.20170403-0ubuntu1
+  * 53abe88 Blacklist Anjuta
+  * 8029f0f Fixed debian packages AFAIK
+  * aab52dc Merge pull request #59 from flexiondotorg/master
+  * 9f93882 debian/xfce4-vala-appmenu-plugin.install: Processed with wrap-and-sort.
+  * efe638b debian/vala-panel-appmenu-common.install: Add Xsession.d helper.
+  * bd0ddd7 debian/source: Make a native packages, for the time being.
+  * 1058813 debian/rules: Add support for MATE panel plugin. Minor refactor.
+  * e2ffeae debian/copyright: Update copyright attributions.
+  * e8fe6e7 debian/control: Processed with wrap-and-sort. Lintian issues resolved.
+  * 5025f8c debian/changelog: Updated for new release.
+  * 04296bd Add new debian packaging files.
+  * c5afc58 Fixed PKGBUILD typos
+  * 49a393f Update PKGBUILD
+  * 86fc046 Merge pull request #58 from IKRadulov/patch-1
+  * 8610dc7 Fixed file conflict
+  * c698ed7 Fixed typo
+  * 1db0f9d Shortening too long names
+  * ac77c82 Merge branch 'master' of https://github.com/rilian-la-te/vala-panel-appmenu
+  * 90a7ecf Added applet dbus service
+  * 039f728 Merge pull request #55 from IKRadulov/master
+  * 9f14524 PKGBUILD has option to disable applets
+  * 6c4a8db PKGBUILD has option to disable applets
+  * 0e27116 MATE: Out of process applet. Workaround for #54
+  * ec13871 removed temporary file
+  * e822050 c-lib removed
+  * c121335 MATE: Real add handle
+  * f903778 Remove redunant assignment
+  * 1b4fefd Changed indentation
+  * dc4b7dd Update README.md
+  * 4c20725 Update README.md
+  * b62e8a8 Mixing C and Vala
+  * 6a8e3fa Updated dbusmenu
+  * 8beac4e Update submodules
+  * 2db282d Fixed mate warning
+  * b9612ff Update README.md
+  * 20aa1b7 Update README.md
+  * 8336df5 Fixed crash on Suse
+  * 53c652f Update README.md
+  * b0c24f4 Update README.md
+  * af66154 Fixed launching uri
+  * 4b6722f Fixed crashes && used C launcher
+  * 982a163 Add Mate Controt Center
+  * c7e158e Revert "Add dummy menu"
+  * 382f9d8 Revert "Try to fix crash"
+  * fb025eb Try to fix crash
+  * 505c0c5 Fix warnings
+  * e602451 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * f67c129 Add dummy menu
+  * bed773c Update PKGBUILD
+  * 80238c5 Blacklist Anjuta
+  * 034300c Update README.md
+  * 2476b34 Update Qt instructions in README.md
+  * 118bbc8 Update README.md
+  * 063f1c8 Add XFCE Instructions to README.md
+  * cb01bb4 Update README.md
+  * 98b0c7c Fix build, made more stripped version of vapi
+  * 4e609dd Releasing 0.0.0+16.10.20160913-0ubuntu1
+  * 437bc6f Fix $GTK_MODULES race condition (LP: #1618886)
+  * 1bf26d9 debian/control: Fix branch in Vcs-* tags
+  * 5d96504 Fix $GTK_MODULES race condition
+  * 574a142 Update README.md
+  * 7f37423 Fixed build.
+  * c403a52 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * c7a3e4d MATE Support
+  * d93ae59 Merge pull request #25 from wesleyotugo/patch-3
+  * 3d26084 Update README.md
+  * ebd1044 Update README.md
+  * 54b0254 Releasing 0.0.0+16.10.20160805-0ubuntu1
+  * e962150 Add systemd user unit
+  * f61b2bd Remove the AM_CONDITONAL([HAVE_SYSTEMD]) - it's not used any more
+  * 158ad0f Fixed launch_uris warning
+  * bcbb8eb Removed deprecated VAPI files
+  * 5e4d520 Just hardcode the fallback path for systemd
+  * 023673e Add a symlink so the module is enabled in the ubuntu session
+  * 0104fe4 Merge archive upload
+  * 1821e97 releasing package unity-gtk-module version 0.0.0+15.04.20150118-0ubuntu2
+  * c965b36 Add systemd user unit
+  * 94bbbd5 Merge pull request #16 from kinesivan/master
+  * 0824651 Fix build error for Arch Linux
+  * 54dad6f Suspend description
+  * 4e4d1cc Correct destructor
+  * 2e3c533 Removed unnecessary cast
+  * 6c46128 Fixed memleak
+  * b52a809 Updated changelog
+  * fa9cb2f Updated dbusmenu
+  * ef3d3a9 Fixed empty desktop menu
+  * b19cdb8 Remove useless remove
+  * a244878 Fixed console flood
+  * 568e821 Removed MenuWidget poroperties
+  * 1b778ec Removed unneeded layout reference
+  * e0d251f Add destructor to MenuWidget
+  * 5b9e2c4 Added license headers
+  * b7711d7 Updated dbusmenu + more unowned
+  * ec1d463 Fixed appmenu destructors
+  * 48cadaf Added fixed gio-unix
+  * 0b0c3aa More unowned
+  * 007e4ea CSS change
+  * 18142aa Updated changelog
+  * 015349d Correctly show desktop menu after loading
+  * 8be9796 Updated debian changelog
+  * 3de4174 Fixed console flood, I hope
+  * 8913077 DBusMenu sanity
+  * cc2cd28 Freeze desktop appmenu
+  * 3b16204 Added control entries
+  * 46bf250 Workaround for #8
+  * c69145a Prepare to 0.2.6
+  * 6bc6274 Small CSS fix
+  * 7de9cb3 Fixed warning
+  * c4ea547 Trying to optimize
+  * 260bd2e More RPM, less CMake
+  * 08f08ec Rewrite spec to pkgconfig
+  * 952e764 Fixed debian makedepend
+  * 4e96e17 Added RPM packaging
+  * 59e1a74 Lang does not require core package now
+  * e39309e RPM support
+  * b69d0e5 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * bfbb8f0 Fallback verisoning
+  * 28cca3e Fixed valac builddep
+  * 5030e7a Fixed all lintian warnings except ITP
+  * 1cc3129 Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 21589f5 Added empty translations
+  * 6a16682 Fixed changelog
+  * 6823393 Prepare to git-buildpackage
+  * bcce4b6 Fixed changelog
+  * 45804f8 Updated CMake modules
+  * 2bcf42c Fixed control file
+  * 7a3f677 Fixed PKGBUILD
+  * 61d0410 Fixed Archlinux build
+  * 87644e2 Update PKGBUILD version
+  * c158a78 Fixed CMakeLists
+  * 6346022 Updated CMake
+  * 45a2832 Added debian foler
+  * c7573af Fixed CMakeLists
+  * 824c63c Merge branch 'master' of github.com:rilian-la-te/vala-panel-appmenu
+  * 3874f6c Git versioning
+  * fd8cde3 PKGBUILD
+  * 70c45ce Fixed CMakeLists
+  * f652a64 GNUInstallDirs
+  * d8fd7a0 Menu creates on active window. Closes #6
+  * 0a930bd Made methods async
+  * 30cb543 Fixed menus domain
+  * 469dc57 Fixed vala<0.28 build
+  * 2a37cf8 Made split PKGBUILD
+  * 7ebec32 DBusMenu as submodule
+  * 2612df2 Fixed ValaPanel build
+  * ea71758 Revert "Fixed arrangement of Accels"
+  * bc71e57 Fixed arrangement of Accels
+  * d15568b Fixed wnck optional depend
+  * 4817cd3 Support for building plugins for both panels at same time
+  * 10bd167 DBusMenu shortcut support
+  * 9761d2c Removed unneded VAPI
+  * 47cc854 Support multiple instances of menus with one registrar
+  * 8adea17 Made version req smaller
+  * 1f553a9 CSS Fix
+  * e5731c1 Added CSS hack
+  * 8563bb6 Hotfix
+  * 52b6e91 Libwnck is now optional
+  * 8b55f74 Desktop-less applications fixes
+  * 4be0db0 Fixed Valapanel build
+  * 6322723 Add bindtextdomain
+  * 070702a Fixed Unity Actions locale
+  * 83e782e Added XFCE unique
+  * bafcaab Fixed Russian Translation
+  * 21a7673 Added Russian translation
+  * 43802be Fixed typo
+  * 0b98e67 Archlinux package for Xfce
+  * ea17a94 Some eyecandy
+  * 4e20ccf Added Desktop menu
+  * 5e64700 Vala Panel Support
+  * 2490d3d Fixed chromium all
+  * 75c5fb6 Fixed DBusMenu sanity
+  * 8433296 Added BamfAppmenu as AppMenu replacement for AppMenu-less apps
+  * 85874a1 Fixed hidden menus
+  * 41431b1 Almost working Global Menu for XFCE (No Application Menu for DBusMenu Items and no hiding)
+  * 7df2a44 Replace Wnck to Bamf
+  * 6477cf4 Added initial code
+  * d8901a1 Replaced Readme
+  * 52e8365 Added cmake submodule
+  * b07e83d init
+  * 4de2769 Releasing 0.0.0+15.04.20150118-0ubuntu1
+  * e9e0a5e Sync with archive.
+  * 55c47fb Support multiple desktop names in $XDG_CURRENT_DESKTOP. Fixes: #1383382 Approved by: William Hua
+  * 55d3356 Sync changelog with the archive version
+  * 116901d Support multiple desktop names in $XDG_CURRENT_DESKTOP.
+  * 01b0815 Releasing 0.0.0+14.10.20140716-0ubuntu1
+  * ee5bdd1 Disable unity-gtk-module on non-Unity desktops. Fixes: 1307657 Approved by: Ted Gould, PS Jenkins bot
+  * c6edbdc Forward show and hide signals to GTK+ menus. Fixes: 1208019 Approved by: Ted Gould, PS Jenkins bot
+  * 207ee81 Make up a bad state name if we can't infer a good name from a radio menu item's label or action. Fixes: 1313184 Approved by: Charles Kerr, PS Jenkins bot
+  * 6bd9ae8 Releasing 0.0.0+14.10.20140618-0ubuntu1
+  * cdf9298 Handle not using the X11 backend
+  * 3737867 Have a simpler check for X11
+  * 5e4dc79 GDK_IS_X11_DISPLAY is only defined in GTK+ 3.0
+  * 7a90502 Handle not using the X11 backend
+  * 606f7c3 Make up a state name if we can't infer a good one for a radio menu item.
+  * c797dca Watch contents of menu items.
+  * 07d4f9a Rename label to label_label.
+  * 3efc25c Fix accelerators.
+  * 950f2a6 Dispatch hide in idle.
+  * 22df31e Remove debugging output.
+  * ea3b68d Don't eagerly show.
+  * e021dff Add submenu actions.
+  * 2d1543a Explain what we're doing.
+  * 035c134 Move show emission and defer to idle.
+  * c8bedd6 Disable unity-gtk-module on non-Unity desktops.
+  * fa231dd Releasing 0.0.0+14.04.20140403-0ubuntu1
+  * c6872c3 Forward original accelerator text for Eclipse, Inkscape, Emacs. Fixes: 1208019
+  * 6892710 Show accelerator text in Eclipse, Inkscape and Emacs.
+  * 9302dcc Try to detect accelerator from closure.
+  * 0d71fb9 Releasing 0.0.0+14.04.20140328-0ubuntu1
+  * 25c90af Watch use-underline on label instead of menu item. Fixes: 1294947
+  * c6b6841 Stop using signal handler ids. Use g_signal_handlers_disconnect_by_data () instead.
+  * facac1f Fix Eclipse and DBeaver menus. Fixes: 1208019, 1218687
+  * 6a696c5 Use G_UNLIKELY for static property strings.
+  * 6a322bf Merge 1208019.
+  * a3fbbc1 Watch use-underline on label instead of menu item.
+  * 8d28905 Split get label function.
+  * 5c71350 Merge no-handlers.
+  * 4d34e8d Merge 1294947-fix-criticals.
+  * 39268eb Forgot to NULL-terminate duplicated string.
+  * c850aa6 Remove Eclipse from blacklist.
+  * c0b8234 Hide menus again.
+  * d54b995 Emit show signal for Eclipse menus.
+  * dbe9573 Menu item doesn't exist any more?
+  * ae14253 Get labels by deep widget inspection.
+  * ca87333 Remove unused variable.
+  * 7b29689 Merge no-handlers branch.
+  * 840976e Remove unused variable.
+  * f6f9721 Split get label function.
+  * cc0da52 Rename function.
+  * 32b10be Merge no-handlers branch.
+  * cd07eda Stop using signal handler ids.
+  * f1e58d8 Show menu bar.
+  * 3be73da Releasing 0.0.0+14.04.20140319-0ubuntu1
+  * 810cccb Watch use-underline property on GtkMenuItems. Fixes: 1260777
+  * 14137ce Releasing 0.0.0+14.04.20140311-0ubuntu1
+  * 9ed4c14 Release trunk to the archive
+  * fde3198 Merge trunk.
+  * 47a741b Dispatch gtk_menu_item_activate () in a GDK idle. Fixes: https://bugs.launchpad.net/bugs/1258669.
+  * 2509645 Merge trunk.
+  * c94f026 Filter out mnemonics when the gtk-enable-mnemonics setting is cleared. Workaround for LP: #1282782. Fixes: https://bugs.launchpad.net/bugs/1282782.
+  * 4e749cd Describe why the deadlock occurs.
+  * 32616a6 Don't check pspec name in detailed signal handler.
+  * 73dd342 Don't use a global linked list.
+  * a938bac Dispatch gtk_menu_item_activate () in a GDK idle.
+  * bfe0cc3 Watch use-underline property on GtkMenuItems.
+  * 6d4f7db Reset the label in the label handler.
+  * b134607 Use only one signal handler for notify::gtk-enable-mnemonics.
+  * 0f6075d Only honour gtk-enable-mnemonics on top-level shells.
+  * b6749dc Simplify mnemonic removal.
+  * 6ce1d00 Pass property name directly.
+  * c77cd1f Remove mnemonics when gtk-enable-mnemonics is cleared.
+  * 6bf0c33 Releasing 0.0.0+14.04.20140213.2-0ubuntu1 (revision 313 from lp:unity-gtk-module).
+  * 495decb Releasing 0.0.0+14.04.20140213.2-0ubuntu1, based on r313
+  * 0a898da Remove our g_ptr_array_insert (), it's added in GLib 2.40.
+  * ea2092b Remove our g_ptr_array_insert ().
+  * e90777b Relax the preconditions for disconnecting action groups from shells. (LP: #1198471)
+  * 842625d Use Multi-Arch: foreign in debian/control.
+  * 548cbc3 Fix regression on GtkRecentChooserMenus. (LP: #1243974). Fixes: https://bugs.launchpad.net/bugs/1243974.
+  * 32bae70 Fix regression on GtkRecentChooserMenus. (LP: #1243974)
+  * 339e29a Multi-arch debian/control.
+  * a22b04b Relax the pre-conditions for disconnecting action groups from shells. (LP: #1198471)
+  * 688a97e Disconnect menu bar from window before chaining up.
+  * bbb4c5a Releasing 0.0.0+14.04.20131125-0ubuntu1 (revision 308 from lp:unity-gtk-module).
+  * 5ce2aae Releasing 0.0.0+14.04.20131125-0ubuntu1, based on r308
+  * b81b3f4 Add a GSettings schema that allows the user to set a blacklist and whitelist for unity-gtk-module (LP: #1243413). Fixes: https://bugs.launchpad.net/bugs/1243413.
+  * 1adc8c1 Fix leaks and remove duplicate code.
+  * 6e6a253 Packaging fix-up.
+  * 1da6841 Use user's blacklist and whitelist.
+  * 64a94bc Add schema file.
+  * 4840a3d Freeciv uses multiple menu bars in its UI. When unity-gtk-module tries to export its menus, it becomes really cramped in the global menu to the point of being unusable. It's better to allow Freeciv to keep its menus where they are in this case. Fixes: https://bugs.launchpad.net/bugs/1242937.
+  * e03af36 Add acroread to the blacklist. Fixes: https://bugs.launchpad.net/bugs/664647.
+  * aec2724 add acroread to the blacklist.
+  * 6fed7e0 Blacklist freeciv and freeciv-gtk2 (LP: #1242937).
+  * eea7d43 Releasing 0.0.0+13.10.20130716.1-0ubuntu1 (revision 304 from lp:unity-gtk-module).
+  * b4f4262 Releasing 0.0.0+13.10.20130716.1-0ubuntu1, based on r304
+  * de2ba24 Make sure to use dpkg-maintscript-helper and dh_builddeb to remove the old obsolete Xsession conffile.
+  * 0d55b68 Version problem
+  * 384da99 Use the dh_installdeb approach
+  * 8b8745b Make sure to use dpkg-maintscript-helper to remove the old obsolete Xsession conffile
+  * 4504c81 Converts from using Xsession to using Upstart.
+  * a5efd76 Releasing 0.0.0+13.10.20130710-0ubuntu1 (revision 301 from lp:unity-gtk-module).
+  * a8d5d6e Releasing 0.0.0+13.10.20130710-0ubuntu1, based on r301
+  * 917c7d6 Handle GtkImageMenuItems with stock ids. Fixes: https://bugs.launchpad.net/bugs/1195365.
+  * 8480bcc Releasing 0.0.0+13.10.20130709-0ubuntu1 (revision 299 from lp:unity-gtk-module).
+  * 5489391 Releasing 0.0.0+13.10.20130709-0ubuntu1, based on r299
+  * 4ddba34 in lib/unity-gtk-menu-shell.c's unity_gtk_menu_shell_get_items(), plug a GList leak. Fixes: https://bugs.launchpad.net/bugs/1199123.
+  * 8b695bb in lib/unity-gtk-menu-shell.c's unity_gtk_menu_shell_get_items(), plug a GList leak.
+  * f5b97e5 Releasing 0.0.0+13.10.20130708-0ubuntu1 (revision 297 from lp:unity-gtk-module).
+  * db53a1c Releasing 0.0.0+13.10.20130708-0ubuntu1, based on r297
+  * 97ae920 We no longer export verb icons in the menus. Only export potential noun icons that would appear in a GtkImage of a non-GtkImageMenuItem. Fixes: https://bugs.launchpad.net/bugs/1196998.
+  * 2a9e5ce Typo
+  * f3d25ef Only export noun icons.
+  * e080abd Generalize old gtk_widget_get_nth_label.
+  * 6693632 Make sure we get the env vars in for dbus activation
+  * d696344 Making sure the common gets the upstart job
+  * a685d81 Switching over to be an upstart job
+  * ac38418 Change the build system to not do xsession
+  * 2a40196 Releasing 0.0.0+13.10.20130702-0ubuntu1 to ubuntu.
+  * d1e8d55 Releasing 0.0.0+13.10.20130702-0ubuntu1, based on r295
+  * c532979 Handle GtkImageMenuItems with stock ids.
+  * 7a7ac1e Releasing 0.0.0+13.10.20130628-0ubuntu1 to ubuntu.
+  * d9a40d6 80unity-gtk-module: Don't do anything if the files aren't installed. Per Debian policy, we can remove the packages but not purge them. In that case we should not add the modules to GTK_MODULES - if they are there then gtk prints a warning.
+  * 4a1dbf8 80unity-gtk-module: Don't do anything if the files aren't installed.
+  * 5f60d16 Releasing 0.0.0+13.10.20130628-0ubuntu1, based on r293
+  * f509680 Export menu item icons.
+  * e8f251e Workaround for crash in unity-panel-service.
+  * 0bd3dca Releasing 0.0.0daily13.06.19-0ubuntu1 to ubuntu.
+  * 9751f7f Releasing 0.0.0daily13.06.19-0ubuntu1, based on r290
+  * e97148c Icons.
+  * f56e0f7 Workaround for crash in unity-panel-service.
+  * 2da8669 Revise debian/copyright since the work was done with Canonical's resources.
+  * a7db749 Releasing 0.0.0daily13.06.07-0ubuntu1 to ubuntu.
+  * ccfea49 Releasing 0.0.0daily13.06.07-0ubuntu1, based on r288
+  * c90f18e add missing python-autopilot and python-pyatspi dependencies on the autopilot package
+  * 13c7cd2 Clean up all debuild warnings about substvars.
+  * 5f047d0 Clean up substvar usage
+  * d6f342a Copyright belongs to Canonical Ltd.
+  * 3782704 Releasing 0.0.0daily13.05.23.1-0ubuntu1 to ubuntu.
+  * 12dbece Releasing 0.0.0daily13.05.23.1-0ubuntu1, based on r285
+  * 0a8add4 Add conflicts, replaces and provides regarding appmenu-gtk packages, since we're essentially replacing appmenu-gtk with unity-gtk-module now. And we cannot test/use unity-gtk-module when appmenu-gtk is installed.
+  * ab58fec Add conflicts, replaces and provides regarding appmenu-gtk packages, since we're essentially replacing appmenu-gtk with unity-gtk-module now. And we cannot test/use unity-gtk-module when appmenu-gtk is installed
+  * 2ceeece Fix a few things that changed with autopilot 1.3. GtkIntrospectionTestMixin is no longer necessary, the X11 emulator as well. Process related operations moved to self.process_manager.
+  * 342e782 Merge trunk
+  * 2923870 Don't assume any particular menu structure in autopilot tests.
+  * 1038b9b Fix a few things that changed with autopilot 1.3. GtkIntrospectionTestMixin is no longer necessary, the X11 emulator as well. Process related operations moved to self.process_manager
+  * 9023390 Don't assume any particular menu structure in autopilot tests.
+  * 1451f67 Add locale independency and use the globally installed unity-gtk-module
+  * c90a5bd Add locale independency and use the globally installed unity-gtk-module
+  * 83dd603 Don't assume the app menu is first in the panel.
+  * 41a1ead * debian/control:   - Added the unity-gtk-module-autopilot package * Added debian/unity-gtk-module-autopilot.install * Changed the build system a bit to enable installation of autopilot tests * Automatic snapshot from revision 279 (bootstrap)
+  * 40c2fb6 As the current autopilot tests use gedit, we should depend on the GTK3 bindings - doesn't make sense to state both
+  * d0a8cfe Do not hard-code the python version in path, typo
+  * f9e030c Add the preparation bootstrapping commit
+  * a6034af Add changelog entry
+  * 11503ba Create a seperate autopilot package, since we don't run integration tests during build
+  * a09751e * Updated a bit the packaging to be similar to other indicators:   - use source format v1 and split mode for bzr-builddeb   - bump compat mode to 9   - update .install files for dh9 and multiarch locations   - clean some leftover templates files from dh-make   - small extra cosmetic changes
+  * 4e6d4d6 * Updated a bit the packaging to be similar to other indicators:   - use source format v1 and split mode for bzr-builddeb   - bump compat mode to 9   - update .install files for dh9 and multiarch locations   - clean some leftover templates files from dh-make   - small extra cosmetic changes
+  * 893b8fa Update homepage.
+  * 9f81d67 Update homepage.
+  * e84f9d3 Fix license version at LGPL 3.0.
+  * f982aac Blacklist gwyddion.
+  * e6e12d1 Extra check for gtk-shell-shows-menubar property.
+  * bd9f634 First attempt at integrating autopilot tests in automake.
+  * e43c364 Update debian/changelog.
+  * 26896db Fix make test target, read tests from list.
+  * 6722574 Patch environment.
+  * 3b27c7f Add make check target.
+  * f4c0f34 Remove debug functions.
+  * 864c27c Test accelerator.
+  * 6786d83 Fix edit undo test.
+  * 8123b4c Test improvement.
+  * 1a265ab Menu item removal test.
+  * 44e0dd5 Make the tests work properly.
+  * 92b49f7 Treat unset UBUNTU_MENUPROXY as enabled.
+  * cc27c29 Use UBUNTU_MENUPROXY instead.
+  * be39fa0 Initial integration tests.
+  * 54b106b Add NO_UNITY_GTK_MODULE.
+  * 2faf4fd Update license.
+  * 4ab3a8d Update debian/changelog.
+  * a6da077 Add blacklist.
+  * e33a3da Updated debian/changelog.
+  * 9eef24e Support GNOME Shell.
+  * 2e8ec99 A litle extra debugging output.
+  * a48cd29 Fix the F10 bug.
+  * 89391a8 Update debian/changelog.
+  * 36d0b08 Don't ever update non-visible items.
+  * d3a05fb G_{BEGIN,END}_DECLS.
+  * 490c5cf Add a GTK-Doc comment.
+  * 695efc8 UNITY_GTK_{MENU_SHELL,ACTION_GROUP}_DEBUG.
+  * f9952a9 Print menu item labels.
+  * 31ec5ec Fix menu shell print function.
+  * 0949233 Update debian/changelog.
+  * f18a44e Menu shell data struct.
+  * e1d6b04 Improve connection between window and menu shell.
+  * 2344272 Fallback to accelerator label.
+  * b9d4079 Hack for menu items with labels manually added.
+  * 1afbe4a Silent rules.
+  * e1c5709 Correct dependency versions.
+  * 5c16fdd Update debian/changelog.
+  * 5836b5b Add documentation to installed packages.
+  * 616598d Update .bzrignore.
+  * e7d0f1a Fix installed package files.
+  * 9da5702 Make compile with GTK+ 2.
+  * 13c3dd4 Update documentation.
+  * 3d8d584 Add X11 dependency.
+  * 96822a5 Use LIBADD instead of LDFLAGS.
+  * bded78e Move install files.
+  * ee71283 Updated debian/changelog.
+  * 1f5c653 Update dependencies.
+  * deac593 Clean up warnings in debian/control.
+  * 149f3db Try using GTK3 conditional.
+  * e6c65ec Remove debian/*.ex.
+  * 1a70a83 Update debian/changelog.
+  * b5f2b47 Fix install file.
+  * 13f92b2 Fix file names.
+  * a8cb32c Remove architecture dependency.
+  * 2dbac18 Update debian/changelog.
+  * 88300de Silent make.
+  * 58198ac Don't put .pc files in the non-dev library.
+  * f031a85 Update installed files.
+  * f8bece2 Fix packaging...
+  * 7d1c358 Fix build.
+  * 0e6ce6d Fix-up .pc files.
+  * 1e1b548 Update debian/control.
+  * 04cb333 Update debian/changelog.
+  * 0330fcc Re-order functions in docs.
+  * b54fa5b Update main doc page.
+  * 5e9f9d1 Add modifiable docs.
+  * b5e55a2 Remove doc files.
+  * 02cc7f7 Remove all properties.
+  * dd5ea46 Remove generated files.
+  * 7a03b68 Add documentation.
+  * 1fcbe55 Add public-facing docs.
+  * 8e8ceb5 Remove strong references to parent shell.
+  * cb97895 Use $(top_builddir) variable instead.
+  * 8a2542f Fix non-portable link warning.
+  * 538d098 Fix packaging issues.
+  * 5f88f98 Packaging fix.
+  * 3c59004 Add m4/ and gtk-doc.make.
+  * c911f43 Correct version.
+  * 9e1f74c Update debian/unity-gtk-module-dev.install.
+  * b4564e0 Updated debian/changelog.
+  * ee5cdf2 Make -dev package.
+  * bc6034f Update debian/changelog.
+  * 1303ebe Hack: link against libunity-gtk-parser.la.
+  * f031fd4 Hide private classes.
+  * de7870b Ignore private headers.
+  * 6cd9710 Fix gtk-doc generation.
+  * 677e154 Add pkgconfig and gtk-docs.
+  * 49cf45c Split parser into separate library.
+  * 93ee32c Don't disconnect if the backing shell is destroyed.
+  * 855934d Allow NULL menu item labels.
+  * e8c1724 Export action group on _UNITY_OBJECT_PATH.
+  * f777b89 Updated changelog.
+  * 6c8b032 Don't overwrite old menu.
+  * 677ecc1 Retrieve old action group.
+  * 567b989 Fallback on old action group if available.
+  * d2bf8cf Augment listed actions with old group.
+  * 7f6f912 Propagate signals.
+  * fa4d715 Old action group.
+  * 9041544 Fix gtk_widget_has_x11_property.
+  * ef0916b Refactor getting X property.
+  * e777048 Update debian/changelog.
+  * 2ebe16a Only protect _GTK_MENUBAR_OBJECT_PATH.
+  * 1023d68 Check X11 properties before overwriting.
+  * f32dfb6 Update debian/changelog.
+  * 2853a6b Remove generated files.
+  * 4a8f8fe Link with GTK...
+  * 5b60fe1 Add options for GTK libdir and X11 sysconfdir.
+  * 3f30141 Update debian/changelog.
+  * bdef25d Detect GTK_LIBDIR properly.
+  * ce48dc0 Infer GTK module directory properly.
+  * 796b5cd Blank lines in debian/control need a full-stop....
+  * 5bfbff1 Edits to Debian files.
+  * b2a029d Try it again.
+  * 1b08d5a Revert back to before debian packaging attempt.
+  * 1e035fa dh_make --native.
+  * d0b25ee Copy notices.
+  * 0dfdbe2 More .bzrignore.
+  * 4e2905b Augment .bzrignore.
+  * 7d97e4a Autoreconf.
+  * 2e151d8 Add Xsession.d script.
+  * fa4987c Clean up.
+  * 94a823f Don't unref section before g_menu_model_items_changed.
+  * 03b4163 Watch for label and accel changes.
+  * 1fa5f33 Remove TODO.
+  * 8c8c9e2 Remove .deps.
+  * 0a209a9 Remove data.
+  * a343676 Clean up.
+  * 977c280 Add config.status and libtool.
+  * 6306236 Maintainer clean.
+  * 734a955 Autotools clean up.
+  * 3701b5f Remember to support accels.
+  * 1241c68 Set X properties after GtkApplicationWindow sets them.
+  * c4edac2 Remove ref counting debug.
+  * d77d8f5 Run dispose to break cycles.
+  * e307d97 Log reference counting, debug radio ref/unref.
+  * 42b27d9 Radio menu item active fix.
+  * 255f607 Connect signals in test-radio.
+  * 0b37743 Add test-radio and fix target name.
+  * ac3bcd8 First radio menu item's name gets clobberred.
+  * 1a37d6f Make fake radio menu items work.
+  * 9712016 Add target attribute for radio menu items.
+  * a4c97c2 Draw as radio function.
+  * 76eb623 Allow clearing of radio actions.
+  * e61e05e Connect action before notifying menu model changes.
+  * 3c452e6 Re-connect action group properly on visible indices.
+  * 6e6bdc4 Remove extraneous warning.
+  * 1182b9c Fix group connection/disconnection.
+  * ed57455 More print methods.
+  * 2710099 Action group printing.
+  * 7c44c9f Fill action group when visible indices are loaded.
+  * 5688335 Add win prefix.
+  * 83b3e6f Action group connections on insert/remove.
+  * 44d8d95 Action groups.
+  * 27ad006 Action disconnect.
+  * e556456 Action group attachment.
+  * 8c7a019 Connect/disconnect action group stubs.
+  * 86d19ef Implement action group interface.
+  * 8c29e3d Action group query.
+  * 445a07d Action group boilerplate.
+  * f7dd59c Watch submenu changes.
+  * fb31002 Remove private from header file names.
+  * fb2a168 Clean up.
+  * 00c7393 The menu model exporter tracks our section objects by memory address.
+  * 11b17e0 Remove debug output.
+  * 09e36f9 Simple debug output.
+  * b76fef0 Idempotent show and hide.
+  * cf37703 Print methods.
+  * f8649dc Fix separator removal.
+  * 539bbba Handle removes.
+  * b0b3c89 More consistent function names.
+  * 60ae8e0 Type typo.
+  * 30255ba Handle insert.
+  * da679ad Handle visibility changes lazily.
+  * 306cf6e Watch menu item hides.
+  * c1bbd6f Watch menu item show.
+  * 17fc59f Refactor in a good state.
+  * 11f6ae2 Clean up data structures.
+  * c0fe254 Handle non-separator visible insert/remove.
+  * b39b02f Start work on visibility of menu items.
+  * a8c887f Fix crash on radio menu item insertion.
+  * 8bb3587 Separate out menu item print function.
+  * bb6dde4 Deal with non-unique radio menu item states.
+  * 4569cad Infer best guess for user-readable action names.
+  * b873e44 More refactoring for action names.
+  * 4de5254 Refactor action naming a bit.
+  * 7b5e33d Radio menu item action support.
+  * 8fab2ee Safer unreffing.
+  * bde3a88 Remove debug output.
+  * f863035 Eliminate g_object_unref (NULL) warning.
+  * a2eccf6 Off-by-1 error.
+  * 1519410 Print menu shells.
+  * 0fff589 Don't remove separators from action group.
+  * 8863535 Fix infinite recursion.
+  * 7cce971 Watch active state changes.
+  * 68c40f0 Watch for sensitivity changes.
+  * ef1b6ad Action names should only have "win" prefix on menu item attribute.
+  * fe5d725 Action group helper.
+  * b29f99b Export action group properly.
+  * 01c5e3e Set action attribute.
+  * 2aebb13 Add actions when submenu is added.
+  * 46885ed More action group stuff.
+  * a524418 Miscellaneous.
+  * adc4320 More action boilerplate.
+  * 2043601 Change action state implementation.
+  * 15a5834 Action activation.
+  * 1c59aa2 Query action function.
+  * e81855d Clean up validations.
+  * ed96cb4 Don't g_object_unref (NULL).
+  * b1ca8bc Fix remove.
+  * 90ad041 Fix insert.
+  * 575b271 Minor clean up.
+  * c55e9aa Clean up and deal with tearoff menu item problem.
+  * ba789bd Action group attachment to menus.
+  * 1234b54 Action group boilerplate.
+  * f0dcdef Watch submenu property.
+  * a214efc Use g_ptr_array_unref instead of g_ptr_array_free.
+  * 5554712 Revert to before action groups were added.
+  * 71793ce Action group populate/unpopulate.
+  * 3b63de2 Unset action group on dispose.
+  * 61bfc6f Action group property.
+  * bfc9d6e Use unref instead of free for GPtrArrays.
+  * 7992e96 Use unref destroy notify on hash table.
+  * f34920a More boilerplate.
+  * d44c956 Action group boilerplate.
+  * bb10fe1 Action group header.
+  * 87ecc53 Add TODO.
+  * 51d8ffa Fix for appending separators at the end of sections.
+  * 2d79a7a Remove elements when separator is added properly.
+  * 27e300a Used the wrong menu item....
+  * 79f77f1 Set parent section to NULL on free.
+  * 0255df5 Setter for menu item's parent section.
+  * 388a155 Fix section change when merge occurs.
+  * a43197d Change return type of check functions.
+  * 63b9039 Validation functions.
+  * affba70 Fix crash due to bad merging.
+  * 170c796 Broken removal of separators.
+  * b02040a Remove debug output.
+  * 40b1538 Make names more consistent.
+  * e16e300 Non-separator removal.
+  * 36e7f7a Add parent reference to menu item.
+  * a6930f7 Split sections properly.
+  * c8d0f81 Fix wrong return value....
+  * bc409e1 Debugging output.
+  * 81b3c4c Signal emission for insertion.
+  * 774d859 Menu item insertion.
+  * 337aa0e Watch for insert signals.
+  * ec1d423 Allow freeing NULL menu items.
+  * 740564b Remove XXX comments (which were incorrect).
+  * 407faab Fix over-unref crash.
+  * f4f3ab0 Fix infinite loop.
+  * 584ff16 Flatten menu model.
+  * 3e0be11 Recursive output of UnityGtkMenu.
+  * e013380 More separator testing.
+  * 8599a97 Add separator as test.
+  * 6d7b8e5 Load submenus on need.
+  * 5c23afa Workaround for crash due to over-unreffing.
+  * b4442d7 Ignore .deps.
+  * 8e45e40 Fix parent type and set private member.
+  * bdcb700 Simple menu parser for separators.
+  * d2cfe76 Unity GTK menu.
+  * ff52734 Update .bzrignore.
+  * d4f59a2 Don't hardcode UTF8_STRING atom.
+  * 15e61ab Ryan's changes for running client.
+  * 69f03f7 Don't leak widgets in tester.
+  * 818545b Point to last element if position is -1.
+  * 25084a3 Fix chain up order of unrealize.
+  * 41859fb Unexport menu model when unrealized.
+  * 93601f5 Clean up.
+  * f522c97 Fix segfault due to quarkifying a quark.
+  * 644bafd Add arguments to g_message output.
+  * a82cecc Add .bzrignore.
+  * ba86ced Insert and remove menu items.
+  * 45f81d0 Fork unity-gtk-module from Ryan's branch.
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sun, 12 Oct 2025 14:45:54 +0000

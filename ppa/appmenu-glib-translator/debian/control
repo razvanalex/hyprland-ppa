@@ -1,0 +1,36 @@
+Source: appmenu-glib-translator
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: libs
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ valac,
+ libglib2.0-dev,
+ gobject-introspection,
+ libgirepository1.0-dev,
+Homepage: https://gitlab.com/vala-panel-project/vala-panel-appmenu
+Vcs-Git: https://github.com/rilian-la-te/vala-panel-appmenu.git
+
+Package: libappmenu-glib-translator0
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Library for translating DBus menu to GMenuModel
+ This library translates DBus menu (com.canonical.dbusmenu) to GMenuModel.
+ It is used by system tray implementations to display application menus.
+
+Package: libappmenu-glib-translator-dev
+Architecture: any
+Section: libdevel
+Depends:
+ libappmenu-glib-translator0 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Library for translating DBus menu to GMenuModel - development files
+ This library translates DBus menu (com.canonical.dbusmenu) to GMenuModel.
+ It is used by system tray implementations to display application menus.
+ .
+ This package contains the development files.

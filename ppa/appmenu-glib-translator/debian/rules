@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	meson setup build subprojects/appmenu-glib-translator --prefix=/usr
+
+override_dh_auto_build:
+	meson compile -C build
+
+override_dh_auto_install:
+	meson install -C build --destdir=$(CURDIR)/debian/tmp
+
+override_dh_auto_test:

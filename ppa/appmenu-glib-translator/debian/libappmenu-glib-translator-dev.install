@@ -1,0 +1,7 @@
+usr/include/*
+usr/lib/*/libappmenu-glib-translator.so
+usr/lib/*/pkgconfig/*.pc
+usr/share/gir-1.0/*.gir
+usr/share/vala/vapi/*.vapi
+usr/share/vala/vapi/*.deps
+usr/lib/*/girepository-1.0/*.typelib
