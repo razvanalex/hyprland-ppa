@@ -1,47 +1,73 @@
 #!/usr/bin/make -f
 
+export PKG_CONFIG_PATH := $(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$(PKG_CONFIG_PATH)
+export XDG_DATA_DIRS := $(CURDIR)/build-stage/usr/share:$(XDG_DATA_DIRS)
+export VALAFLAGS := --vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi --vapidir=/usr/share/vala/vapi
+export C_INCLUDE_PATH := $(CURDIR)/build-stage/usr/include:$(C_INCLUDE_PATH)
+export LIBRARY_PATH := $(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$(LIBRARY_PATH)
+export LD_LIBRARY_PATH := $(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$(LD_LIBRARY_PATH)
+
+STAGE_DIR := $(CURDIR)/build-stage
+
 %:
 	dh $@
 
 override_dh_auto_configure:
+	# Patch all gir.py files to add --girdir and --vapidir arguments
+	find lib -name 'gir.py' -type f -exec sed -i \
+		'/os.getenv("VALADOC", "valadoc"),/a\        *["--girdir", "/usr/share/gir-1.0"],\n        *["--girdir", "'"$(STAGE_DIR)"'/usr/share/gir-1.0"],\n        *["--vapidir", "/usr/share/vala/vapi"],\n        *["--vapidir", "'"$(STAGE_DIR)"'/usr/share/vala/vapi"],' {} \;
 	meson setup build-io lib/astal/io --prefix=/usr
+
+build-lib-astal-%:
+	meson setup build-$* lib/astal/$* --prefix=/usr
+	meson compile -C build-$*
+	meson install -C build-$* --destdir=$(STAGE_DIR)
+
+build-lib-%:
+	meson setup build-$* lib/$* --prefix=/usr
+	meson compile -C build-$*
+	meson install -C build-$* --destdir=$(STAGE_DIR)
 
 override_dh_auto_build:
 	meson compile -C build-io
-	mkdir -p $(CURDIR)/build-stage/usr/share/vala/vapi
-	meson install -C build-io --destdir=$(CURDIR)/build-stage
-	vapigen --library=gtk-layer-shell-0 --pkg gtk+-3.0 --directory=$(CURDIR)/build-stage/usr/share/vala/vapi /usr/share/gir-1.0/GtkLayerShell-0.1.gir || true
-	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
-	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
-	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
-	C_INCLUDE_PATH=$(CURDIR)/build-stage/usr/include:$$C_INCLUDE_PATH \
-	LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LIBRARY_PATH \
-	LD_LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LD_LIBRARY_PATH \
-	meson setup build-gtk3 lib/astal/gtk3 --prefix=/usr
-	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
-	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
-	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
-	C_INCLUDE_PATH=$(CURDIR)/build-stage/usr/include:$$C_INCLUDE_PATH \
-	LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LIBRARY_PATH \
-	LD_LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LD_LIBRARY_PATH \
-	meson compile -C build-gtk3
-	vapigen --library=gtk4-layer-shell-0 --pkg gtk4 --directory=$(CURDIR)/build-stage/usr/share/vala/vapi /usr/share/gir-1.0/Gtk4LayerShell-1.0.gir || true
-	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
-	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
-	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
-	C_INCLUDE_PATH=$(CURDIR)/build-stage/usr/include:$$C_INCLUDE_PATH \
-	LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LIBRARY_PATH \
-	LD_LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LD_LIBRARY_PATH \
-	meson setup build-gtk4 lib/astal/gtk4 --prefix=/usr
-	PKG_CONFIG_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig:$(CURDIR)/build-stage/usr/lib/pkgconfig:$$PKG_CONFIG_PATH \
-	XDG_DATA_DIRS=$(CURDIR)/build-stage/usr/share:$$XDG_DATA_DIRS \
-	VALAFLAGS="--vapidir=$(CURDIR)/build-stage/usr/share/vala/vapi" \
-	C_INCLUDE_PATH=$(CURDIR)/build-stage/usr/include:$$C_INCLUDE_PATH \
-	LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LIBRARY_PATH \
-	LD_LIBRARY_PATH=$(CURDIR)/build-stage/usr/lib/$(DEB_HOST_MULTIARCH):$$LD_LIBRARY_PATH \
-	meson compile -C build-gtk4
+	mkdir -p $(STAGE_DIR)/usr/share/vala/vapi
+	meson install -C build-io --destdir=$(STAGE_DIR)
+	vapigen --library=gtk-layer-shell-0 --pkg gtk+-3.0 --directory=$(STAGE_DIR)/usr/share/vala/vapi /usr/share/gir-1.0/GtkLayerShell-0.1.gir || true
+	vapigen --library=gtk4-layer-shell-0 --pkg gtk4 --directory=$(STAGE_DIR)/usr/share/vala/vapi /usr/share/gir-1.0/Gtk4LayerShell-1.0.gir || true
+	$(MAKE) -f debian/rules build-lib-astal-gtk3
+	$(MAKE) -f debian/rules build-lib-apps
+	$(MAKE) -f debian/rules build-lib-auth
+	$(MAKE) -f debian/rules build-lib-battery
+	$(MAKE) -f debian/rules build-lib-bluetooth
+	# $(MAKE) -f debian/rules build-lib-cava
+	$(MAKE) -f debian/rules build-lib-greet
+	$(MAKE) -f debian/rules build-lib-hyprland
+	$(MAKE) -f debian/rules build-lib-mpris
+	$(MAKE) -f debian/rules build-lib-network
+	$(MAKE) -f debian/rules build-lib-notifd
+	$(MAKE) -f debian/rules build-lib-powerprofiles
+	$(MAKE) -f debian/rules build-lib-river
+	$(MAKE) -f debian/rules build-lib-tray
+	$(MAKE) -f debian/rules build-lib-wayland-glib
+	$(MAKE) -f debian/rules build-lib-wireplumber
+	$(MAKE) -f debian/rules build-lib-astal-gtk4
 
 override_dh_auto_install:
 	meson install -C build-io --destdir=$(CURDIR)/debian/tmp
 	meson install -C build-gtk3 --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-apps --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-auth --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-battery --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-bluetooth --destdir=$(CURDIR)/debian/tmp
+	# meson install -C build-cava --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-greet --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-hyprland --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-mpris --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-network --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-notifd --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-powerprofiles --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-river --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-tray --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-wayland-glib --destdir=$(CURDIR)/debian/tmp
+	meson install -C build-wireplumber --destdir=$(CURDIR)/debian/tmp
 	meson install -C build-gtk4 --destdir=$(CURDIR)/debian/tmp

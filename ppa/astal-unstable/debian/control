@@ -18,6 +18,13 @@ Build-Depends:
  libjson-glib-dev,
  libgjs-dev,
  libnm-dev,
+ gir1.2-nm-1.0,
+ libpam0g-dev,
+ libupower-glib-dev,
+ libwireplumber-0.5-dev,
+ libiniparser-dev,
+ libfftw3-dev,
+ libappmenu-glib-translator-dev,
 Homepage: https://aylur.github.io/astal/
 Vcs-Git: https://github.com/Aylur/astal
 
