@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# Home directory is read-only on Launchpad
+export CARGO_HOME=.
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	cargo build --release --offline
+
+execute_after_dh_auto_build:
+	./doc/gen.sh
+
+override_dh_auto_install:
+	install target/release/awww debian/awww/usr/bin/awww
+	install target/release/awww-daemon debian/awww/usr/bin/awww-daemon

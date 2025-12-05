@@ -1,0 +1,31 @@
+Source: awww
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: x11
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ cargo,
+ liblz4-dev,
+ rustc,
+ pkg-config,
+ wayland-protocols,
+ libwayland-dev,
+ libwayland-bin,
+ scdoc
+Homepage: https://codeberg.org/LGFae/awww
+Vcs-Git: https://codeberg.org/LGFae/awww.git
+
+Package: awww
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ lz4,
+ wayland-protocols
+Provides: awww
+Conflicts: swww
+Replaces: swww
+Description: A Solution to your Wayland Wallpaper Woes.
+ Efficient animated wallpaper daemon for wayland, controlled at runtime

@@ -1,0 +1,27 @@
+SHELL			:= /bin/bash
+PACKAGE			:= awww
+REPOSITORY		:= https://codeberg.org/LGFae/awww.git
+VERSION			:= 0.11.2
+COMMIT_HASH		:= 0b1bb7f
+BUILD           :=
+REVISION		:= 1
+STATUS			:=
+TARBALL_URL		:=
+TARGET  		?= oracular
+URGENCY 		?= medium
+DEBFULLNAME 	?=
+DEBEMAIL    	?=
+PPA				?= ppa:razvanalex/hyprland-ppa
+ROOT			:= $(shell pwd)/../../
+PACKAGE_ROOT    := $(ROOT)/ppa/awww-unstable/
+
+include $(ROOT)/Makefile.defs
+
+# Because of limitations regarding networking when building rust packages on
+# Launchpad, we need to include the dependencies in the archive. In addition,
+# we need to allow binaries in the archive, otherwise build will fail.
+prepare:
+	cd $(BUILD_DIR) && \
+	mkdir -p .cargo && \
+	cargo vendor > .cargo/config.toml && \
+	python3 -c 'import os, json; [ (d := json.load(open(p := os.path.join(r, ".cargo-checksum.json"))), [d["files"].pop(k) for k in list(d.get("files", {})) if k.endswith(".orig")], json.dump(d, open(p, "w"))) for r, _, f in os.walk("vendor") if ".cargo-checksum.json" in f ]'
