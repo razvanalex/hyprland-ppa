@@ -1,0 +1,21 @@
+Source: cliphist
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: utils
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ golang-go
+Homepage: https://github.com/sentriz/cliphist
+Vcs-Git: https://github.com/sentriz/cliphist.git
+
+Package: cliphist
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ wl-clipboard
+Description: Wayland clipboard manager with support for text and images
+ cliphist is a Wayland clipboard manager with support for text and images.
+ It stores clipboard history in a bolt database and works with wl-clipboard.

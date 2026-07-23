@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export GOPATH=/tmp/go
+export GO111MODULE=on
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	go build -mod=vendor -v -o cliphist
+
+override_dh_auto_install:
+	install -d debian/cliphist/usr/bin
+	install -m 755 cliphist debian/cliphist/usr/bin/cliphist
+
+override_dh_dwz:
+

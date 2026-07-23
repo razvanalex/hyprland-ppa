@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cliphist
+Source: https://github.com/sentriz/cliphist
+
+Files: *
+Copyright: Sentriz <sentriz@gmail.com>
+License: GPL-3.0-only
