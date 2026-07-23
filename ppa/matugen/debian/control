@@ -1,0 +1,22 @@
+Source: matugen
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: utils
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ cargo,
+ rustc,
+ pkg-config
+Homepage: https://github.com/InioX/matugen
+Vcs-Git: https://github.com/InioX/matugen.git
+
+Package: matugen
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Material 3 color generator for Linux
+ Matugen extracts Material You color palettes from wallpapers and templates them into
+ GTK3, GTK4, Qt, Rofi, Foot, Kitty, and Hyprland configuration files.

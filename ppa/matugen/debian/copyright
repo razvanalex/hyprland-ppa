@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: matugen
+Source: https://github.com/InioX/matugen
+
+Files: *
+Copyright: InioX <iniox@github.com>
+License: GPL-3.0-only
