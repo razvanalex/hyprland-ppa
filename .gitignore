@@ -1,4 +1,6 @@
 .pgp
 .env
 build/
+ppa/*/build/
 README.md.asc
+
