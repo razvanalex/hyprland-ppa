@@ -1,0 +1,27 @@
+Source: mpvpaper
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: video
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ ninja-build,
+ pkg-config,
+ wayland-protocols,
+ libwayland-dev,
+ libmpv-dev,
+ libegl-dev
+Homepage: https://github.com/GhostNaN/mpvpaper
+Vcs-Git: https://github.com/GhostNaN/mpvpaper.git
+
+Package: mpvpaper
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ mpv
+Description: Video wallpaper program for Wayland
+ mpvpaper is a video wallpaper program for Wayland output using libmpv.
+ Allows playing video files, streams, animated GIFs as wallpaper.
