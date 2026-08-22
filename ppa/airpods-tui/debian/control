@@ -1,0 +1,34 @@
+Source: airpods-tui
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: utils
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ cargo,
+ rustc,
+ pkg-config,
+ libdbus-1-dev,
+ libpulse-dev
+Homepage: https://github.com/annoyedmilk/airpods-tui
+Vcs-Git: https://github.com/annoyedmilk/airpods-tui.git
+
+Package: airpods-tui
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: AirPods management daemon and TUI for Linux
+ Keyboard-driven TUI plus headless daemon speaking Apple's AACP control
+ channel over Bluetooth L2CAP. Exposes per-pod battery, noise control modes
+ (Off/Transparency/Adaptive/ANC), Conversation Awareness, One-Bud ANC,
+ ear-detection pause/resume, stem media controls, volume swipe synced to
+ system volume, and iPhone <-> Linux audio handoff. Includes a systemd user
+ unit running the headless daemon (`systemctl --user enable --now
+ airpods-tui`) and Waybar JSON output modes (`--waybar`, `--waybar-watch`).
+ .
+ NOTE: Apple AACP features require BlueZ to identify as an Apple device:
+ `DeviceID = bluetooth:004C:0000:0000` under [General] in
+ /etc/bluetooth/main.conf (not applied automatically by this package),
+ followed by `sudo systemctl restart bluetooth`.
