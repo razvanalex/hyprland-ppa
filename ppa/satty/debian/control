@@ -1,0 +1,26 @@
+Source: satty
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: utils
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ cargo,
+ rustc,
+ pkg-config,
+ libgtk-4-dev,
+ libadwaita-1-dev,
+ libgdk-pixbuf-2.0-dev
+Homepage: https://github.com/Satty-org/Satty
+Vcs-Git: https://github.com/Satty-org/Satty.git
+
+Package: satty
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Modern screenshot annotation tool
+ Satty is a screenshot annotation inspired by Swappy and Flameshot.
+ It supports fullscreen annotation, post-shot cropping, smooth hardware-accelerated
+ rendering, and works on wlroots-based compositors such as Hyprland and Sway.
