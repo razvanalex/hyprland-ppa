@@ -1,0 +1,836 @@
+quickshell (0.0.0+git20260721.e649d24-1) resolute; urgency=medium
+
+  * e649d24 launch: don't print dead instance help logs from --no-duplicate
+  * 025c709 ipc: wait for remote process to exit before returning from kill
+  * 4df562d service/notifications: emit NotificationClosed after Notify returns
+  * 98b6d0b io/ipchandler: stop reimplementing QVariant in ipc value slots
+  * 25eb04f tooling: use QList<QJSValue> over QJSValueList
+  * ead3b00 networking: fix UAFs in NMWirelessNetwork ap/setting destroy handler
+  * a611932 core/scriptmodel: represent members as a QJSValueList
+  * 1661ef1 wm: recompute WindowsetProjection.screens on each usage
+  * 68c2c85 core/window: render a frame when re-enabling updatesEnabled
+  * 897fcda wayland/lock: avoid creating lock surfaces for uninited wl screens
+  * d99d87d crash: remove logs from crash template
+  * b66495f all: add/fix property change signals on various properties
+  * eaba6c8 services/mpris: fix minRate and maxRate returning rate
+  * 4b4fca3 docs: document private ABI usage
+  * 7d1c9a9 wayland/toplevel: reorganize toplevel management
+  * d1760ed wayland/lock: add window null check in surface isVisible
+  * b93d613 wayland/lock: run scenegraph callbacks for lock surfaces
+  * 59e9c47 version: 0.3.0
+  * ffe95f0 guix: drop
+  * 8db8ca1 core/log: mask virtual/override property warnings
+  * 0baa81a all: fix typos
+  * 01834e9 hyprland/ipc: add lua ipc support
+  * 2ba2ae4 core: add qt version check in preprocessor
+  * 055e384 core/model: make diffUpdate handle reordering without duplicating rows
+  * 11a71d2 dbus/dbusmenu: connect onItemPropertiesUpdated
+  * e162429 wayland/toplevel: track global screen removals
+  * 783c953 services/pipewire: assume default channels in channelMap if unset
+  * b850b8a core: add DefaultEnv pragma
+  * d60498a networking: add wired device support
+  * 9a54119 core/command: warn on mismatch when other displays have instances
+  * 18075d1 core/command: ignore QT_QPA_PLATFORM in display check
+  * fb08ece wayland/screencopy: intersect dmabuf and render formats + cleanup
+  * d4c9297 i3/ipc: ensure monitor/workspace pointers are nulled on destroy
+  * 7f7ab6b launch: use dup2 to reset daemon stdio over close+open
+  * 7208f68 core: add QS_DROP_EXPENSIVE_FONTS env var
+  * f0d0216 core: add DropExpensiveFonts pragma disabling woff and woff2 fonts
+  * 7c5a6c4 core/log: crash if Quickshell's log filter is installed twice
+  * 5bf6a41 core: correctly construct runtime path when XDG_RUNTIME_DIR missing
+  * 13fe9b0 services/pipewire: avoid blanket disconnect for default nodes
+  * ad5fd91 wm: add nullptr guard to WindowManager::screenProjection
+  * 49d4f46 io/fileview: handle deserialization to list<T> properties
+  * 9b98d10 io/fileview: try to convert values to json before handling sequences
+  * 854088c io/fileview: convert containers to QVariantList/Map before serialize
+  * b4e71cb core/window: add parentWindow property to FloatingWindow
+  * ceac3c6 io/fileview: use QVariant when QJSValue cast fails in adapter prop read
+  * aaff22f io/fileview: write values into correct JsonObjects in deserialize
+  * 50cdf98 core/colorquant: add imageRect option for cropping image
+  * 4b751cc wayland/screencopy: use linear texture filtering over nearest
+  * 20c691c networking: add PSK, settings and connection status support
+  * 92b336c tooling: ensure intercepts do not overwrite symlinks to cfg files
+  * d612227 core/qmlglobal: add shellId, instanceId, appId and launchTime props
+  * b83c39c services/pipewire: add -fno-strict-overflow to fix PCH with pipewire
+  * ee1100e wayland/buffer: drop unused GLESv3 include
+  * 9bf752a crash: add std::terminate handler
+  * 313f4e4 core: track XDG_CURRENT_DESKTOP in debuginfo
+  * 6ef86dd crash: run platform compat hooks in crash reporter init
+  * 308f1e2 crash: unmask signals before reexec
+  * 0805832 core: reuse global pragma parsing js engine during scanning
+  * 6a244c3 core/region: add per-corner radius support
+  * d745184 wayland/background-effect: add ext-background-effect-v1 support
+  * 77c04a9 launch: add ability to override AppId via pragma or QS_APP_ID
+  * eb6eaf5 core/log: add a mutex to protect stdoutStream
+  * 7511545 build: add missing wayland-client CFLAGS
+  * 0cb6292 hyprland/focus_grab: handle destruction of tracked windows
+  * 3520c85 wayland: remove --require-defined linker argument
+  * 3cf65af docs: ask users not to submit v1 crash reports
+  * a51dcd0 wayland: use patched surfaceRole accessor on FreeBSD
+  * 97b2688 core/log: fix non-linux typo and import unistd on freebsd
+  * 0a859d5 service/pam: include `signal.h` on freebsd
+  * 1bd5b08 hyprland/ipc: add null checks and ws preinit to toplevel object init
+  * 365bf16 wayland: hook wl_proxy_get_listener avoiding QTBUG-145022 crash
+  * 6705e2d wm: add WindowManager module with ext-workspace support
+  * 9e8eecf core: log qt related environment variables in debuginfo
+  * 1b2519d core: log gpu information in debuginfo
+  * 1123d5a core: move crash/version debug info to one place
+  * 4b77936 crash: allow overriding crash reporter url
+  * e32b909 core: add disable env vars for file watcher and crash handler
+  * 178c04b docs: revise contribution policy and related files
+  * 706d6de crash: unmask signals in coredump fork
+  * 9a9c605 core: hash scanned files and don't trigger a reload if matching
+  * bd62179 all: retry incomplete socket reads
+  * cf1a2ae wayland/toplevel: clear activeToplevel on deactivation
+  * 15a8409 ipc: handle null currentGeneration in IpcKillCommand::exec
+  * 6bcd3d9 nix: use libxcb directly
+  * c030300 core/desktopentry: preserve desktop action order
+  * 5721955 services/pipewire: ignore ENOENT errors
+  * a849a88 build: remove DISTRIBUTOR_DEBUGINFO_AVAILABLE
+  * cdde4c6 crash: switch to cpptrace from breakpad
+  * cddb4f0 build: fix lint-staged to ignore deleted files
+  * 6e17efa wayland/screencopy: enable vulkan dmabuf support on session locks
+  * 36517a2 services/pipewire: manage default objs using normal qt properties
+  * c3c3e2c wayland/screencopy: pin XRGB alpha to 1 in vulkan mode
+  * 2cf57f4 core/proxywindow: expose updatesEnabled property
+  * a99519c wayland/screencopy: support dmabufs in vulkan mode
+  * 158db16 wayland: check screen isPlaceholder and if wl_output is null
+  * e7cd1e9 core: add env and isEnvSet functions to pragma context
+  * afbc5ff services/pipewire: use node volume control when device missing
+  * dacfa9d widgets/cliprect: use ShaderEffectSource to propagate mouse events
+  * 4429c03 widgets/cliprect: fix ShaderEffect warnings on reload
+  * 395a130 core: add hasThemeIcon mapping
+  * 1e4d804 widgets/cliprect: use layer.effect on content item over property
+  * 191085a ipc: use deleteLater() in IpcServerConnection to prevent use-after-free
+  * 8fd0de4 core/proxywindow: create window on visibility for lazily initialized windows
+  * 7a427ce core: fix inverted inHeader condition in preprocesso
+  * 5eb6f51 core: add preprocessor for versioning
+  * d03c597 io/ipchandler: add signal listener support
+  * 783b971 build: update CI, nix checkouts, lints
+  * dca6523 core/popupwindow: add grabFocus
+  * de1bfe0 core/popupwindow: clean up popup lifecycle and window init
+  * db37dc5 networking: add networking library
+  * bcc3d42 core: switch to custom incubation controller
+  * eecc2f8 services/pipewire: ignore monitors in PwNodeLinkTracker
+  * 11d6d67 services/pipewire: add peak detection
+  * 5d8354a services/pipewire: add reconnect support
+  * 8d19beb core/log: copy early logs with sendfile/readwrite again
+  * 6742148 all: initial support for freebsd
+  * 341a07d io/process: use QVariantHash over QHash in Q_PROPERTY
+  * 41828c4 services/pipewire: use node volume controls when routeDevice missing
+  * 3918290 core/window: add min/max/fullscreen properties, and move/resize fns to FloatingWindow
+  * 26531fc service/tray: emit change signals for item title and description
+  * 667bd38 nix: update version to 0.2.1
+  * 9cdda21 core/command: reset color after compatibility warning msg
+  * d24e8e9 hyprland/ipc: swap windowTitle and windowClass in openwindow handler
+  * e9bad67 hyprland/ipc: fix activeToplevel not resetting after closewindow
+  * ed036d5 wayland/shortcuts-inhibit: add shortcuts inhibitor
+  * 1ddb355 core/icon: add searching custom file paths
+  * ab494dd i3/ipc: implement IPC listener to receive arbitrary events
+  * fdbb86a core/model: fix recursion in emptyInstance
+  * 0a7dcf3 build: update clang tooling and reformat
+  * 1552aca build: fix new clang-tidy lints
+  * 0a36e3e ci: add qt6.10.0 checkout
+  * a00ff03 services/pipewire: cache route device volumes to initialize nodes
+  * fc704e6 core: reference scanned paths by QDir over QString
+  * db1777c service/polkit: add service module to write Polkit agents
+  * 1b147a2 core/desktopentry: handle string escape sequences
+  * 3e2ce40 core: reference configs by absolute instead of canonical paths
+  * 0085881 core/command: filter instance selection by current display
+  * 1e8cc2e core: add CacheDir pragma
+  * ea79eac services/pipewire: do not use device for pro audio node controls
+  * c9d3ffb version: bump to 0.2.1
+  * f12f0e7 service/greetd: always send responses
+  * 3e32ae5 core/desktopentry: don't match keys with wrong modifier or country
+  * 2eacb71 core/desktopentry: mask entries with priority less than hidden entry
+  * c5c438f all: fix gcc warnings and lints
+  * 9bb2c04 nix: remove qtwayland dependency when qt >= 6.10
+  * 3bcc199 wayland/lock: support Qt 6.10
+  * 9662234 services/pipewire: consider device volume step when sending updates
+  * 475856b docs: start tracking qs-next changelog
+  * 482744c ci: fix magic-nix-cache write permissions
+  * 6092b37 build: explicitly depend on private qt modules
+  * 1d94144 all: fix lints
+  * f78078d nix: update flake + tidyfox
+  * eeb8181 ci: add detsys nix cache
+  * a922694 ci: use unwrapped package for dependencies derivation
+  * afada1e ci: add qt 6.9.2 and 6.9.1 checkouts
+  * b9905ef nix: add overlay
+  * 2119eb2 build: fix cross compilation
+  * e9a574d core: derive incubation controllers from tracked windows list
+  * 59f5744 core/desktopentry: watch for changes and rescan entries
+  * 49646e4 ci: use latest wayland-protocol for all test cases
+  * 6eb1255 wayland/idle-notify: add idle notify
+  * b8fa424 wayland/idle-inhibit: fix formatting + lints, destructor, add logs
+  * 2c29834 wayland/idle-inhibit: stop vendoring protocol
+  * f592793 hyprland/ipc: fix focusedWorkspaceChanged connection
+  * f7597cd core/log: fix nullptr crash in ThreadLogging
+  * 42420ea wayland/idle-inhibit: use bindable .value() instead of implicit cast
+  * b8625aa wayland/idle-inhibit: add idle inhibitor
+  * a5431dd version: bump to 0.2.0
+  * f0d5f48 docs: add changelogs
+  * 1c02654 core/desktopentry: use this-> in heuristicLookup
+  * 0416032 core/reloader: trigger postReload with a signal
+  * 1644ed5 bluetooth: do not try to enable rfkilled devices
+  * 91c9db5 wayland/screencopy: handle buffer creation failures
+  * ab096b7 wayland/screencopy: reset buffer requests between frames
+  * 448623d service/notifications: use bytes over bits in pixmap rowstride check
+  * dfededc launch: ignore QT_STYLE_OVERRIDE and QT_QUICK_CONTROLS_STYLE
+  * 4dad447 docs: remove }; in headers + typo fixes
+  * 3bbf39c core/reloader: fix file watcher compatibility with vscode
+  * f90bef2 hyprland/workspace: Use name instead of id for activate
+  * db77c71 wayland/layershell: use width over height in horizontal auto exclude
+  * fcffbbc core/desktopentry: lookup wm class in nodisplay entries
+  * 759bd72 core/log: stop trying to store detailed logs after write fail
+  * 63a6d27 core/qmlglobal: configDir, configPath() -> shellDir, shellPath()
+  * 77de23b core/desktopentry: add StartupWMClass and heuristicLookup
+  * 7b417bb build: add /lib/qt-6 to wrapped nix package
+  * e55d519 build: split derivation for extensible wrapper
+  * ecc4a12 all: mask various useless dbus errors
+  * 6572a7f tooling: derive import paths from QML engine import paths
+  * e885f4a tooling: check if .qmlls.ini is a symlink in addition to exists
+  * 115d671 services/tray: use normal icon as fallback for attention custom icon
+  * 91dcb41 services/pipewire: destroy qml ifaces early to avoid user callbacks
+  * 201c559 core: add Internal pragma
+  * 78e3874 tooling: add per-shell tooling lock to prevent races
+  * 986749c tooling: add automatic QMLLS support for new imports and singletons
+  * 4d8055f build: fix PostReloadHook resolution in LSP
+  * a45fc03 service/tray: fix missing documentation for invokables
+  * c40074d service/notifications: add inline-reply action support
+  * 3dfb7d8 core/window: handle graphics context loss
+  * a2146f6 core/window: add closed() signal to all window types
+  * 5706c09 core/window: clean up window interface property proxies
+  * 5ac9096 Revert "core/region: use QList over QQmlListProperty for child regions"
+  * 05fbead x11/panelwindow: calc screen geom with  exclusions of other panels
+  * 478aa2b core/window: run polish in onExposed instead of polishItems
+  * cee1f58 service/mpris: make lengthSupported bindable and notify for changes
+  * 71334bf core/desktopentry: expose exec command and use execDetached on call
+  * de25787 io/process: null stdio channels in detached processes
+  * b011cd9 core/window: set FloatingWindow default max size to QWINDOWSIZE_MAX
+  * 1e1ba93 core/window: add manual PanelWindow tester
+  * 59d29bb x11/panelwindow: use Qt window default screen if none is provided
+  * 9604302 x11/panelwindow: convert to bindable properties
+  * 479ff58 wayland/layershell: support opposite-to-exclusion edge margins
+  * 3b4ebc5 wayland/layershell: support auto exclusive zone without constraint
+  * bb206e3 core/window: run window-level polish along with item polish
+  * 0c9c5be core/region: use QList over QQmlListProperty for child regions
+  * 49a3752 core: correctly deregister QML incubators on destruction
+  * 026aac3 build: add icon and desktop file
+  * d7079b7 core: allow qml scanner to detect namespaced and versioned imports
+  * 6f774af core/colorquant: print image source url vs pointer on err
+  * 5703fba wayland/lock: handle null window in configure()
+  * 07ea4de io/ipchandler: add registry logs
+  * 2629e21 crash: initialize QApplication after logging to run cat filter
+  * b4c62b8 core: only log warn+ from quickshell.paths
+  * 1af08c0 core: only call QmlScanner::scanDir() on directories
+  * 4b35d7b core: support qs. imports
+  * 3d594e1 core/log: track default logging categories
+  * 5d7e075 bluetooth: fix defaultAdapter reactivity
+  * 87d99b8 services/pipewire: destroy bound audio object when node is destroyed
+  * 7eff415 core/qmlglobal: re-add shellRoot as a deprecated property
+  * 3cc7ced core/window: fix QsWindow being null for WlrLayershell
+  * fb37be7 core/log: ignore on-disk logging configs for quickshell* rules.
+  * 9708d82 core/reloader: trigger onPostReload if launched post-reload
+  * 0e6518a core/command: improve dead instance selection
+  * 86591f1 io/process: mask the "QProcess destroyed for running process" warn
+  * f681e20 bluetooth: add bluetooth integration
+  * 1d02292 hyprland/ipc: actually set lastIpcObject
+  * f842b84 widgets/wrapper: round child position when centering
+  * d949f91 wayland/screencopy: apply output transform to wlr screencopy
+  * 27f97c3 wayland/toplevel: refactor toplevel output tracking to its own file
+  * 20c3da0 io/fileview: null watcher ptr after deletion to avoid UAF
+  * 8be18c0 hyprland/ipc: expose HyprlandToplevel jsons
+  * 98d09b5 io/process: add Process.exec()
+  * 8fc3e1c docs: include HyprlandToplevel in module file
+  * c17ea54 wayland/lock: check for protocol availability before use
+  * 362c8e1 hyprland/ipc: expose Hyprland toplevels
+  * c115df8 docs: mention github mirror in README
+  * 02362c3 services/pipewire: add missing ; after Q_ENUM for docgen
+  * 3d3b7f1 wayland/lock: avoid creating lock surfaces for the fallback screen
+  * 79b2204 io/socketserver: correctly order startup/teardown across generations
+  * 95d0af8 services/pipewire: update volume props from device for device nodes
+  * 579d589 core/popupanchor: ensure item-derived rect is at least 1x1 pixels
+  * 9a30333 build: clarify shared libraries
+  * d916457 core/window: add title property to floating windows
+  * 2032248 wayland/layershell: fix bridge destructor use after free on reload
+  * 0499518 core/qmlglobal: add execDetached functions for spawning processes
+  * 0140356 core/qmlglobal!: rename shellRoot to configDir + add configPath
+  * 71fe3d9 x11/panelwindow: do not look up engine generation in ~XPanelWindow()
+  * 517143a all: fix new lints
+  * 05b5ecc build: update build guide, nix and guix packages
+  * 703a378 core: change version number
+  * 09981a0 core/log: print path to detailed log instead of text log on launch
+  * 2a8479d core/generation: use deleteLater() to delete file watchers
+  * 2b01a75 io/process: add StdioCollector data stream parser
+  * 0224fa9 io/fileview: use deleteLater() to delete file watchers
+  * 91000a5 docs: point readme to website
+  * dcd9e3a hyprland/ipc: implement toplevel address association
+  * ee570ec services/pipewire: expose node type
+  * 6b3d64e widgets/wrapper: use top/bottom margins in implicitHeight not l/r
+  * aa547ba wayland/popupanchor: consider window size in anchor dirty state
+  * d1df932 core/popupanchor: add margins property
+  * ef077dd core/panelwindow: move Margins to types.hpp
+  * 2773e54 core/process: ignore environment changes made by the Env pragma
+  * 4a0f638 core/window: expose coordinate mapping functions on QsWindow
+  * 6d42d26 core/popupanchor: add item-relative anchor rect support
+  * adcef7f core/popupwindow: wait for polish to reposition
+  * b67f92b all: use BINDABLE only with trivial setters
+  * 2e3c15f wayland/layershell: use bindable implicit size in exclusive zone calc
+  * 5ae8e49 core/window: move implicit width/height to bindable properties
+  * cb195d4 launch: look for configs in all XDG config dirs
+  * b898592 core: don't show " at " in qml warnings if object name is empty
+  * ee31e5d ui/reload: use monospace font for error message
+  * ec433d1 core: improve log format for QML errors and warnings
+  * 4472b27 core/reloader: watch new files detected in failed reloads
+  * e931b85 core/window: add min/max size to FloatingWindow
+  * 05ed9ff wayland/screencopy: add constrained implicitSize for ScreencopyView
+  * 7390ae2 widgets/cliprect: override parent's implicit size instead of wrapper
+  * 73e673e widgets/cliprect: set default background color to white
+  * abd9a3c wayland/screencopy: use all dmabuf planes and modifiers in egl image
+  * bf235d3 wayland/layershell: ensure bridge is nulled on layer destruction
+  * 2bcd9e0 widgets/wrapper: default resizeChild to true
+  * 428aec9 widgets/wrapper: set WrapperRectangle border.width to 0
+  * 23ef14c widgets/wrapper: apply implicit size override on componentComplete
+  * d872ea8 service/tray: hide missing prop warnings for ToolTip
+  * c4a7d16 io/process: emit read for data remaining in buffer on exit
+  * 89e796c widgets/cliprect: default data property instead of children property
+  * 3cf96ec widgets/wrapper: support overriding implicit size
+  * e135de9 widgets/wrapper: use bindable properties everywhere
+  * 8b5b12b core/scriptmodel: update model data after objectProp eq
+  * 2e33ef5 hyprland/ipc: track workspace fullscreen state
+  * edfc4c6 wayland/layershell: ensure exclusive zone is updated on zone/mode chg
+  * 644254d wayland/toplevel: expose visible outputs
+  * 5193426 core/qmljson: add support for synthesized .qml.json files
+  * 6026c4c service/mpris: expose dbus service name
+  * c77a12d ui/reload: add textual fallback for copy and close icons
+  * 56b4ef3 service/tray: silence compliance warnings
+  * 2e905f6 core/scriptmodel: add objectProp, allowing js objects to be compared
+  * 61f00a0 core/model: return ObjectModel values list directly
+  * 6dbc310 widgets/cliprect: fix premultiplied alpha blending
+  * 8124a63 ui: add native reload popup
+  * 5c1d600 core/window: fix UAF in createQQuickWindow
+  * 4d74851 widgets/wrapper: add WrapperMouseArea
+  * 4d7d06b core/qmlglobal: add clipboard support
+  * 325a51c core: add DataDir and StateDir pragmas
+  * a05c0de core/qmlglobal: add dataPath(), statePath() and cachePath()
+  * c1c24c2 core/qmlglobal: expose dataDir and stateDir
+  * 69c7f4f core/qmlglobal: expose cacheDir
+  * fee4942 io/fileview: add adapter support and JsonAdapter
+  * cb69c2d service/upower: do not crash when trying to set power profile w/o ppd
+  * 48a5638 hyprland/focus_grab: prevent grab object leak on activate
+  * baa9e5e ci: fix perl warnings in lint
+  * e342ba3 ci: add qt 6.8.2, 6.8.3 and 6.9.0
+  * 4ae0eae wayland/toplevel: add close() request
+  * e0cff67 wayland/layershell: refactor layer shell surface integration
+  * 6a8284d core/window: add implicit size properties to window types
+  * ead9141 widgets/wrapper: add distinct top/bottom/left/right margins
+  * ca26210 core/desktopentry: check XDG_DATA_HOME according to base dirs spec
+  * 8863bf5 core/window: fix null QObject::connect in ProxyWindowBase::setScreen
+  * 67524f9 wayland/lock: fix protocol errors with Qt 6.9.0
+  * ed52826 core/scriptmodel: detatch mValues when accessed during update
+  * 3a97da0 guix: add wrap-program phase
+  * 4ea77a8 wayland: update QWaylandShellSurface impls to use updateExposure()
+  * 14aa179 i3/ipc: fix workspace and monitor focus being unset on launch
+  * 2028766 i3/ipc: provide default sorting for workspaces
+  * d6a4ebc hyprland/ipc: provide default sorting for workspaces
+  * fa74449 service/tray: add "Communications" category
+  * 69430e3 service/tray: provide default sorting for SystemTray.items
+  * 392f56c hyprland/ipc: further cleanup + add Hyprland.focusedWorkspace
+  * 67b2682 i3/ipc: general cleanup + add active property
+  * 8f11d60 hyprland/ipc: make monitor bindable + fix property errors
+  * 62ccab5 hyprland/ipc: expose active and focused properties + activate()
+  * 207e611 guix: add guix package definition
+  * 1a20c39 i3/ipc: convert to bindable properties
+  * 3b2d84c hyprland/ipc: convert to bindable properties
+  * eabf79e core/command: allow `qs log` to retrieve logs of dead instances
+  * 0662c37 io/process!: replace manageLifetime with startDetached
+  * c5bea85 io/process: hack around moc parse error
+  * 9534778 wayland/screencopy: Add missing include needed for musl
+  * d1a1727 service/mpris: hack around more non-compliant players
+  * 1eabf5b io/fileview: ensure directory is watched for file creation
+  * aeb347b wayland/toplevel: add pending state for outputs entered before qscreen init
+  * c3ed3b0 hyprland/ipc: fix nullptr workspace read in log line
+  * 50026f0 i3/ipc: ensure workspace does not exist at init before model add
+  * fb326e0 i3/ipc: fix wrong event handler being called for GetWorkspaces
+  * d58b7b5 core/colorquant: add ColorQuantizer
+  * fb343ab hyprland/ipc: prefer ID based workspace lookups to name based ones
+  * d3b1a65 hyprland/ipc: reduce impact of racing workspace queries
+  * 9506c1b docs: update CONTRIBUTING style guide
+  * 4f2610d io/ipchandler: add `prop get`
+  * 9417d6f core/command: deprecate `qs msg`
+  * 4205293 core/clock: expose date as a QDateTime
+  * 325be88 core/command: add option to select newest matching instance
+  * b289bfa hyprland/surface: add visibleMask
+  * cdaff29 core/icon: stop reusing image ids (dbusmenu, notifications)
+  * c6791cf core/window: fix screen assignments being completely broken
+  * b73eff0 core/screen: add model and serial number properties
+  * 6a017d6 fix single quote parsing
+  * 3c7dfcb hyprland/ipc: handle renameworkspace
+  * b336129 core/window: add QsWindow.devicePixelRatio
+  * bc73d35 wayland/screencopy: fix ScreencopyContext leak in ScreencopyView
+  * 6464ead core/window: move input mask handling + commit scheduling to polish
+  * d6b5852 core!: fix typo in ShellScreen.primaryOrientation
+  * d195ca7 wayland/screencopy: fix UAF in dmabuf modifier collection
+  * ca79715 wayland/screencopy: log more information during buffer creation
+  * c2ed5bf core/stacklist: add tests
+  * 6024c37 core/scriptmodel: improve docs
+  * 6d8022b service/pipewire: add registry and node ready properties
+  * 8b6aa62 fix fd leaks in scanPath
+  * cd42914 wayland/screencopy: add screencopy
+  * 918dd23 build/wayland: do not link to a target in wl_proto
+  * 2c411fc all: fix new lints
+  * 26d443a ci: add 6.8.1
+  * af86d5f hyprland/surface: remove debug print
+  * 761d99d service/mpris: reset position timestamps on seek
+  * fca058e service/upower: add device model property
+  * eaf8549 service/upower: correctly deserialize UPowerDeviceState::Discharging
+  * f3b7171 core/window: allow explicit surface format selection
+  * dc3a796 core/command: avoid running when cli11 forces returning 0
+  * 47bcf8e service/upower: add power-profiles support
+  * 66b9917 service/mpris: trigger onPositionUpdated when seeking
+  * 3a40174 hyprland/surface: add hyprland surface opacity support
+  * 08836ca core/scriptmodel: add expression model for unique lists
+  * 2f194b7 service/upower: track device additions/removals
+  * 611cd76 core/proxywindow: connect mScreen's destroy signal in all cases
+  * 27840db service/mpris: don't send postTrackChanged unless trackChanged sent
+  * a053373 core/qsmenu!: improve menu layout change UX
+  * 3fc1c91 lint: remove reinterpret_cast lint
+  * be5e5fc lint: remove broken lint selection
+  * ded3708 io/fileview: correctly mark signals as signals in docs
+  * 69d1396 io/fileview: add support for watching changes
+  * ccf8850 build: add progress bar to `just lint-changed`
+  * 70be74e io/fileview: add write support
+  * 2d05c7a core/menu: correctly handle menu destruction while open
+  * 26280b3 widgets/cliprect: fix typo in bottomRightRadius
+  * af14a41 widgets/wrapper: update child geometry when implicit size changes
+  * cb05e9a core/reloader: fix incubator warnings
+  * 8882f7c core/proxywindow: fix ProxiedWindow proxy pointer after reload
+  * 59298f6 i3: fix Q_PROPERTY definitions for use with typegen
+  * fd87be1 widgets/cliprect: pass user input to contained items
+  * b6a79fe core/proxywindow: improve QsWindowAttached robustness
+  * 539692b service/tray: re-add Q_INVOKABLE to invokable functions
+  * 87a57b7 launch: don't try to write daemon exit from monitor process
+  * e3d003e core/popupanchor: emit anchoring() before checking anchor props
+  * 6f99933 hyprland/ipc: pad event argument list to given count
+  * 31adcaa i3/sway: add support for the I3 and Sway IPC
+  * 84ce47b build: add justfile entry to lint only changed files
+  * 2571766 all: fix clang 18 lints
+  * e957e88 ci: run lints and test compile on arch
+  * 9b409c0 ci: use qt6.7.2 from cached nixpkgs commit
+  * cb42697 ci: test compilation against supported qt version / compiler matrix
+  * 57a5d8e core/reloader: wrap QQuickItem root nodes in a floating window
+  * c21df95 core/reloader: do not require ShellRoot
+  * 2996e40 core/plugin: rename QuickshellPlugin to QsEnginePlugin
+  * afa1b6f wayland/layershell: link to xdg-shell protocol codegen
+  * a8901fd debug/lint: run lints on reload for visible windows
+  * 8d63006 widgets/wrapper: fix default child not being assigned initially
+  * 5b01ec0 debug/linter: remove log messages
+  * f0aca20 core/proxywindow: notify for width/height changes after connect
+  * 5301227 service/tray: fix compile on qt versions older than 6.8
+  * ec143d6 dbus/properties: remove non bindable based dbus property impl
+  * 324fe92 all: remove unused dbus props and warnings for non-required ones
+  * b43b4a0 service/tray: adopt bindable properties
+  * 0e9e593 dbus/properties: allow removing to/from wire transforms
+  * ac50767 service/tray!: refactor qml bindings to StatusNotifierItem
+  * f53e6fb dbus/dbusmenu: use bindable dbus properties
+  * ff55ac8 service/upower: adopt bindable properties
+  * d4deb11 dbus/properties: support data transformation/validation before store
+  * a13c9d9 service/notifications: adopt bindable properties
+  * abb900b service/mpris!: do not provide fallback track information
+  * e2ef7b7 service/mpris: add isPlaying
+  * db9e633 service/mpris: adopt bindable properties
+  * 1955dee dbus/properties: add QObjectBindableProperty based dbus property
+  * 4163713 dbus/properties: decouple properties from AbstractDBusProperty
+  * dca75b7 service/mpris: clarify trackinfo emit order and use QBindings
+  * 8450543 service/mpris!: convert trackArtists from list<string> to string
+  * dbaaf55 core/popupwindow: remove parentWindow deprecation message
+  * eb5a5b8 debug: run lints after window expose
+  * 6ceee06 debug: add lint for zero sized items
+  * 66b494d build: add qs_add_link_dependencies
+  * f4066cb core/popupanchor: add anchoring signal for last second repositioning
+  * ee93306 widgets/wrapper: fix margin wrapper reactvity and margins
+  * 033e810 widgets: add ClippingWrapperRectangle
+  * 401ee4c widgets: add wrapper components and managers
+  * 79fca3c docs: mention spirv-tools in BUILD.md
+  * 3617485 services/tray: fix const lint in item
+  * fdc1302 widgets: add ClippingRectangle
+  * 68ba500 core/icon: ability to specify a fallback or check if an icon exists
+  * d266736 core/qmlglobal: add shellRoot property
+  * 7db3772 core/generation: short circuit findObjectGeneration if only one exists
+  * 29d31f5 docs: add note that private qt headers are required for some libs
+  * 36d1dbe service/tray: report misbehaving tray hosts
+  * 0445eee io/process: support commands at file:// and root:// paths.
+  * 60dfa67 io/fileview: support zero-sized files (/proc)
+  * 0dd19d4 core/proxywindow: remove blank frame when destroying window
+  * 2c0e46c core/lazyloader: fix incubator UAF in forceCompletion
+  * 74f3718 launch: fix use after free of command options
+  * b528be9 all: fix gcc warnings
+  * 92252c3 build: fix gcc
+  * 7ffce72 all: optimize build
+  * 1168879 build: only install necessary qml module files
+  * 2e18340 build: allow specifying QML install dir
+  * cdeec6e all: use fully qualified type names in signals and invokables
+  * 98cdb87 all: use UntypedObjectModel instead of ObjectModel in Q_PROPERTY
+  * 746b0e7 all: use fully qualified type names in Q_PROPERTY
+  * a931adf all: add DEPENDENCIES entries to qml modules
+  * 9980f85 window: generate qmltypes
+  * 4e48c6e all: refactor windows code out of core
+  * 1adad9e build: avoid creating qs symlink in privileged directory
+  * 4c2d7a7 crash: print warning messages for run/buildtime Qt version mismatch
+  * 89d04f3 build: find waylandscanner and qtwaylandscanner from imported target
+  * 23f59ec crash: add build configuration and distributor information
+  * 8e40112 service/pipewire: ignore metadata updates with null keys
+  * 3ed39b2 service/pipewire: fix metadata permission checks
+  * fbaec14 service/pipewire: improve documentation
+  * fdc78ae service/pipewire: add a way to set preferred default nodes
+  * f889f08 service/pipewire: refactor defaults and metadata handling
+  * 7f9762b service/pipewire: disconnect link tracker from registry on node destroy
+  * 931aca5 service/pipewire: don't use configured default devices
+  * bd89783 core/icon: allow changing the icon theme
+  * 7a28308 core/command: rename --instance to --id and --info to --show
+  * c57ac4b core/menu: disconnect menu before unref when changed
+  * 08966f9 service/tray: always mark the root menu item as having children
+  * 84e3f04 service/tray: disconnect menu from handle on deletion
+  * bdc9fe9 service/tray: delete image pixmaps created with new[] using delete[]
+  * 01f2be0 widgets/iconimage: add typegen hints to alias properties
+  * abe0327 widgets: add IconImage widget
+  * accdc59 wayland/all: scale layers and popup anchors correctly
+  * 293341c core/reloader: ensure generation ptrs are removed on destroy
+  * 5e2fb14 io/ipchandler: add IpcHandler and qs msg
+  * 3690812 core/log: fix encoding 29 second deltas (again)
+  * 01f6331 core/command: add --daemonize
+  * 9d21a01 core/command: add --no-duplicate
+  * 47ec85f core/command: make log --file positional
+  * 01deefe core/log: encode category log levels
+  * a82fbf4 core/command: add log --follow
+  * c78381f core/command: add --tail to log subcommand
+  * f810c63 core/command: allow log files to be specified w/ instance selectors
+  * 19d7459 core/window: premultiply background colors
+  * 2c485e4 nix: update lockfile to avoid mesa mismatches
+  * 8cdb413 nix: modernize cmake options
+  * 85be386 io/fileview: add FileView
+  * 3a1eec0 core/log: fix sparse logs being on by default
+  * 465d540 crash: fix off-end read when copying environ array
+  * 3974762 x11/panelwindow: add option to disable Xinerama aware struts
+  * 6cb7d89 x11/panelwindow: fix multi monitor struts
+  * 95245cb x11/panelwindow: fix strut start/end, patch around awesome, resize all panels
+  * 94e881e core!: refactor launch sequence
+  * da043e0 core/ipc: add ipc server/client
+  * 13b6eea core/reloader: null generation ref in reloadables on destruction
+  * 3edb3f4 core/reloader: disconnect old generation before reloading
+  * 60349f1 core: set application name to avoid bin name fallback
+  * 77c5a2d build: add "qs" as a symlink to the "quickshell" binary
+  * f6ad617 service/pipewire: ignore insignificant device volume changes
+  * a116f39 core/desktopentry: prioritize fallback keys over mismatched keys
+  * af29bc2 core: add by-pid symlinks to instance runtime paths
+  * 9967e2e core: fix UAF when calling Qt.quit or Qt.exit
+  * e327d67 build: fix -DCRASH_REPORTER=OFF
+  * 79b22af service/pipewire: avoid overloading devices with volume changes
+  * c60871a service/pipewire: set device node volumes with device object
+  * b40d414 build: add opt-in installation of QML lib
+  * f95e7db hyprland/focus_grab: wait for surface creation if null
+  * fe1d15e crash: add crash reporter
+  * 5040f37 core/reloader: delay post-reload reload hooks
+  * 5a038f0 service/mpris: support trackids in object path form
+  * e223408 service/mpris: fix display position when paused
+  * f89c504 core/menu: opening platform menus w/o QApplication no longer crashes
+  * 1d2bf5d core/clock: fix behavior with odd time changes
+  * 815867c x11/panelwindow: fix multi monitor
+  * 22c397b x11/panelwindow: respect exclusive zones per layer
+  * 23cd6cd x11/panelwindow: set _NET_WM_DESKTOP to stay on all desktops
+  * 683d92a core/command: add --version
+  * 1485270 core/log: ensure malformed logs cannot overflow ring buffer
+  * 5f4d7f8 core/log: fix log corruption with messages at 29 second deltas
+  * 53b8f1e core/log: add read-log --no-time
+  * c2b4610 core/log: add read-log --filter
+  * 0fc9865 core/log: create fully detailed logs by default
+  * 291179e core/command: rewrite command parser with CLI11
+  * bdbf5b9 core/log: add custom log encoder for smaller log storage
+  * 8364e94 core/log: capture early logs in fs logger
+  * 7c7326e core/log: add timestamps to log files
+  * 38ba3ff core/popupanchor: pick flip direction based on available width
+  * 6bf4826 core/log: add filesystem logger
+  * 46f48f2 core/log: add fancy logger
+  * 533b389 nix: build with split debuginfo in release mode
+  * d582bb7 core: add per-config shell id
+  * 79b2fea core/util: fix MemberMetadata compile on gcc
+  * 2c87cc3 core: stop using the simple animation driver by default
+  * cb2862e wayland/toplevel_management: add ToplevelManager.activeToplevel
+  * 9555b20 core/clock: fix instability causing timer to fire multiple times
+  * a4903ea core/clock: fix breakage at midnight
+  * 76744c9 core/clock: add SystemClock
+  * ba1e535 core/util: add experimental member macros
+  * 8873a06 service/notifications: use DROP_EMIT_SET for notification properties
+  * 3a8e67e core/util: move DropEmitter to utils and add generic accessor macros
+  * abc0201 service/mpris: add uniqueId property to detect track changes
+  * d9f66e6 service/upower!: divide percentage by 100
+  * 18563b1 wayland/popupanchor: fix anchor state breaking show after reposition
+  * 4b2e569 core/types: allow implicit conversion from point to box
+  * 58c3718 core/types: add implicit coversion from rect to box
+  * 6b9b1fc core/menu: add QsMenuAnchor for more control of platform menus
+  * 5435027 core/menu: add handle support to QsMenuOpener + add handle to tray
+  * acdbe73 dbus/dbusmenu: separate menu handles from status notifier items
+  * a71a6fb core/popupanchor: fix flip with opposite anchors and gravity
+  * 60388f1 core/popupanchor: reposition on popup size change
+  * ebfa8ec core/popupanchor: rework popup anchoring and add PopupAnchor
+  * 14910b1 docs: mention member reference syntax in CONTRIBUTING
+  * a9e4720 docs: use new member reference shorthand
+  * dfcf533 core/window!: rename QSWindow to QsWindow
+  * aa3f7da wayland/platformmenu: fix flipped positions and submenu y positions
+  * 6367b56 core/window: fix attached property prior to backer creation
+  * e48af44 core/window: add QsWindow attached object to contained Items
+  * d1c33d4 docs: explain type reference shorthand in CONTRIBUTING
+  * e9cacbd all: use type/prop shorthand in docs
+  * c4cc662 core/objectmodel: fix objectInserted signal indexes
+  * e23923d service/notifications: make notifications Retainable
+  * 609834d core/retainable: add Retainable and RetainableLock
+  * 7c5632e service/upower: start upower dbus service if inactive
+  * d630cc7 service/notifications: add notifications service
+  * 79cbfba wayland/layershell: add warning that exclusive focus is not a lock
+  * c758421 core/reloader: fix Reloadable::onReload being called multiple times
+  * 49b3092 all: fix formatting
+  * bb33c9a core/global: add Quickshell.iconPath
+  * 24f54f5 service/upower: add upower service
+  * 497c9c4 core/window: ensure items are polished before setting window visible
+  * db23c02 core/desktopentry: paper over id casing issues
+  * fdbb490 service/tray: fix crash when display is called on a menuless item
+  * b4be383 service/tray: log menu refcount updates
+  * ec36263 service/tray!: redesign menus / dbusmenu and add native menu support
+  * c31bbea docs: add breaking change notice
+  * d8b900e lint: allow implicit bool conversions
+  * 8547d12 service/pipewire: make binding warnings in docs more obvious
+  * d7149d5 core/objectrepeater: soft-remove in favor of Instantiator
+  * c78c864 core/objectrepeater: delete delegate instances after removal
+  * 09d8a7a core/objectrepeater: add ObjectRepeater
+  * d8fa9e7 service/mpris: add properties for common track metadata
+  * c56a3ec service/mpris: add shorthand for playback state changes
+  * b6612bd core/panelwindow: remove QSDOC_HIDE for above and focusable props
+  * 3573663 service/greetd: add greetd service
+  * 7295618 wayland/lock: only update surfaces on screens changed if locked
+  * 59cf60d service/pam: add responseVisible
+  * 6efa05a core: run full destruction sequence before exiting
+  * 3033cba all: fix failing lints
+  * 8ec245a wayland/lock: initialize lock content before starting lock
+  * 71a65c4 docs: mention Fedora COPR package
+  * 9e58077 core: fix shutdown sequence crashing
+  * 3991726 docs: document PAM feature in build instructions
+  * ae762f5 hyprland/ipc: ensure requests are flushed
+  * e89035b service/pam: move pam execution to subprocess to allow killing it
+  * b5c8774 service/pam: send completed messages after destroying pam conv
+  * 7e5d128 service/pam: add pam service
+  * f655875 core/desktopentry: add limited desktop entry api
+  * ce5ddbf core: add $XDG_DATA_DIRS/pixmaps to QIcon fallback path
+  * d8b72b4 wayland/lock: notify on screen change
+  * 523de78 wayland/layershell: ensure state changes are comitted without render
+  * 67783ec core/transformwatcher: fix crash when a or b is destroyed
+  * b5b9c1f wayland/toplevel_management: add foreign toplevel management
+  * 5d1def3 hyprland/ipc: fix monitorFor returning null during HyprlandIpc init
+  * bc34999 hyprland/ipc: match by name in refreshMonitors instead of id
+  * ef1a413 hyprland/ipc: re-request monitors and workspaces on fail
+  * d14ca70 hyprland/ipc: add hyprland ipc
+  * be237b6 core/elapsedtimer: add ElapsedTimer
+  * 37fecfc docs: add commit style instructions
+  * b1f5a5e service/mpris: preserve mpris watcher and players across reload
+  * 9d5dd40 docs: recommend packagers add a dependency on qtsvg
+  * 29f02d8 all: remove NVIDIA workarounds
+  * 7d20b47 misc: remove the docs and examples submodules
+  * bd504da docs: add build, packaging and development instructions
+  * 238ca8c core/reloader: fix crashing on failed reload
+  * a8506ed build: link jemalloc by default to reduce heap fragmentation
+  * d56c07c core/reloader: simplify generation teardown
+  * 84bb409 core/reloader: fix incorrect generation teardown on hard reload
+  * 6c95267 wayland: fix UAF in layershell surface destructor
+  * 7feae55 core/reloader: add reload signals for visual notifications
+  * 569c404 all: import module dependencies via qmldir
+  * 0519acf core: support `root:` and `root:/` paths for the config root
+  * 33fac67 core: use the simple animation driver
+  * 7ad3671 core/reloader: fix file watcher compatibility with vim
+  * 4e92d82 core: add options to enable QML debugging
+  * 5a84e73 core/objectmodel: add signals for changes to the list
+  * 06240cc service/mpris: improve compatibility with noncompliant players
+  * 5016dbf all: replace list properties with ObjectModels
+  * 6326f60 service/mpris: re-query position on playback and metadata change
+  * ac339cb service/mpris: expose desktopEntry property
+  * f2df3da service/mpris: fix position being incorrect after pausing
+  * ed3708f service/mpris: add trackChanged signal
+  * af45502 service/mpris: add mpris module
+  * 4ee9ac7 service/mpris: finish mpris implementation
+  * 3b6d1c3 feat: mpris
+  * 73cfeba x11: add XPanelWindow
+  * 908ba3e hyprland/global_shortcuts: fix crash when protocol is not present
+  * 3e80c4a service/pipewire: add pipewire module
+  * bba8cb8 hyprland/global_shortcuts: add GlobalShortcut
+  * 87a884c hyprland/focus_grab: add HyprlandFocusGrab
+  * e7cfb5c service/tray: move menu access to SystemTrayMenuWatcher
+  * 3c0456a core/boundcomponent: add BoundComponent
+  * d64bf59 core/intercept: do not rewrite paths when url ends in .qml
+  * 53d69fd docs: bump docs submodule
+  * 4db28fe core/lazyloader: add activeAsync property
+  * 658f3cf docs: add API documentation for SystemTray and DBusMenu
+  * 6106164 dbus/dbusmenu: add DBusMenu support
+  * 7cc1b54 service/tray: rework tray image providers
+  * aa9f8cd dbus/properties: dbus/dbusutil -> dbus/properties
+  * 74d1bb9 dbus/properties: fix QDBusPendingCallWatcher leak
+  * a1d8272 service/tray: log failures when calling Activate or SecondaryActivate
+  * c71fdd6 service/tray: log icon render failures due to IconThemePath
+  * 1f49c55 wayland/lock: fix post-reload lockscreen creation
+  * ce4e697 service/tray: use bilinear scaling for tray icons
+  * c6e5a35 core/reloader: fix more crashes (not all of them)
+  * 31462b9 core/reloader: fix UAF of old generation during scene destroy
+  * 97bcdbe service/tray: add activate, secondaryActivate and scroll methods
+  * 94a1140 core/popup: fix popup never becoming visible when lazy loaded
+  * 6eb68d2 core/reloader: fix late creation of Reloadable types
+  * 6181234 service/tray: account for more edge cases and add placeholder img
+  * 54bf485 nix: add qtsvg dependency by default
+  * 23d0c2e io/socket: add flush()
+  * a06af24 core/transformwatcher: add TransformWatcher
+  * fd5b73a wayland: fix Qt 6.7 compatibility
+  * 98318c4 nix: fix git revision in nix package
+  * 0b2baea core: add IgnoreSystemSettings pragma
+  * ff8e252 core: fix build warnings
+  * 082c3c4 core: add pragmas
+  * c084736 core/window: fix reloads breaking for indirect window children
+  * 6214ac1 service/tray: mostly complete StatusNotifierItem implementation
+  * d47a7f2 core/icon: add icon image provider
+  * 8e530b6 dbus: create property helper classes
+  * 8529a2e readme: add matrix link
+  * 54b3d33 core/process: fix stdinEnabled documentation
+  * 83afce7 core/screen: expose x and y positions
+  * 439788f core/popup: force window destruction to avoid crashes
+  * c3fe93e core/window: fix backingWindowVisible always reporting true
+  * 3026d34 all/window: use global screeninfo pool for screen getter
+  * 9cbd5ab core/window: ensure window cannot be made visible during reload
+  * 9625129 core: replace throws with qFatal
+  * 055b191 core/window: add windowTransform and backingWindowVisible properties
+  * 3a0381d core/window: backing windows can now be destroyed and recreated
+  * b6dc696 core/generation: fix incuabation controller use after free
+  * c6bf826 core/reloader: fix Quickshell.reload not working
+  * 4eb5dc5 core/variants: expose instances list as a property
+  * f09f591 core/region: improve child handling
+  * 8e25c1c core/easingcurve: add EasingCurve type
+  * dd811ac core/window: fix mask reactivity
+  * 31264ac core/singleton: fix PostReloadHook in singletons
+  * 9f38908 core/intercept: do not intercept non qml files
+  * 5189779 core/lazyloader: add LazyLoader
+  * 8d742e3 core/window: fix floating window reloading recreating the window
+  * 300c0d9 core/window: fix white flash before window content is set
+  * 5731af5 misc: update submodules
+  * 41803ee core/window: fix windows not taking screen assignments during reload
+  * 48156a5 core/variants: restructure Variants to match the design of Repeater
+  * ffbdac9 core: synthesized qmldir files and new qml scanning strategy
+  * 1687ff3 reload: encapsulate each engine generation more
+  * 211f454 singleton: add reloadable Singleton type
+  * 463f9a2 root: recreate the qml engine on reload instead of clearing it
+  * 9f6ef37 build: improve parallelism by removing core dependency on modules
+  * c440416 build: greatly speed up build times using pch
+  * 3480707 wayland: namespace type names a bit to prevent future conflicts
+  * 1e647ce readme: mention hosted docs
+  * b675b36 popups: add popup windows
+  * 8cf0659 window: fix empty masks not applying
+  * 7a15495 layershell: fix protocol error on popup attachment
+  * 5f9bb9b window: changing screen now recreates the window on the new screen
+  * 31365dd misc: make the last window closing not quit by default
+  * 3789709 screens: make screen list changes not recreate QuickshellScreenInfos
+  * 15cd78e screens: add qDebug<< impl to QuickshellScreenInfo
+  * fc93591 variants: fix onReload not being called after variant updates
+  * a35d3f9 global: add Quickshell.processId and rename Process.pid
+  * b720dfa build: add git revision to version
+  * 73fd022 build: slightly improve qmltype generation
+  * 6966fc0 all: ensure QObject ownership is Cpp when required
+  * de8668e cli: add manifest and environment variables for config path
+  * 25409d2 docs: mention quickshell-examples in README
+  * f5d3457 feat: resolve symlinks to the config
+  * f32b417 docs: add build instructions to README
+  * 5ac0464 fix: ub/crash when changing layershell props after hiding window
+  * 3d4b8ef fix: remove unexpected and undefined mask behavior
+  * e1bb5df misc: update readme to reflect hosts
+  * 5688409 misc: add LGPL license
+  * 04c4cfe feat: add --workdir
+  * 6318038 misc: change version to 0.1
+  * 28087c1 build: nix packaging
+  * dfeb02e fix(panel): WlrLayershell exclusionMode was never set
+  * 4ef4cba refactor: move settings to their own object
+  * 62f99f5 feat: add Process.manageLifetime
+  * 4cfe6ee fix: fix scopes of created QQmlComponents
+  * 7467b65 feat: attach Qt.quit and Qt.exit functions
+  * e06b07a feat(process): add Process.environment
+  * 65ad2a9 refactor: rename ReloadPropagator to Scope
+  * 1188bdd fix: ShellRoot missing NOTIFY for configChanged
+  * bbe64f4 feat: add support for getting and setting workdir
+  * b5f50cd fix(socket): clear buffer when closing/opening socket
+  * b42add3 fix: Process.pid and Quickshell.env returning undefined instead of null
+  * 087c929 fix(process): pid not emitting changed signal
+  * ffa9d02 feat(process): add ways to close stdio channels
+  * 3f0bd20 feat: add Process type
+  * cd2343e fix(stream): segfault for datastream with no reader
+  * bccf43f fix: root is now destroyed on exit
+  * b5110b7 feat: add Quickshell.env
+  * 14e1d2d refactor: move socket and datastream types to Io module
+  * f45d298 feat(socket): add SocketServer and Socket.write
+  * f004454 fix(slock): memory leak when creating non SessionLockSurface
+  * 83a0ec6 feat(socket): add unix socket listener
+  * bb5bc05 build: add build options for all components
+  * d06b671 docs(layer): improve WlrLayershell documentation
+  * 42ea70e docs(slock): improve session lock documentation
+  * cdd5729 feat(slock): intentionally protocol error if lock is destroyed
+  * a255889 fix(slock): fix lock target when attempting to enable multiple locks
+  * b05d98b fix(slock): protocol error when session lock is reconfigured
+  * 0b529c6 fix(slock): make SessionLock.secure accurate
+  * cbdfba1 chore: clean up lints
+  * 4eac0b4 fix(wayland): fix ext screens resetting and causing protocol error
+  * 48bdcf4 feat(slock): add user facing SessionLock and SessionLockSurface
+  * 1fa87b7 feat(slock): implement ext_session_lock_v1 backend
+  * 70c5cf1 build: use ninja
+  * e6d2426 tools: use parallel to run clang-tidy
+  * cfd9a27 refactor: move wlr_layershell to its own subdirectory
+  * 4ae7ff8 rename: QuickShell => Quickshell
+  * 307e6c0 nix: remove qtlayershell dep
+  * 0034edd docs: add macro hints for typegen to paper over weird interfaces
+  * c0faebc cleanup(plugin): remove dependency on unstable moc functions
+  * 3bd587c feat: basic plugin system
+  * 6c6272e cleanup: remove unused ScreenConfiguration type
+  * fabf86f fix(docs): fix incorrect docgen and add wayland module
+  * d5344f4 feat(panel): set exclusionMode to Normal when exclusiveZone is set
+  * 8cd9657 fix(wayland): layershell auto exclusive zone applies on reload
+  * e2063e8 feat(wayland): WaylandLayershell attached property for PanelWindow
+  * 13c5d7c fix(wayland): layershell windows are recreated if attach fails
+  * c293078 feat(wayland): create cross platform window interfaces
+  * 4a82949 feat(wayland): custom layershell implementation
+  * b0567a5 build(wayland): setup cmake for wayland module
+  * c6dde9c refactor(wayland): seperate cmake files for modularity
+  * 5bbd033 refactor(wayland): start factoring wayland out of ShellWindow
+  * 55bcae4 fix: dangling screen issues and incorrect warnings
+  * a361930 feat: expose ProxyWindowBase.screen
+  * 6ad4fff feat: expose ProxyWindowBase contentItem
+  * 1ecc943 fix: ShellScreen signals are now connected
+  * ea2cdf3 feat: make proxy windows visible by default
+  * dc61692 refactor: rename ProxyShell/FloatingWindow to Shell/FloatingWindow
+  * 083fff5 feat: add PersistentProperties
+  * ed62193 feat: use an intermediary content item for proxy windows (fixes in desc)
+  * 5e58f0b fix: allow reloadable objects inside of proxy windows
+  * d967d56 fix: regression of default window color from white to black
+  * 1da43be feat: completely redesign hot reloader
+  * d6ed717 feat: abstract out scavenger scopes
+  * 82aa7d4 feat: add clickthrough mask to windows
+  * 5f75c40 feat: expose the backing window for ProxyWindowBase
+  * ad24507 feat: add ProxyShellWindow.exclusionMode
+  * bb16054 feat: add NOTIFY for ProxyWindowBase.color
+  * 424a45b feat: begin work on docs, also minor refactoring
+  * 5de0ae0 feat: rename project to quickshell
+  * ae5363a build: add missing qt module deps
+  * c0d6e63 feat: add filesystem watcher and rename QtShell object
+  * cab5ffc build: add option to not build layershell
+  * 767500b refactor: move reload function to QtShellGlobal
+  * 7a18ce8 fix: thisptr lints for base classes
+  * d761007 feat: add layershell support
+  * 56502b7 fix: log QQmlComponent creation error strings
+  * b62f2f3 fix: setting visible above geom in ProxyFloatingWindow
+  * f2f7ec9 fix: greatly improve Variants scavenge heuristic
+  * e1281b8 fix: make ProxyWindowBase's contentItem accessible for anchors
+  * 362789f feat: implement soft reloading
+  * ba1e18a refactor: rm QtShell/ShellComponent code superseded by RootWrapper
+  * 9a5ad44 feat: add hard reload signal and wrap root object
+  * d14258d feat: add Variants type for creating instances
+  * 23837e5 feat: basic QtShell and ShellComponent types
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Tue, 21 Jul 2026 21:11:43 +0000

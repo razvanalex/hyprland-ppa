@@ -1,0 +1,64 @@
+Source: quickshell
+Maintainer: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Uploaders: Răzvan-Alexandru Smădu <razvansmadu@gmail.com>
+Section: x11
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ ninja-build,
+ pkg-config,
+ qt6-base-dev,
+ qt6-base-private-dev,
+ qt6-declarative-dev,
+ qt6-declarative-private-dev,
+ qt6-shadertools-dev,
+ qt6-svg-dev,
+ qt6-wayland-dev,
+ qt6-wayland-private-dev,
+ spirv-tools,
+ libcli11-dev,
+ libdrm-dev,
+ libgbm-dev,
+ libegl-dev,
+ libgl-dev,
+ libjemalloc-dev,
+ libwayland-dev,
+ wayland-protocols,
+ libpipewire-0.3-dev,
+ libpam0g-dev,
+ libpolkit-gobject-1-dev,
+ libpolkit-agent-1-dev,
+ libglib2.0-dev
+Homepage: https://git.outfoxxed.me/quickshell/quickshell
+Vcs-Git: https://git.outfoxxed.me/quickshell/quickshell.git
+
+Package: quickshell
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Recommends:
+ qml6-module-qtcore,
+ qml6-module-qtnetwork,
+ qml6-module-qtpositioning,
+ qml6-module-qtquick,
+ qml6-module-qtquick-window,
+ qml6-module-qtquick-controls,
+ qml6-module-qtquick-layouts,
+ qml6-module-qtquick-shapes,
+ qml6-module-qtquick-effects,
+ qml6-module-qt5compat-graphicaleffects,
+ qml6-module-qt-labs-platform,
+ qml6-module-qt-labs-folderlistmodel,
+ qml6-module-qt-labs-settings,
+ qml6-module-qt-labs-synchronizer,
+ qml6-module-qt-labs-qmlmodels,
+ qml6-module-org-kde-kirigami,
+ qml6-module-org-kde-syntaxhighlighting
+Provides: quickshell
+Description: Flexible Qt/QML desktop shell framework for Wayland
+ Quickshell is a flexible toolkit for building desktop shells using Qt6 and QML.
+ It provides native Wayland layer-shell protocol support, IPC bindings,
+ and fluid UI rendering.
