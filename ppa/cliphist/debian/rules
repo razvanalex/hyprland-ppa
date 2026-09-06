@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 export GOPATH=/tmp/go
+export GOCACHE=/tmp/go-cache
 export GO111MODULE=on
 
 %:
