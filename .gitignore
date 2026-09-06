@@ -2,4 +2,5 @@
 build/
 ppa/*/build/
 README.md.asc
-
+__pycache__/
+*.pyc
