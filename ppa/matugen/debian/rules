@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export CARGO_HOME=.
+
 %:
 	dh $@
 
