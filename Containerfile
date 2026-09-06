@@ -1,4 +1,4 @@
-FROM ubuntu:25.10
+FROM ubuntu:26.04
 
 RUN apt update && apt upgrade -y
 
@@ -8,7 +8,7 @@ RUN apt install -y \
     devscripts \
     debhelper \
     decopy \
-    dh-cargo
+    dh-cargo equivs
 
 # Install general build deps
 RUN apt install -y \
@@ -49,7 +49,7 @@ RUN apt install -y \
     libliftoff-dev \
     liblzma-dev \
     libnotify-bin \
-    libpam0g-dev \
+    libpam0g-dev libaudit-dev \
     libpango1.0-dev \
     libpipewire-0.3-dev \
     libqt6svg6 \
@@ -107,6 +107,20 @@ RUN apt install -y \
 # Install hypridle deps
 RUN apt install -y \
     libsdbus-c++-dev
+
+# Install quickshell deps
+RUN apt install -y \
+    qt6-base-private-dev \
+    qt6-declarative-dev \
+    qt6-declarative-private-dev \
+    qt6-shadertools-dev \
+    qt6-svg-dev \
+    qt6-wayland-dev \
+    qt6-wayland-private-dev \
+    libcli11-dev \
+    libpolkit-gobject-1-dev \
+    libpolkit-agent-1-dev
+
 
 # Install hyprlock deps
 RUN apt install -y \
