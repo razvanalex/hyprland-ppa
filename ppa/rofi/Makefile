@@ -1,7 +1,7 @@
 SHELL			:= /bin/bash
 PACKAGE			:= rofi
 VERSION			:= 1.7.5+wayland3
-BUILD           := c
+BUILD           := d
 REVISION		:= 1
 REPOSITORY		:= lbonn/rofi
 TARBALL_URL		:= https://github.com/$(REPOSITORY)/releases/download/$(shell echo $(VERSION) | sed s/\+/%2B/g)/rofi-$(VERSION).tar.gz

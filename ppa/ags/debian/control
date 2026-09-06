@@ -21,6 +21,7 @@ Build-Depends:
  libgtk-3-dev,
  libpulse-dev,
  libpam-dev,
+ libaudit-dev,
  gobject-introspection,
  libgirepository1.0-dev
 Homepage: https://aylur.github.io/ags-docs/
