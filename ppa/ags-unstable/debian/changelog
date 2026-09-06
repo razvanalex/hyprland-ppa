@@ -1,3 +1,34 @@
+ags-unstable (2.3.0+git20260516.bbee2f1-1) resolute; urgency=medium
+
+  * bbee2f1 chore: update lockfiles
+  * e169694 nix: update hash
+  * e644522 chore: bump version
+  * 4e17479 ci: package deps with release
+  * 5997c98 chore: update lockfiles
+  * f5dd481 docs: update
+  * 7d64936 docs: add OkPanel to showcases (#786)
+  * 0cbca42 docs(faq): nested reactive values
+  * a5faba0 docs: update migration guide
+  * fe13af2 update(flake.lock): 'wrapGAppsHook' has been renamed to/replaced by 'wrapGAppsHook3' (#782)
+  * 8b9fe2f fix(nix): 'wrapGAppsHook' has been renamed to/replaced by 'wrapGAppsHook3' (#777)
+  * 83f4895 docs(index): fix delta shell image (#775)
+  * 3649182 docs(index): fix delta shell info (#774)
+  * 63df725 chore: update lockfiles
+  * d3217e2 docs(migration-guide): update codeblocks
+  * 25a1ebb Update issue templates
+  * 3e0dfb2 docs: fix image
+  * b83ec54 docs(index): features and showcases
+  * 31138c9 nix: update lockfile
+  * 5b93231 docs: maintanance
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sat, 16 May 2026 11:05:12 +0000
+
+ags-unstable (2.3.0+git20260514.772f6ad-1) resolute; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Thu, 14 May 2026 20:53:35 +0000
+
 ags-unstable (2.3.0+git20251012.772f6ad-1) plucky; urgency=medium
 
   * 772f6ad fix(docs): fixed broken link in docs/guide/install.md:24 (#767)

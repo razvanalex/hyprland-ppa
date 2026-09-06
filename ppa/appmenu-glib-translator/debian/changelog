@@ -1,3 +1,9 @@
+appmenu-glib-translator (25.04+git20260514.6665f77-1) resolute; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Thu, 14 May 2026 17:56:32 +0000
+
 appmenu-glib-translator (25.04+git20251012.6665f77-1) plucky; urgency=medium
 
   * updated package

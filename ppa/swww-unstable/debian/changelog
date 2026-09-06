@@ -1,3 +1,9 @@
+swww (0.9.5+git20260514.004dfd8b-1) resolute; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Thu, 14 May 2026 21:16:30 +0000
+
 swww (0.9.5+git20250110.004dfd8b-1) oracular; urgency=medium
 
   * 004dfd8 Merge pull request #375 from kerty0/main
