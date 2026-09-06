@@ -5,10 +5,8 @@ BUILD           := b
 PACKAGE_VERSION := 1
 REPOSITORY		:= Aylur/ags
 TARBALL 		:= https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/$(PACKAGE)-v$(VERSION).tar.gz
-TARGET  		?= questing
+TARGET			?= resolute
 URGENCY 		?= medium
-DEBFULLNAME 	?=
-DEBEMAIL    	?=
 PPA				?= ppa:razvanalex/hyprland-ppa
 ROOT			:= $(shell pwd)/../../
 PACKAGE_ROOT    := $(ROOT)/ppa/$(PACKAGE)/
@@ -22,7 +20,7 @@ prepare:
 	curl -LJO https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/node_modules-v$(VERSION).tar.gz && \
 	tar xvf node_modules-v$(VERSION).tar.gz && \
 	rm -fr node_modules-v$(VERSION).tar.gz && \
-	apt install -y npm && npm install typescript --save-dev && \
+	npm install typescript --save-dev && \
 	( \
 		cd .. && \
 		rm -f $(PACKAGE)_$(VERSION)$(BUILD).orig.tar.gz && \
