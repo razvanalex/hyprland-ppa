@@ -1,3 +1,50 @@
+satty (0.22.0g-1) resolute; urgency=medium
+
+  * possible disruptions
+    - feat!: touchpad scroll for zoom (with Ctrl) and pan by @robertwidfen in https://github.com/Satty-org/Satty/pull/535
+    - fix!: unclash right mouse button in crop tool by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/562
+  * What's Changed
+    - fix: pan with middle mouse button in zoom != 1.0 by @robertwidfen in https://github.com/Satty-org/Satty/pull/532
+    - chore: updating deps in release.nu becomes optional by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/530
+    - chore: enforce line breaks as Unix style with cargo fmt by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/534
+    - fix: text cursor updating with empty texts by @robertwidfen in https://github.com/Satty-org/Satty/pull/537
+    - refactor: optional extra ring around marker by @robertwidfen in https://github.com/Satty-org/Satty/pull/539
+    - feat!: touchpad scroll for zoom (with Ctrl) and pan by @robertwidfen in https://github.com/Satty-org/Satty/pull/535
+    - refactor: cleanup & convert .vscode configs to templates by @robertwidfen in https://github.com/Satty-org/Satty/pull/542
+    - refactor: README.md to include config.toml by @robertwidfen in https://github.com/Satty-org/Satty/pull/543
+    - feat: smaller and same marker size for 1-99 by @robertwidfen in https://github.com/Satty-org/Satty/pull/547
+    - feat: Add Alt/Alt+Shift binding for highlight and blur by @robertwidfen in https://github.com/Satty-org/Satty/pull/550
+    - fix: limit crop shadow overlay to image bounds by @robertwidfen in https://github.com/Satty-org/Satty/pull/552
+    - refactor: annotation size factor editing into toolbar by @robertwidfen in https://github.com/Satty-org/Satty/pull/549
+    - feat: annotation-size-factor with Ctrl mod and climb rate by @robertwidfen in https://github.com/Satty-org/Satty/pull/554
+    - ci: add aarch64 (arm64) Linux release build by @MAY4VFX in https://github.com/Satty-org/Satty/pull/556
+    - feat: make clear-all undoable as an atomic history action by @sonnymilton in https://github.com/Satty-org/Satty/pull/558
+    - chore: update rust-overlay flake input to fix the dev shell build by @rokokol in https://github.com/Satty-org/Satty/pull/565
+    - chore(deps): anyhow 1.0.103 by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/568
+    - chore(deps): bump clap_complete from 4.6.5 to 4.6.7 in the compatible-updates group across 1 directory by @dependabot[bot] in https://github.com/Satty-org/Satty/pull/570
+    - feat: toggle text outline in inverted color with Alt by @rokokol in https://github.com/Satty-org/Satty/pull/574
+    - feat: drop-shadow text effect + gamma-corrected contrast by @rokokol in https://github.com/Satty-org/Satty/pull/576
+    - feat: render emoji in the text tool by @rokokol in https://github.com/Satty-org/Satty/pull/577
+    - fix: include path information in README by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/581
+    - fix: new clippy warnings via stable rustc by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/584
+    - chore: update many deps by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/589
+    - chore(deps): update fontconfig to 0.11 (incompatible) by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/571
+    - Fix text cursor and selection position, bounding rectangle, preedit highlight and underline by @robertwidfen in https://github.com/Satty-org/Satty/pull/595
+    - feat: tool dismiss/commit buttons in style toolbar by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/561
+    - feat: default rounded brush lines and round cap toggle button by @imizgun in https://github.com/Satty-org/Satty/pull/592
+    - chore(deps): bump the compatible-updates group across 1 directory with 3 updates by @dependabot[bot] in https://github.com/Satty-org/Satty/pull/594
+    - fix!: unclash right mouse button in crop tool by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/562
+    - feat: add notification-thumbnail config/cmdline option to allow sending notification with image thumbnail rather than app icon by @RobertMueller2 in https://github.com/Satty-org/Satty/pull/583
+    - feat: make transparency grid static by @Cubesicle in https://github.com/Satty-org/Satty/pull/599
+    - feat: round fat arrow when round caps is enabled by @robertwidfen in https://github.com/Satty-org/Satty/pull/598
+  * New Contributors
+    - @MAY4VFX made their first contribution in https://github.com/Satty-org/Satty/pull/556
+    - @rokokol made their first contribution in https://github.com/Satty-org/Satty/pull/565
+    - @imizgun made their first contribution in https://github.com/Satty-org/Satty/pull/592
+    - @Cubesicle made their first contribution in https://github.com/Satty-org/Satty/pull/599
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sun, 06 Sep 2026 11:48:13 +0000
+
 satty (0.22.0f-1) resolute; urgency=medium
 
   * possible disruptions
