@@ -12,7 +12,7 @@ TARBALL_PKG		:= $(PACKAGE)_$(BUILD_VER).orig.tar.gz
 SOURCE_CHANGES	:= ./build/$(PACKAGE)_$(BUILD_VER)-$(REVISION)_source.changes
 
 .PHONY: build
-build: __prepare_pkg sign_pgp_init 
+build: __prepare_pkg 
 	cd $(BUILD_DIR) && \
 	debuild -S -d -k$(DEBEMAIL) \
 		--source-option=--include-binaries \
@@ -81,12 +81,6 @@ __prepare:
 	&& \
 	cp -r $(PACKAGE_ROOT)/debian . && \
 	decopy --root . --output ./debian/copyright --exclude ./debian/ --mode full
-
-# HACK: This is a hack to enable GPG inside a container. Otherwise, build fails
-# because it couldn't sign the files.
-.PHONY: sign_pgp_init 
-sign_pgp_init:
-	gpg --clearsign --passphrase-file $(ROOT)/.pgp --dry-run --pinentry-mode loopback $(ROOT)/README.md
 
 .PHONY: publish
 publish:

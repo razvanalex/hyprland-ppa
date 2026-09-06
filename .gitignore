@@ -1,4 +1,3 @@
-.pgp
 .env
 build/
 ppa/*/build/
