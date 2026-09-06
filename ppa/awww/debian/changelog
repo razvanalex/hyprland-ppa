@@ -1,3 +1,9 @@
+awww (0.11.2e-1) resolute; urgency=medium
+
+  * updated package
+
+ -- Răzvan-Alexandru Smădu <razvansmadu@gmail.com>  Sun, 06 Sep 2026 13:19:55 +0000
+
 awww (0.11.2d-1) noble; urgency=medium
 
   * Rename package from swww to awww.

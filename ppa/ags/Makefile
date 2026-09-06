@@ -1,8 +1,8 @@
 SHELL			:= /bin/bash
 PACKAGE			:= ags
 VERSION			:= 1.8.2
-BUILD           := b
-PACKAGE_VERSION := 1
+BUILD           := c
+REVISION		:= 1
 REPOSITORY		:= Aylur/ags
 TARBALL 		:= https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/$(PACKAGE)-v$(VERSION).tar.gz
 TARGET			?= resolute
