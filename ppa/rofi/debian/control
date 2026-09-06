@@ -19,7 +19,7 @@ Build-Depends:
  libpango1.0-dev (>= 1.50),
  libcairo2-dev,
  libglib2.0-dev (>= 2.72),
- libgdk-pixbuf2.0-dev,
+ libgdk-pixbuf-2.0-dev,
  libstartup-notification0-dev,
  libxkbcommon-dev (>= 0.4.1),
  libxkbcommon-x11-dev,

@@ -1,7 +1,7 @@
 SHELL			:= /bin/bash
 PACKAGE			:= ags
 VERSION			:= 1.8.2
-BUILD           := c
+BUILD           := d
 REVISION		:= 1
 REPOSITORY		:= Aylur/ags
 TARBALL_URL 	:= https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/$(PACKAGE)-v$(VERSION).tar.gz

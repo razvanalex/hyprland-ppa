@@ -1,9 +1,9 @@
 SHELL			:= /bin/bash
 PACKAGE			:= awww
 REPOSITORY		:= https://codeberg.org/LGFae/awww.git
-VERSION			:= 0.11.2
+VERSION			:= 0.12.1
 COMMIT_HASH		:= 
-BUILD           := e
+BUILD           := a
 REVISION		:= 1
 STATUS			:=
 TARBALL_URL		:= https://codeberg.org/LGFae/awww/archive/v$(VERSION).tar.gz
