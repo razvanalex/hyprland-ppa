@@ -114,23 +114,35 @@ def parse_args() -> Arguments:
     return parser.parse_args(namespace=Arguments())
 
 
-def get_last_release_info(repository: str) -> dict[str, Any]:
+def get_release_info(repository: str, version: str) -> dict[str, Any] | None:
     # Only github releases supported for now
-    repository = repository.replace("https://", "")
+    repository = repository.replace("https://", "").replace("http://", "")
     repository = repository.replace("github.com/", "")
     repository = repository.replace(".git", "")
 
     url = f"https://api.github.com/repos/{repository}/releases"
 
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
+        if response.status_code != 200:
+            return None
 
         releases: list[dict[str, Any]] = response.json()
-        last_release: dict[str, Any] = releases[0]
-    except Exception as e:
-        raise RuntimeError(f"Could not get release info: {url}") from e
+        if not isinstance(releases, list) or len(releases) == 0:
+            return None
 
-    return last_release
+        for r in releases:
+            name = r.get("name") or ""
+            tag = r.get("tag_name") or ""
+            if version in name or version in tag:
+                return r
+
+        if version in (releases[0].get("name") or "") or version in (releases[0].get("tag_name") or ""):
+            return releases[0]
+    except Exception:
+        return None
+
+    return None
 
 
 def parse_changelog(changelog: str) -> str:
@@ -185,21 +197,15 @@ def parse_changelog(changelog: str) -> str:
 
 
 def get_changelog_from_release(repository: str, version: str) -> str:
-    last_release = get_last_release_info(repository)
+    release = get_release_info(repository, version)
+    if release is not None and "body" in release and release["body"]:
+        changelog: str = release["body"]
+        changelog = changelog.replace("\r", "")
+        changelog = parse_changelog(changelog)
+        if len(changelog) > 0:
+            return changelog
 
-    if version not in last_release["name"]:
-        raise ValueError(
-            f"Invalid version {version} for package {last_release['name']}"
-        )
-
-    changelog: str = last_release["body"]
-    changelog = changelog.replace("\r", "")
-    changelog = parse_changelog(changelog)
-
-    if len(changelog) == 0:
-        changelog = "  * updated package"
-
-    return changelog
+    return "  * updated package"
 
 
 def extract_commit_form_version(version: str) -> str | None:
