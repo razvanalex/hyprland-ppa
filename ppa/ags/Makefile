@@ -4,7 +4,7 @@ VERSION			:= 1.8.2
 BUILD           := c
 REVISION		:= 1
 REPOSITORY		:= Aylur/ags
-TARBALL 		:= https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/$(PACKAGE)-v$(VERSION).tar.gz
+TARBALL_URL 	:= https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/$(PACKAGE)-v$(VERSION).tar.gz
 TARGET			?= resolute
 URGENCY 		?= medium
 PPA				?= ppa:razvanalex/hyprland-ppa
@@ -15,8 +15,8 @@ BUILD_ROOT		:= $(PACKAGE_ROOT)/build/
 include $(ROOT)/Makefile.defs
 
 prepare:
-	mv $(BUILD_ROOT)/$(PACKAGE) $(BUILD_ROOT)/$(PACKAGE)-$(VERSION)$(BUILD)
-	cd $(BUILD_ROOT)/$(PACKAGE)-$(VERSION)$(BUILD) && \
+	mv build/$(PACKAGE) $(BUILD_DIR)
+	cd $(BUILD_DIR) && \
 	curl -LJO https://github.com/$(REPOSITORY)/releases/download/v$(VERSION)/node_modules-v$(VERSION).tar.gz && \
 	tar xvf node_modules-v$(VERSION).tar.gz && \
 	rm -fr node_modules-v$(VERSION).tar.gz && \

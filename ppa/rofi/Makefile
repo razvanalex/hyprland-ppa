@@ -14,4 +14,4 @@ PACKAGE_ROOT    := $(ROOT)/ppa/$(PACKAGE)/
 include $(ROOT)/Makefile.defs
 
 prepare:
-	echo "Nothing to do"
+	mv build/rofi-$(VERSION)/ $(BUILD_DIR)
