@@ -15,3 +15,4 @@ BUILD_ROOT		:= $(PACKAGE_ROOT)/build/
 include $(ROOT)/Makefile.defs
 
 prepare:
+	cd $(BUILD_DIR) && npm install

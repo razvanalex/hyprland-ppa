@@ -22,4 +22,5 @@ prepare:
 	mv build/swww-$(VERSION)/ $(BUILD_DIR)
 	cd $(BUILD_DIR) && \
 	mkdir -p .cargo && \
-	cargo vendor > .cargo/config.toml
+	cargo vendor > .cargo/config.toml && \
+	python3 -c 'import os, json; [ (d := json.load(open(p := os.path.join(r, ".cargo-checksum.json"))), [d["files"].pop(k) for k in list(d.get("files", {})) if k.endswith(".orig")], json.dump(d, open(p, "w"))) for r, _, f in os.walk("vendor") if ".cargo-checksum.json" in f ]'
