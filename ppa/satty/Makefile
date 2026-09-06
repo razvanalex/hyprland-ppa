@@ -3,7 +3,7 @@ PACKAGE			:= satty
 REPOSITORY		:= https://github.com/Satty-org/Satty.git
 VERSION			:= 0.22.0
 COMMIT_HASH		:=
-BUILD           := d
+BUILD           := e
 REVISION		:= 1
 STATUS			:=
 TARBALL_URL		:= https://github.com/Satty-org/Satty/archive/refs/tags/v$(VERSION).tar.gz
@@ -17,3 +17,6 @@ include $(ROOT)/Makefile.defs
 
 prepare:
 	mv build/Satty-$(VERSION)/ $(BUILD_DIR)
+	cd $(BUILD_DIR) && \
+	mkdir -p .cargo && \
+	cargo vendor > .cargo/config.toml

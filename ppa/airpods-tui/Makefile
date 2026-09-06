@@ -3,7 +3,7 @@ PACKAGE			:= airpods-tui
 REPOSITORY		:= https://github.com/annoyedmilk/airpods-tui.git
 VERSION			:= 0.3.2
 COMMIT_HASH		:=
-BUILD           := d
+BUILD           := e
 REVISION		:= 1
 STATUS			:=
 TARBALL_URL		:= https://github.com/annoyedmilk/airpods-tui/archive/refs/tags/v$(VERSION).tar.gz
@@ -17,3 +17,6 @@ include $(ROOT)/Makefile.defs
 
 prepare:
 	mv build/airpods-tui-$(VERSION)/ $(BUILD_DIR)
+	cd $(BUILD_DIR) && \
+	mkdir -p .cargo && \
+	cargo vendor > .cargo/config.toml
